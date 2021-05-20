@@ -1,34 +1,22 @@
 #include "Keyboard.h"
 
 const int BUTTON_COUNT = 10;
-const int buttonPins[] = {PA0, PA1, PA2, PA3, PA4, PA5, PA6, PA7, PA8, PA15}; // Dont reuse any RX/TX/USB/Pins
-const int ledPins[] = {PB0, PB1, PB2, PB3, PB4, PB5, PB6, PB7, PB8, PB9}; 
-const int unlockPin = PB11;
-bool locked = false;
+const int buttonPins[10] = {5,6,7,8,9,10,11,12,13,14}; 
+bool previousState[10] = {HIGH}; 
 
 void setup() {
-  pinMode(unlockPin, INPUT_PULLUP);
   for (uint8_t i = 0; i < BUTTON_COUNT; i++) {
      pinMode(buttonPins[i], INPUT_PULLUP);
-  }
-  for (uint8_t i = 0; i < BUTTON_COUNT; i++) {
-     pinMode(ledPins[i], OUTPUT);
   }
   Keyboard.begin();
 }
 
-
 void loop() {
-  if (digitalRead(unlockPin) == LOW) {
-    locked = false;
-  }
-  
   for (uint8_t i = 0; i < BUTTON_COUNT; i++) {
-    if (digitalRead(buttonPins[i]) == LOW) {
-      if (locked == false) {        
+    int currentState = digitalRead(buttonPins[i]);
+    if (currentState != previousState[i] && currentState == LOW) {   
         Keyboard.print(String(i));
-        locked = true;
-      }
     }
+    previousState[i] = currentState;
   }
 }

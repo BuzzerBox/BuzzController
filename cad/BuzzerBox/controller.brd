@@ -3857,7 +3857,15 @@ Source: http://eshop.phoenixcontact.com .. 1751248.pdf</description>
 <wire x1="89.69" y1="3.33" x2="88.9" y2="2.54" width="0.8128" layer="16"/>
 <wire x1="98.27" y1="34.798" x2="98.27" y2="11.700321875" width="0.8128" layer="16"/>
 <wire x1="98.27" y1="11.700321875" x2="89.109678125" y2="2.54" width="0.8128" layer="16"/>
-<wire x1="66.42" y1="89.535" x2="75.82" y2="86.995" width="0" layer="19" extent="1-1"/>
+<via x="73.66" y="93.98" extent="1-16" drill="0.35"/>
+<wire x1="66.04" y1="97.79" x2="72.39" y2="97.79" width="0.6096" layer="16"/>
+<wire x1="72.39" y1="97.79" x2="73.66" y2="96.52" width="0.6096" layer="16"/>
+<wire x1="73.66" y1="96.52" x2="73.66" y2="93.98" width="0.6096" layer="16"/>
+<wire x1="73.66" y1="93.98" x2="73.66" y2="87.63" width="0.6096" layer="1"/>
+<wire x1="73.66" y1="87.63" x2="74.295" y2="86.995" width="0.6096" layer="1"/>
+<wire x1="74.295" y1="86.995" x2="75.82" y2="86.995" width="0.6096" layer="1"/>
+<wire x1="58.42" y1="46.99" x2="60.96" y2="46.99" width="0" layer="19" extent="1-1"/>
+<wire x1="63.5" y1="31.75" x2="60.96" y2="46.99" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="RAW">
 <contactref element="PRO_MICRO" pad="24"/>
@@ -4053,7 +4061,10 @@ Source: http://eshop.phoenixcontact.com .. 1751248.pdf</description>
 <wire x1="19.05" y1="62.23" x2="20.3835" y2="60.8965" width="0.8128" layer="16"/>
 <wire x1="21.59" y1="59.69" x2="20.3835" y2="60.8965" width="0.8128" layer="16"/>
 <wire x1="20.3835" y1="60.8965" x2="19.05" y2="59.69" width="0.3048" layer="16"/>
-<wire x1="81.28" y1="85.99" x2="75.82" y2="85.725" width="0" layer="19" extent="1-1"/>
+<wire x1="71.12" y1="88.9" x2="72.39" y2="87.63" width="0.6096" layer="1"/>
+<wire x1="72.39" y1="87.63" x2="72.39" y2="86.36" width="0.6096" layer="1"/>
+<wire x1="72.39" y1="86.36" x2="73.025" y2="85.725" width="0.6096" layer="1"/>
+<wire x1="73.025" y1="85.725" x2="75.82" y2="85.725" width="0.6096" layer="1"/>
 </signal>
 <signal name="N$45">
 <contactref element="BUZZER3" pad="2"/>
@@ -4487,11 +4498,10 @@ Source: http://eshop.phoenixcontact.com .. 1751248.pdf</description>
 <wire x1="83.09" y1="84.19" x2="83.99" y2="85.09" width="0.3048" layer="1"/>
 <wire x1="81.28" y1="84.19" x2="80.91" y2="84.19" width="0.3048" layer="1"/>
 <wire x1="75.82" y1="89.535" x2="76.835" y2="89.535" width="0.3048" layer="1"/>
-<wire x1="77.47" y1="88.9" x2="76.835" y2="89.535" width="0.3048" layer="1"/>
-<wire x1="81.28" y1="84.19" x2="80.91" y2="83.82" width="0.3048" layer="1"/>
-<wire x1="80.91" y1="83.82" x2="80.01" y2="83.82" width="0.3048" layer="1"/>
-<wire x1="80.01" y1="83.82" x2="77.47" y2="86.36" width="0.3048" layer="1"/>
-<wire x1="77.47" y1="86.36" x2="77.47" y2="88.9" width="0.3048" layer="1"/>
+<wire x1="80.01" y1="86.36" x2="76.835" y2="89.535" width="0.3048" layer="1"/>
+<wire x1="81.095" y1="84.005" x2="81.28" y2="84.19" width="0.3048" layer="1"/>
+<wire x1="80.01" y1="86.36" x2="80.01" y2="85.09" width="0.3048" layer="1"/>
+<wire x1="80.01" y1="85.09" x2="81.095" y2="84.005" width="0.3048" layer="1"/>
 </signal>
 <signal name="N$29">
 <contactref element="BUZZER4" pad="3"/>
