@@ -14424,11 +14424,16 @@ Source: http://eshop.phoenixcontact.com .. 1751248.pdf</description>
 <pinref part="GND2" gate="1" pin="GND"/>
 <wire x1="147.32" y1="88.9" x2="139.7" y2="88.9" width="0.1524" layer="91"/>
 <pinref part="RPI_GPIO" gate="G$1" pin="39"/>
-<wire x1="187.96" y1="111.76" x2="144.78" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="185.42" y1="111.76" x2="144.78" y2="111.76" width="0.1524" layer="91"/>
 <wire x1="139.7" y1="88.9" x2="139.7" y2="111.76" width="0.1524" layer="91"/>
-<wire x1="139.7" y1="111.76" x2="187.96" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="139.7" y1="111.76" x2="144.78" y2="111.76" width="0.1524" layer="91"/>
 <junction x="139.7" y="88.9"/>
 <junction x="187.96" y="111.76"/>
+<pinref part="RPI_GPIO" gate="G$1" pin="25"/>
+<wire x1="185.42" y1="111.76" x2="187.96" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="187.96" y1="129.54" x2="185.42" y2="129.54" width="0.1524" layer="91"/>
+<wire x1="185.42" y1="129.54" x2="185.42" y2="111.76" width="0.1524" layer="91"/>
+<junction x="185.42" y="111.76"/>
 </segment>
 <segment>
 <pinref part="SUPPLY1" gate="1" pin="GND"/>
@@ -14653,7 +14658,11 @@ Source: http://eshop.phoenixcontact.com .. 1751248.pdf</description>
 <junction x="205.74" y="160.02"/>
 <pinref part="PRO_MICRO" gate="G$1" pin="VCC"/>
 <wire x1="205.74" y1="86.36" x2="170.18" y2="86.36" width="0.1524" layer="91"/>
-<wire x1="205.74" y1="160.02" x2="205.74" y2="86.36" width="0.1524" layer="91"/>
+<wire x1="205.74" y1="160.02" x2="205.74" y2="157.48" width="0.1524" layer="91"/>
+<pinref part="RPI_GPIO" gate="G$1" pin="4"/>
+<wire x1="205.74" y1="157.48" x2="205.74" y2="86.36" width="0.1524" layer="91"/>
+<wire x1="203.2" y1="157.48" x2="205.74" y2="157.48" width="0.1524" layer="91"/>
+<junction x="205.74" y="157.48"/>
 </segment>
 <segment>
 <pinref part="D2" gate="1" pin="C"/>
