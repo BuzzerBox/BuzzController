@@ -14587,6 +14587,8 @@ Source: http://eshop.phoenixcontact.com .. 1751248.pdf</description>
 <part name="P+7" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
 <part name="RLSBT" library="con-phoenix-350" library_urn="urn:adsk.eagle:library:174" deviceset="1751248" device="" package3d_urn="urn:adsk.eagle:package:9395/1"/>
 <part name="GND25" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="R43" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="RESISTOR" device="0805" package3d_urn="urn:adsk.eagle:package:39651/1" value=" "/>
+<part name="R44" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="RESISTOR" device="0805" package3d_urn="urn:adsk.eagle:package:39651/1" value=" "/>
 </parts>
 <sheets>
 <sheet>
@@ -15209,6 +15211,14 @@ Source: http://eshop.phoenixcontact.com .. 1751248.pdf</description>
 <instance part="GND25" gate="1" x="236.22" y="96.52" smashed="yes">
 <attribute name="VALUE" x="233.68" y="93.98" size="1.778" layer="96"/>
 </instance>
+<instance part="R43" gate="G$1" x="187.96" y="78.74" smashed="yes" rot="R90">
+<attribute name="NAME" x="187.452" y="83.312" size="1.778" layer="95" font="vector" rot="R90" align="bottom-center"/>
+<attribute name="VALUE" x="189.484" y="78.74" size="1.778" layer="96" font="vector" rot="R90" align="top-center"/>
+</instance>
+<instance part="R44" gate="G$1" x="185.42" y="76.2" smashed="yes" rot="R90">
+<attribute name="NAME" x="184.912" y="80.772" size="1.778" layer="95" font="vector" rot="R90" align="bottom-center"/>
+<attribute name="VALUE" x="186.944" y="76.2" size="1.778" layer="96" font="vector" rot="R90" align="top-center"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -15660,13 +15670,21 @@ Source: http://eshop.phoenixcontact.com .. 1751248.pdf</description>
 </segment>
 <segment>
 <pinref part="P+7" gate="1" pin="+5V"/>
-<wire x1="190.5" y1="91.44" x2="190.5" y2="78.74" width="0.1524" layer="91"/>
+<wire x1="190.5" y1="91.44" x2="190.5" y2="83.82" width="0.1524" layer="91"/>
 <pinref part="MCP1" gate="G$1" pin="VDD"/>
+<wire x1="190.5" y1="83.82" x2="190.5" y2="78.74" width="0.1524" layer="91"/>
 <wire x1="190.5" y1="78.74" x2="193.04" y2="78.74" width="0.1524" layer="91"/>
 <pinref part="MCP1" gate="G$1" pin="A0"/>
 <wire x1="190.5" y1="78.74" x2="190.5" y2="66.04" width="0.1524" layer="91"/>
 <wire x1="190.5" y1="66.04" x2="193.04" y2="66.04" width="0.1524" layer="91"/>
 <junction x="190.5" y="78.74"/>
+<pinref part="R43" gate="G$1" pin="2"/>
+<wire x1="187.96" y1="83.82" x2="190.5" y2="83.82" width="0.1524" layer="91"/>
+<junction x="190.5" y="83.82"/>
+<pinref part="R44" gate="G$1" pin="2"/>
+<wire x1="185.42" y1="81.28" x2="185.42" y2="83.82" width="0.1524" layer="91"/>
+<wire x1="185.42" y1="83.82" x2="187.96" y2="83.82" width="0.1524" layer="91"/>
+<junction x="187.96" y="83.82"/>
 </segment>
 </net>
 <net name="N$45" class="0">
@@ -16078,8 +16096,11 @@ Source: http://eshop.phoenixcontact.com .. 1751248.pdf</description>
 </segment>
 <segment>
 <pinref part="MCP1" gate="G$1" pin="SDA"/>
-<wire x1="193.04" y1="71.12" x2="182.88" y2="71.12" width="0.1524" layer="91"/>
-<label x="182.88" y="71.12" size="1.778" layer="95"/>
+<wire x1="193.04" y1="71.12" x2="185.42" y2="71.12" width="0.1524" layer="91"/>
+<label x="180.34" y="71.12" size="1.778" layer="95"/>
+<pinref part="R44" gate="G$1" pin="1"/>
+<wire x1="185.42" y1="71.12" x2="180.34" y2="71.12" width="0.1524" layer="91"/>
+<junction x="185.42" y="71.12"/>
 </segment>
 <segment>
 <pinref part="PRO_MICRO" gate="G$1" pin="2"/>
@@ -16209,8 +16230,11 @@ Source: http://eshop.phoenixcontact.com .. 1751248.pdf</description>
 </segment>
 <segment>
 <pinref part="MCP1" gate="G$1" pin="SCK"/>
-<wire x1="193.04" y1="73.66" x2="182.88" y2="73.66" width="0.1524" layer="91"/>
-<label x="182.88" y="73.66" size="1.778" layer="95"/>
+<wire x1="193.04" y1="73.66" x2="187.96" y2="73.66" width="0.1524" layer="91"/>
+<label x="180.34" y="73.66" size="1.778" layer="95"/>
+<pinref part="R43" gate="G$1" pin="1"/>
+<wire x1="187.96" y1="73.66" x2="180.34" y2="73.66" width="0.1524" layer="91"/>
+<junction x="187.96" y="73.66"/>
 </segment>
 <segment>
 <pinref part="MCP23017" gate="G$1" pin="SCK"/>
@@ -16318,9 +16342,9 @@ Source: http://eshop.phoenixcontact.com .. 1751248.pdf</description>
 <net name="N$50" class="0">
 <segment>
 <pinref part="PRO_MICRO" gate="G$1" pin="A0"/>
-<wire x1="170.18" y1="76.2" x2="185.42" y2="76.2" width="0.1524" layer="91"/>
-<wire x1="185.42" y1="76.2" x2="185.42" y2="104.14" width="0.1524" layer="91"/>
-<wire x1="185.42" y1="104.14" x2="223.52" y2="104.14" width="0.1524" layer="91"/>
+<wire x1="170.18" y1="76.2" x2="175.26" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="175.26" y1="76.2" x2="175.26" y2="104.14" width="0.1524" layer="91"/>
+<wire x1="175.26" y1="104.14" x2="223.52" y2="104.14" width="0.1524" layer="91"/>
 <wire x1="223.52" y1="104.14" x2="223.52" y2="109.22" width="0.1524" layer="91"/>
 <pinref part="RLSBT" gate="-1" pin="K"/>
 <wire x1="223.52" y1="109.22" x2="236.22" y2="109.22" width="0.1524" layer="91"/>
