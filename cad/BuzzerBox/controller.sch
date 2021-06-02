@@ -13509,6 +13509,9 @@ Source: http://eshop.phoenixcontact.com .. 1751251.pdf</description>
 <text x="-3.048" y="4.191" size="1.27" layer="22" rot="R90">GND</text>
 <text x="0.635" y="4.191" size="1.27" layer="22" rot="R90">BT</text>
 <text x="3.81" y="4.064" size="1.27" layer="22" rot="R90">LED</text>
+<text x="-3.81" y="-3.81" size="1.27" layer="21" rot="R270">G</text>
+<text x="-0.635" y="-3.81" size="1.27" layer="21" rot="R270">B</text>
+<text x="2.54" y="-3.81" size="1.27" layer="22" rot="R270">L</text>
 </package>
 <package name="1751248" urn="urn:adsk.eagle:footprint:9371/1" locally_modified="yes">
 <description>&lt;b&gt;MKDS 1/ 2-3,5&lt;/b&gt; Printklemme&lt;p&gt;
@@ -14670,16 +14673,16 @@ DIN A3, landscape with location and doc. field</description>
 <part name="SUPPLY4" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="P+5" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+12V" device=""/>
 <part name="P+6" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
+<part name="BUZZER8" library="custom-350" deviceset="1751251" device="" package3d_urn="urn:adsk.eagle:package:9394/1"/>
+<part name="BUZZER1" library="custom-350" deviceset="1751251" device="" package3d_urn="urn:adsk.eagle:package:9394/1"/>
+<part name="BUZZER0" library="custom-350" deviceset="1751251" device="" package3d_urn="urn:adsk.eagle:package:9394/1"/>
+<part name="BUZZER6" library="custom-350" deviceset="1751251" device="" package3d_urn="urn:adsk.eagle:package:9394/1"/>
 <part name="BUZZER7" library="custom-350" deviceset="1751251" device="" package3d_urn="urn:adsk.eagle:package:9394/1"/>
 <part name="BUZZER9" library="custom-350" deviceset="1751251" device="" package3d_urn="urn:adsk.eagle:package:9394/1"/>
-<part name="BUZZER0" library="custom-350" deviceset="1751251" device="" package3d_urn="urn:adsk.eagle:package:9394/1"/>
-<part name="BUZZER2" library="custom-350" deviceset="1751251" device="" package3d_urn="urn:adsk.eagle:package:9394/1"/>
-<part name="BUZZER1" library="custom-350" deviceset="1751251" device="" package3d_urn="urn:adsk.eagle:package:9394/1"/>
-<part name="BUZZER8" library="custom-350" deviceset="1751251" device="" package3d_urn="urn:adsk.eagle:package:9394/1"/>
-<part name="BUZZER5" library="custom-350" deviceset="1751251" device="" package3d_urn="urn:adsk.eagle:package:9394/1"/>
-<part name="BUZZER4" library="custom-350" deviceset="1751251" device="" package3d_urn="urn:adsk.eagle:package:9394/1"/>
 <part name="BUZZER3" library="custom-350" deviceset="1751251" device="" package3d_urn="urn:adsk.eagle:package:9394/1"/>
-<part name="BUZZER6" library="custom-350" deviceset="1751251" device="" package3d_urn="urn:adsk.eagle:package:9394/1"/>
+<part name="BUZZER4" library="custom-350" deviceset="1751251" device="" package3d_urn="urn:adsk.eagle:package:9394/1"/>
+<part name="BUZZER5" library="custom-350" deviceset="1751251" device="" package3d_urn="urn:adsk.eagle:package:9394/1"/>
+<part name="BUZZER2" library="custom-350" deviceset="1751251" device="" package3d_urn="urn:adsk.eagle:package:9394/1"/>
 <part name="D5" library="avago" library_urn="urn:adsk.eagle:library:107" deviceset="HSMS-2852" device="" package3d_urn="urn:adsk.eagle:package:4488/1"/>
 <part name="P+3" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
 <part name="GND4" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
@@ -14786,7 +14789,7 @@ DIN A3, landscape with location and doc. field</description>
 <part name="POWER" library="custom-350" deviceset="1751248" device="" package3d_urn="urn:adsk.eagle:package:9395/1"/>
 <part name="LDO1" library="v-reg-2" deviceset="LM1084" device="-V" value="LM1084-V"/>
 <part name="D3" library="diode" deviceset="1N4004" device="" package3d_urn="urn:adsk.eagle:package:43336/1" value="1N4002"/>
-<part name="LED1" library="display-kingbright" library_urn="urn:adsk.eagle:library:213" deviceset="7-SEG_" device="SA10-21" package3d_urn="urn:adsk.eagle:package:13078/1"/>
+<part name="7SEG" library="display-kingbright" library_urn="urn:adsk.eagle:library:213" deviceset="7-SEG_" device="SA10-21" package3d_urn="urn:adsk.eagle:package:13078/1"/>
 <part name="P+2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
 <part name="R35" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="RESISTOR" device="0805" package3d_urn="urn:adsk.eagle:package:39651/1" value=" "/>
 <part name="R36" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="RESISTOR" device="0805" package3d_urn="urn:adsk.eagle:package:39651/1" value=" "/>
@@ -14980,7 +14983,7 @@ DIN A3, landscape with location and doc. field</description>
 <attribute name="NAME" x="-41.084" y="176.8706" size="1.778" layer="95"/>
 <attribute name="VALUE" x="-40.274" y="183.3466" size="1.778" layer="96" align="center"/>
 </instance>
-<instance part="LED1" gate="G$1" x="116.84" y="83.82" smashed="yes">
+<instance part="7SEG" gate="G$1" x="116.84" y="83.82" smashed="yes">
 <attribute name="NAME" x="111.76" y="93.345" size="1.778" layer="95"/>
 <attribute name="VALUE" x="111.76" y="72.39" size="1.778" layer="96"/>
 </instance>
@@ -15296,11 +15299,11 @@ DIN A3, landscape with location and doc. field</description>
 <pinref part="R33" gate="G$1" pin="2"/>
 </segment>
 <segment>
-<pinref part="LED1" gate="G$1" pin="COM@1"/>
+<pinref part="7SEG" gate="G$1" pin="COM@1"/>
 <pinref part="P+2" gate="1" pin="+5V"/>
 <wire x1="127" y1="91.44" x2="129.54" y2="91.44" width="0.1524" layer="91"/>
 <wire x1="129.54" y1="91.44" x2="129.54" y2="101.6" width="0.1524" layer="91"/>
-<pinref part="LED1" gate="G$1" pin="COM@2"/>
+<pinref part="7SEG" gate="G$1" pin="COM@2"/>
 <wire x1="127" y1="88.9" x2="129.54" y2="88.9" width="0.1524" layer="91"/>
 <wire x1="129.54" y1="88.9" x2="129.54" y2="101.6" width="0.1524" layer="91"/>
 <junction x="129.54" y="101.6"/>
@@ -15621,7 +15624,7 @@ DIN A3, landscape with location and doc. field</description>
 <label x="91.44" y="83.82" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="LED1" gate="G$1" pin="B"/>
+<pinref part="7SEG" gate="G$1" pin="B"/>
 <wire x1="104.14" y1="88.9" x2="106.68" y2="88.9" width="0.1524" layer="91"/>
 <label x="104.14" y="88.9" size="1.778" layer="95"/>
 </segment>
@@ -15633,7 +15636,7 @@ DIN A3, landscape with location and doc. field</description>
 <label x="91.44" y="91.44" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="LED1" gate="G$1" pin="G"/>
+<pinref part="7SEG" gate="G$1" pin="G"/>
 <wire x1="104.14" y1="76.2" x2="106.68" y2="76.2" width="0.1524" layer="91"/>
 <label x="104.14" y="76.2" size="1.778" layer="95"/>
 </segment>
@@ -15645,14 +15648,14 @@ DIN A3, landscape with location and doc. field</description>
 <label x="91.44" y="88.9" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="LED1" gate="G$1" pin="F"/>
+<pinref part="7SEG" gate="G$1" pin="F"/>
 <wire x1="104.14" y1="78.74" x2="106.68" y2="78.74" width="0.1524" layer="91"/>
 <label x="104.14" y="78.74" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="A" class="0">
 <segment>
-<pinref part="LED1" gate="G$1" pin="A"/>
+<pinref part="7SEG" gate="G$1" pin="A"/>
 <wire x1="106.68" y1="91.44" x2="104.14" y2="91.44" width="0.1524" layer="91"/>
 <label x="104.14" y="91.44" size="1.778" layer="95"/>
 </segment>
@@ -15669,7 +15672,7 @@ DIN A3, landscape with location and doc. field</description>
 <label x="91.44" y="73.66" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="LED1" gate="G$1" pin="E"/>
+<pinref part="7SEG" gate="G$1" pin="E"/>
 <wire x1="106.68" y1="81.28" x2="104.14" y2="81.28" width="0.1524" layer="91"/>
 <label x="104.14" y="81.28" size="1.778" layer="95"/>
 </segment>
@@ -15684,7 +15687,7 @@ DIN A3, landscape with location and doc. field</description>
 </net>
 <net name="D" class="0">
 <segment>
-<pinref part="LED1" gate="G$1" pin="D"/>
+<pinref part="7SEG" gate="G$1" pin="D"/>
 <wire x1="106.68" y1="83.82" x2="105.156" y2="83.82" width="0.1524" layer="91"/>
 <label x="104.14" y="83.82" size="1.778" layer="95"/>
 </segment>
@@ -15701,7 +15704,7 @@ DIN A3, landscape with location and doc. field</description>
 <label x="91.44" y="78.74" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="LED1" gate="G$1" pin="C"/>
+<pinref part="7SEG" gate="G$1" pin="C"/>
 <wire x1="106.68" y1="86.36" x2="103.632" y2="86.36" width="0.1524" layer="91"/>
 <label x="104.14" y="86.36" size="1.778" layer="95"/>
 </segment>
@@ -15713,7 +15716,7 @@ DIN A3, landscape with location and doc. field</description>
 <label x="91.44" y="81.28" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="LED1" gate="G$1" pin="DP"/>
+<pinref part="7SEG" gate="G$1" pin="DP"/>
 <wire x1="129.54" y1="76.2" x2="127" y2="76.2" width="0.1524" layer="91"/>
 <label x="127" y="76.2" size="1.778" layer="95"/>
 </segment>
@@ -15757,27 +15760,27 @@ DIN A3, landscape with location and doc. field</description>
 <plain>
 </plain>
 <instances>
-<instance part="BUZZER7" gate="-1" x="134.62" y="-66.04" smashed="yes" rot="R180">
+<instance part="BUZZER8" gate="-1" x="134.62" y="-66.04" smashed="yes" rot="R180">
 <attribute name="NAME" x="133.35" y="-65.151" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="118.11" y="-65.151" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="BUZZER7" gate="-2" x="134.62" y="-73.66" smashed="yes" rot="R180">
+<instance part="BUZZER8" gate="-2" x="134.62" y="-73.66" smashed="yes" rot="R180">
 <attribute name="NAME" x="133.35" y="-72.771" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="118.11" y="-72.771" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="BUZZER7" gate="-3" x="134.62" y="-81.28" smashed="yes" rot="R180">
+<instance part="BUZZER8" gate="-3" x="134.62" y="-81.28" smashed="yes" rot="R180">
 <attribute name="NAME" x="133.35" y="-80.391" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="118.11" y="-80.391" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="BUZZER9" gate="-1" x="134.62" y="-101.6" smashed="yes" rot="R180">
+<instance part="BUZZER1" gate="-1" x="134.62" y="-101.6" smashed="yes" rot="R180">
 <attribute name="NAME" x="133.35" y="-100.711" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="118.11" y="-100.711" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="BUZZER9" gate="-2" x="134.62" y="-109.22" smashed="yes" rot="R180">
+<instance part="BUZZER1" gate="-2" x="134.62" y="-109.22" smashed="yes" rot="R180">
 <attribute name="NAME" x="133.35" y="-108.331" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="118.11" y="-108.331" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="BUZZER9" gate="-3" x="134.62" y="-116.84" smashed="yes" rot="R180">
+<instance part="BUZZER1" gate="-3" x="134.62" y="-116.84" smashed="yes" rot="R180">
 <attribute name="NAME" x="133.35" y="-115.951" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="118.11" y="-115.951" size="1.778" layer="96" rot="R180"/>
 </instance>
@@ -15793,51 +15796,51 @@ DIN A3, landscape with location and doc. field</description>
 <attribute name="NAME" x="133.35" y="-151.511" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="118.11" y="-151.511" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="BUZZER2" gate="-1" x="-68.58" y="-142.24" smashed="yes" rot="R180">
+<instance part="BUZZER6" gate="-1" x="-68.58" y="-142.24" smashed="yes" rot="R180">
 <attribute name="NAME" x="-69.85" y="-141.351" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="-85.09" y="-141.351" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="BUZZER2" gate="-2" x="-68.58" y="-149.86" smashed="yes" rot="R180">
+<instance part="BUZZER6" gate="-2" x="-68.58" y="-149.86" smashed="yes" rot="R180">
 <attribute name="NAME" x="-69.85" y="-148.971" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="-85.09" y="-148.971" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="BUZZER2" gate="-3" x="-68.58" y="-157.48" smashed="yes" rot="R180">
+<instance part="BUZZER6" gate="-3" x="-68.58" y="-157.48" smashed="yes" rot="R180">
 <attribute name="NAME" x="-69.85" y="-156.591" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="-85.09" y="-156.591" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="BUZZER1" gate="-1" x="134.62" y="0" smashed="yes" rot="R180">
+<instance part="BUZZER7" gate="-1" x="134.62" y="0" smashed="yes" rot="R180">
 <attribute name="NAME" x="133.35" y="0.889" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="118.11" y="0.889" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="BUZZER1" gate="-2" x="134.62" y="-7.62" smashed="yes" rot="R180">
+<instance part="BUZZER7" gate="-2" x="134.62" y="-7.62" smashed="yes" rot="R180">
 <attribute name="NAME" x="133.35" y="-6.731" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="118.11" y="-6.731" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="BUZZER1" gate="-3" x="134.62" y="-15.24" smashed="yes" rot="R180">
+<instance part="BUZZER7" gate="-3" x="134.62" y="-15.24" smashed="yes" rot="R180">
 <attribute name="NAME" x="133.35" y="-14.351" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="118.11" y="-14.351" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="BUZZER8" gate="-1" x="134.62" y="-33.02" smashed="yes" rot="R180">
+<instance part="BUZZER9" gate="-1" x="134.62" y="-33.02" smashed="yes" rot="R180">
 <attribute name="NAME" x="133.35" y="-32.131" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="118.11" y="-32.131" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="BUZZER8" gate="-2" x="134.62" y="-40.64" smashed="yes" rot="R180">
+<instance part="BUZZER9" gate="-2" x="134.62" y="-40.64" smashed="yes" rot="R180">
 <attribute name="NAME" x="133.35" y="-39.751" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="118.11" y="-39.751" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="BUZZER8" gate="-3" x="134.62" y="-48.26" smashed="yes" rot="R180">
+<instance part="BUZZER9" gate="-3" x="134.62" y="-48.26" smashed="yes" rot="R180">
 <attribute name="NAME" x="133.35" y="-47.371" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="118.11" y="-47.371" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="BUZZER5" gate="-1" x="-68.58" y="-38.1" smashed="yes" rot="R180">
+<instance part="BUZZER3" gate="-1" x="-68.58" y="-38.1" smashed="yes" rot="R180">
 <attribute name="NAME" x="-69.85" y="-37.211" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="-85.09" y="-37.211" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="BUZZER5" gate="-2" x="-68.58" y="-45.72" smashed="yes" rot="R180">
+<instance part="BUZZER3" gate="-2" x="-68.58" y="-45.72" smashed="yes" rot="R180">
 <attribute name="NAME" x="-69.85" y="-44.831" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="-85.09" y="-44.831" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="BUZZER5" gate="-3" x="-68.58" y="-53.34" smashed="yes" rot="R180">
+<instance part="BUZZER3" gate="-3" x="-68.58" y="-53.34" smashed="yes" rot="R180">
 <attribute name="NAME" x="-69.85" y="-52.451" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="-85.09" y="-52.451" size="1.778" layer="96" rot="R180"/>
 </instance>
@@ -15853,27 +15856,27 @@ DIN A3, landscape with location and doc. field</description>
 <attribute name="NAME" x="-69.85" y="-85.471" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="-85.09" y="-85.471" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="BUZZER3" gate="-1" x="-68.58" y="-106.68" smashed="yes" rot="R180">
+<instance part="BUZZER5" gate="-1" x="-68.58" y="-106.68" smashed="yes" rot="R180">
 <attribute name="NAME" x="-69.85" y="-105.791" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="-85.09" y="-105.791" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="BUZZER3" gate="-2" x="-68.58" y="-114.3" smashed="yes" rot="R180">
+<instance part="BUZZER5" gate="-2" x="-68.58" y="-114.3" smashed="yes" rot="R180">
 <attribute name="NAME" x="-69.85" y="-113.411" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="-85.09" y="-113.411" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="BUZZER3" gate="-3" x="-68.58" y="-121.92" smashed="yes" rot="R180">
+<instance part="BUZZER5" gate="-3" x="-68.58" y="-121.92" smashed="yes" rot="R180">
 <attribute name="NAME" x="-69.85" y="-121.031" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="-85.09" y="-121.031" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="BUZZER6" gate="-1" x="-68.58" y="-5.08" smashed="yes" rot="R180">
+<instance part="BUZZER2" gate="-1" x="-68.58" y="-5.08" smashed="yes" rot="R180">
 <attribute name="NAME" x="-69.85" y="-4.191" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="-85.09" y="-4.191" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="BUZZER6" gate="-2" x="-68.58" y="-12.7" smashed="yes" rot="R180">
+<instance part="BUZZER2" gate="-2" x="-68.58" y="-12.7" smashed="yes" rot="R180">
 <attribute name="NAME" x="-69.85" y="-11.811" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="-85.09" y="-11.811" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="BUZZER6" gate="-3" x="-68.58" y="-20.32" smashed="yes" rot="R180">
+<instance part="BUZZER2" gate="-3" x="-68.58" y="-20.32" smashed="yes" rot="R180">
 <attribute name="NAME" x="-69.85" y="-19.431" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="-85.09" y="-19.431" size="1.778" layer="96" rot="R180"/>
 </instance>
@@ -16419,33 +16422,33 @@ DIN A3, landscape with location and doc. field</description>
 <pinref part="GND26" gate="1" pin="GND"/>
 </segment>
 <segment>
-<pinref part="BUZZER9" gate="-1" pin="K"/>
+<pinref part="BUZZER1" gate="-1" pin="K"/>
 <wire x1="137.16" y1="-101.6" x2="147.32" y2="-101.6" width="0.1524" layer="91"/>
 <pinref part="GND27" gate="1" pin="GND"/>
 </segment>
 <segment>
-<pinref part="BUZZER7" gate="-1" pin="K"/>
+<pinref part="BUZZER8" gate="-1" pin="K"/>
 <wire x1="137.16" y1="-66.04" x2="147.32" y2="-66.04" width="0.1524" layer="91"/>
 <pinref part="GND28" gate="1" pin="GND"/>
 </segment>
 <segment>
-<pinref part="BUZZER8" gate="-1" pin="K"/>
+<pinref part="BUZZER9" gate="-1" pin="K"/>
 <wire x1="137.16" y1="-33.02" x2="147.32" y2="-33.02" width="0.1524" layer="91"/>
 <pinref part="GND29" gate="1" pin="GND"/>
 </segment>
 <segment>
-<pinref part="BUZZER1" gate="-1" pin="K"/>
+<pinref part="BUZZER7" gate="-1" pin="K"/>
 <wire x1="137.16" y1="0" x2="147.32" y2="0" width="0.1524" layer="91"/>
 <pinref part="GND30" gate="1" pin="GND"/>
 </segment>
 <segment>
 <pinref part="GND31" gate="1" pin="GND"/>
-<pinref part="BUZZER2" gate="-1" pin="K"/>
+<pinref part="BUZZER6" gate="-1" pin="K"/>
 <wire x1="-66.04" y1="-142.24" x2="-55.88" y2="-142.24" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="GND32" gate="1" pin="GND"/>
-<pinref part="BUZZER3" gate="-1" pin="K"/>
+<pinref part="BUZZER5" gate="-1" pin="K"/>
 <wire x1="-66.04" y1="-106.68" x2="-55.88" y2="-106.68" width="0.1524" layer="91"/>
 </segment>
 <segment>
@@ -16455,11 +16458,11 @@ DIN A3, landscape with location and doc. field</description>
 </segment>
 <segment>
 <pinref part="GND34" gate="1" pin="GND"/>
-<pinref part="BUZZER5" gate="-1" pin="K"/>
+<pinref part="BUZZER3" gate="-1" pin="K"/>
 <wire x1="-66.04" y1="-38.1" x2="-55.88" y2="-38.1" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="BUZZER6" gate="-1" pin="K"/>
+<pinref part="BUZZER2" gate="-1" pin="K"/>
 <wire x1="-66.04" y1="-5.08" x2="-55.88" y2="-5.08" width="0.1524" layer="91"/>
 <pinref part="GND35" gate="1" pin="GND"/>
 </segment>
@@ -16717,14 +16720,14 @@ DIN A3, landscape with location and doc. field</description>
 </net>
 <net name="N$45" class="0">
 <segment>
-<pinref part="BUZZER3" gate="-2" pin="K"/>
+<pinref part="BUZZER5" gate="-2" pin="K"/>
 <pinref part="R11" gate="G$1" pin="1"/>
 <wire x1="-66.04" y1="-114.3" x2="-50.8" y2="-114.3" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$46" class="0">
 <segment>
-<pinref part="BUZZER2" gate="-2" pin="K"/>
+<pinref part="BUZZER6" gate="-2" pin="K"/>
 <pinref part="R14" gate="G$1" pin="1"/>
 <wire x1="-66.04" y1="-149.86" x2="-50.8" y2="-149.86" width="0.1524" layer="91"/>
 </segment>
@@ -16733,7 +16736,7 @@ DIN A3, landscape with location and doc. field</description>
 <segment>
 <pinref part="R4" gate="G$1" pin="1"/>
 <wire x1="-50.8" y1="-45.72" x2="-55.88" y2="-45.72" width="0.1524" layer="91"/>
-<pinref part="BUZZER5" gate="-2" pin="K"/>
+<pinref part="BUZZER3" gate="-2" pin="K"/>
 <wire x1="-66.04" y1="-45.72" x2="-50.8" y2="-45.72" width="0.1524" layer="91"/>
 <junction x="-50.8" y="-45.72"/>
 </segment>
@@ -16747,7 +16750,7 @@ DIN A3, landscape with location and doc. field</description>
 </net>
 <net name="N$38" class="0">
 <segment>
-<pinref part="BUZZER7" gate="-2" pin="K"/>
+<pinref part="BUZZER8" gate="-2" pin="K"/>
 <wire x1="137.16" y1="-73.66" x2="152.4" y2="-73.66" width="0.1524" layer="91"/>
 <pinref part="R22" gate="G$1" pin="1"/>
 </segment>
@@ -16777,7 +16780,7 @@ DIN A3, landscape with location and doc. field</description>
 </net>
 <net name="N$4" class="0">
 <segment>
-<pinref part="BUZZER6" gate="-2" pin="K"/>
+<pinref part="BUZZER2" gate="-2" pin="K"/>
 <pinref part="R1" gate="G$1" pin="1"/>
 <wire x1="-66.04" y1="-12.7" x2="-50.8" y2="-12.7" width="0.1524" layer="91"/>
 </segment>
@@ -16965,21 +16968,21 @@ DIN A3, landscape with location and doc. field</description>
 </net>
 <net name="N$36" class="0">
 <segment>
-<pinref part="BUZZER1" gate="-2" pin="K"/>
+<pinref part="BUZZER7" gate="-2" pin="K"/>
 <pinref part="R10" gate="G$1" pin="1"/>
 <wire x1="137.16" y1="-7.62" x2="152.4" y2="-7.62" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$37" class="0">
 <segment>
-<pinref part="BUZZER8" gate="-2" pin="K"/>
+<pinref part="BUZZER9" gate="-2" pin="K"/>
 <wire x1="137.16" y1="-40.64" x2="152.4" y2="-40.64" width="0.1524" layer="91"/>
 <pinref part="R19" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="N$39" class="0">
 <segment>
-<pinref part="BUZZER9" gate="-2" pin="K"/>
+<pinref part="BUZZER1" gate="-2" pin="K"/>
 <pinref part="R25" gate="G$1" pin="1"/>
 <wire x1="137.16" y1="-109.22" x2="152.4" y2="-109.22" width="0.1524" layer="91"/>
 </segment>
@@ -17168,7 +17171,7 @@ DIN A3, landscape with location and doc. field</description>
 </net>
 <net name="LED0B1" class="0">
 <segment>
-<pinref part="BUZZER6" gate="-3" pin="K"/>
+<pinref part="BUZZER2" gate="-3" pin="K"/>
 <wire x1="-66.04" y1="-20.32" x2="-58.42" y2="-20.32" width="0.1524" layer="91"/>
 <label x="-66.04" y="-20.32" size="1.778" layer="95"/>
 <pinref part="R56" gate="G$1" pin="1"/>
@@ -17179,7 +17182,7 @@ DIN A3, landscape with location and doc. field</description>
 </net>
 <net name="LED0B0" class="0">
 <segment>
-<pinref part="BUZZER5" gate="-3" pin="K"/>
+<pinref part="BUZZER3" gate="-3" pin="K"/>
 <wire x1="-66.04" y1="-53.34" x2="-58.42" y2="-53.34" width="0.1524" layer="91"/>
 <label x="-66.04" y="-53.34" size="1.778" layer="95"/>
 <pinref part="R58" gate="G$1" pin="1"/>
@@ -17201,7 +17204,7 @@ DIN A3, landscape with location and doc. field</description>
 </net>
 <net name="LED0A3" class="0">
 <segment>
-<pinref part="BUZZER3" gate="-3" pin="K"/>
+<pinref part="BUZZER5" gate="-3" pin="K"/>
 <wire x1="-55.88" y1="-121.92" x2="-66.04" y2="-121.92" width="0.1524" layer="91"/>
 <label x="-63.5" y="-121.92" size="1.778" layer="95"/>
 <pinref part="R62" gate="G$1" pin="1"/>
@@ -17212,7 +17215,7 @@ DIN A3, landscape with location and doc. field</description>
 </net>
 <net name="LED0A4" class="0">
 <segment>
-<pinref part="BUZZER2" gate="-3" pin="K"/>
+<pinref part="BUZZER6" gate="-3" pin="K"/>
 <wire x1="-66.04" y1="-157.48" x2="-53.34" y2="-157.48" width="0.1524" layer="91"/>
 <label x="-63.5" y="-157.48" size="1.778" layer="95"/>
 <pinref part="R64" gate="G$1" pin="1"/>
@@ -17223,7 +17226,7 @@ DIN A3, landscape with location and doc. field</description>
 </net>
 <net name="LED1A5" class="0">
 <segment>
-<pinref part="BUZZER1" gate="-3" pin="K"/>
+<pinref part="BUZZER7" gate="-3" pin="K"/>
 <wire x1="147.32" y1="-15.24" x2="137.16" y2="-15.24" width="0.1524" layer="91"/>
 <label x="139.7" y="-15.24" size="1.778" layer="95"/>
 <pinref part="R46" gate="G$1" pin="1"/>
@@ -17234,7 +17237,7 @@ DIN A3, landscape with location and doc. field</description>
 </net>
 <net name="LED1A7" class="0">
 <segment>
-<pinref part="BUZZER8" gate="-3" pin="K"/>
+<pinref part="BUZZER9" gate="-3" pin="K"/>
 <wire x1="147.32" y1="-48.26" x2="137.16" y2="-48.26" width="0.1524" layer="91"/>
 <label x="139.7" y="-48.26" size="1.778" layer="95"/>
 <pinref part="R48" gate="G$1" pin="1"/>
@@ -17246,7 +17249,7 @@ DIN A3, landscape with location and doc. field</description>
 </net>
 <net name="LED1A6" class="0">
 <segment>
-<pinref part="BUZZER7" gate="-3" pin="K"/>
+<pinref part="BUZZER8" gate="-3" pin="K"/>
 <wire x1="137.16" y1="-81.28" x2="147.32" y2="-81.28" width="0.1524" layer="91"/>
 <label x="139.7" y="-81.28" size="1.778" layer="95"/>
 <pinref part="R50" gate="G$1" pin="1"/>
@@ -17257,7 +17260,7 @@ DIN A3, landscape with location and doc. field</description>
 </net>
 <net name="LED1A0" class="0">
 <segment>
-<pinref part="BUZZER9" gate="-3" pin="K"/>
+<pinref part="BUZZER1" gate="-3" pin="K"/>
 <wire x1="137.16" y1="-116.84" x2="147.32" y2="-116.84" width="0.1524" layer="91"/>
 <label x="139.7" y="-116.84" size="1.778" layer="95"/>
 <pinref part="R52" gate="G$1" pin="1"/>
