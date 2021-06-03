@@ -13509,9 +13509,9 @@ Source: http://eshop.phoenixcontact.com .. 1751251.pdf</description>
 <text x="-3.048" y="4.191" size="1.27" layer="22" rot="R90">GND</text>
 <text x="0.635" y="4.191" size="1.27" layer="22" rot="R90">BT</text>
 <text x="3.81" y="4.064" size="1.27" layer="22" rot="R90">LED</text>
-<text x="-3.81" y="-3.81" size="1.27" layer="21" rot="R270">G</text>
-<text x="-0.635" y="-3.81" size="1.27" layer="21" rot="R270">B</text>
-<text x="2.54" y="-3.81" size="1.27" layer="22" rot="R270">L</text>
+<text x="-3.81" y="-3.81" size="0.8128" layer="21" rot="R270">GND</text>
+<text x="-0.635" y="-3.81" size="0.8128" layer="21" rot="R270">BT</text>
+<text x="2.54" y="-3.81" size="0.8128" layer="21" rot="R270">LED</text>
 </package>
 <package name="1751248" urn="urn:adsk.eagle:footprint:9371/1" locally_modified="yes">
 <description>&lt;b&gt;MKDS 1/ 2-3,5&lt;/b&gt; Printklemme&lt;p&gt;
