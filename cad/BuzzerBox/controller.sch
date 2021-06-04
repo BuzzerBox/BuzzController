@@ -14791,14 +14791,14 @@ DIN A3, landscape with location and doc. field</description>
 <part name="D3" library="diode" deviceset="1N4004" device="" package3d_urn="urn:adsk.eagle:package:43336/1" value="1N4002"/>
 <part name="7SEG" library="display-kingbright" library_urn="urn:adsk.eagle:library:213" deviceset="7-SEG_" device="SA10-21" package3d_urn="urn:adsk.eagle:package:13078/1"/>
 <part name="P+2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
-<part name="R35" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="RESISTOR" device="0805" package3d_urn="urn:adsk.eagle:package:39651/1" value=" "/>
-<part name="R36" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="RESISTOR" device="0805" package3d_urn="urn:adsk.eagle:package:39651/1" value=" "/>
-<part name="R37" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="RESISTOR" device="0805" package3d_urn="urn:adsk.eagle:package:39651/1" value=" "/>
-<part name="R38" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="RESISTOR" device="0805" package3d_urn="urn:adsk.eagle:package:39651/1" value=" "/>
-<part name="R39" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="RESISTOR" device="0805" package3d_urn="urn:adsk.eagle:package:39651/1" value=" "/>
-<part name="R40" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="RESISTOR" device="0805" package3d_urn="urn:adsk.eagle:package:39651/1" value=" "/>
-<part name="R41" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="RESISTOR" device="0805" package3d_urn="urn:adsk.eagle:package:39651/1" value=" "/>
-<part name="R42" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="RESISTOR" device="0805" package3d_urn="urn:adsk.eagle:package:39651/1" value=" "/>
+<part name="R35" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="RESISTOR" device="0805" package3d_urn="urn:adsk.eagle:package:39651/1" value="150"/>
+<part name="R36" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="RESISTOR" device="0805" package3d_urn="urn:adsk.eagle:package:39651/1" value="150"/>
+<part name="R37" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="RESISTOR" device="0805" package3d_urn="urn:adsk.eagle:package:39651/1" value="150"/>
+<part name="R38" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="RESISTOR" device="0805" package3d_urn="urn:adsk.eagle:package:39651/1" value="150"/>
+<part name="R39" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="RESISTOR" device="0805" package3d_urn="urn:adsk.eagle:package:39651/1" value="150"/>
+<part name="R40" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="RESISTOR" device="0805" package3d_urn="urn:adsk.eagle:package:39651/1" value="150"/>
+<part name="R41" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="RESISTOR" device="0805" package3d_urn="urn:adsk.eagle:package:39651/1" value="150"/>
+<part name="R42" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="RESISTOR" device="0805" package3d_urn="urn:adsk.eagle:package:39651/1" value="150"/>
 <part name="MCP1" library="microchip" deviceset="MCP23017" device="-E/SO"/>
 <part name="GND24" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="P+7" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
@@ -14992,35 +14992,28 @@ DIN A3, landscape with location and doc. field</description>
 </instance>
 <instance part="R35" gate="G$1" x="81.28" y="91.44" smashed="yes">
 <attribute name="NAME" x="85.852" y="91.948" size="1.778" layer="95" font="vector" align="bottom-center"/>
-<attribute name="VALUE" x="81.28" y="89.916" size="1.778" layer="96" font="vector" align="top-center"/>
+<attribute name="VALUE" x="81.28" y="94.996" size="1.778" layer="96" font="vector" align="top-center"/>
 </instance>
 <instance part="R36" gate="G$1" x="81.28" y="88.9" smashed="yes">
 <attribute name="NAME" x="86.106" y="89.154" size="1.778" layer="95" font="vector" align="bottom-center"/>
-<attribute name="VALUE" x="81.28" y="87.376" size="1.778" layer="96" font="vector" align="top-center"/>
 </instance>
 <instance part="R37" gate="G$1" x="81.28" y="86.36" smashed="yes">
 <attribute name="NAME" x="86.106" y="86.614" size="1.778" layer="95" font="vector" align="bottom-center"/>
-<attribute name="VALUE" x="81.28" y="84.836" size="1.778" layer="96" font="vector" align="top-center"/>
 </instance>
 <instance part="R38" gate="G$1" x="81.28" y="83.82" smashed="yes">
 <attribute name="NAME" x="86.106" y="84.074" size="1.778" layer="95" font="vector" align="bottom-center"/>
-<attribute name="VALUE" x="81.28" y="82.296" size="1.778" layer="96" font="vector" align="top-center"/>
 </instance>
 <instance part="R39" gate="G$1" x="81.28" y="81.28" smashed="yes">
 <attribute name="NAME" x="86.106" y="81.534" size="1.778" layer="95" font="vector" align="bottom-center"/>
-<attribute name="VALUE" x="81.28" y="79.756" size="1.778" layer="96" font="vector" align="top-center"/>
 </instance>
 <instance part="R40" gate="G$1" x="81.28" y="78.74" smashed="yes">
 <attribute name="NAME" x="86.106" y="78.994" size="1.778" layer="95" font="vector" align="bottom-center"/>
-<attribute name="VALUE" x="81.28" y="77.216" size="1.778" layer="96" font="vector" align="top-center"/>
 </instance>
 <instance part="R41" gate="G$1" x="81.28" y="76.2" smashed="yes">
 <attribute name="NAME" x="86.106" y="76.454" size="1.778" layer="95" font="vector" align="bottom-center"/>
-<attribute name="VALUE" x="81.28" y="74.676" size="1.778" layer="96" font="vector" align="top-center"/>
 </instance>
 <instance part="R42" gate="G$1" x="81.28" y="73.66" smashed="yes">
 <attribute name="NAME" x="86.106" y="73.914" size="1.778" layer="95" font="vector" align="bottom-center"/>
-<attribute name="VALUE" x="78.74" y="72.136" size="1.778" layer="96" font="vector" align="top-center"/>
 </instance>
 <instance part="MCP1" gate="G$1" x="50.8" y="71.12" smashed="yes">
 <attribute name="NAME" x="38.1" y="99.06" size="1.27" layer="95" font="vector"/>
