@@ -30,9 +30,9 @@
 <layer number="20" name="Dimension" color="24" fill="1" visible="yes" active="yes"/>
 <layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="yes"/>
+<layer number="23" name="tOrigins" color="15" fill="1" visible="no" active="yes"/>
 <layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="yes"/>
-<layer number="25" name="tNames" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="no" active="yes"/>
 <layer number="26" name="bNames" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="27" name="tValues" color="7" fill="1" visible="no" active="yes"/>
 <layer number="28" name="bValues" color="7" fill="1" visible="no" active="yes"/>
@@ -46,9 +46,9 @@
 <layer number="36" name="bGlue" color="7" fill="5" visible="no" active="yes"/>
 <layer number="37" name="tTest" color="7" fill="1" visible="no" active="yes"/>
 <layer number="38" name="bTest" color="7" fill="1" visible="no" active="yes"/>
-<layer number="39" name="tKeepout" color="4" fill="11" visible="yes" active="yes"/>
+<layer number="39" name="tKeepout" color="4" fill="11" visible="no" active="yes"/>
 <layer number="40" name="bKeepout" color="1" fill="11" visible="yes" active="yes"/>
-<layer number="41" name="tRestrict" color="4" fill="10" visible="yes" active="yes"/>
+<layer number="41" name="tRestrict" color="4" fill="10" visible="no" active="yes"/>
 <layer number="42" name="bRestrict" color="1" fill="10" visible="yes" active="yes"/>
 <layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="yes"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
@@ -58,7 +58,7 @@
 <layer number="48" name="Document" color="7" fill="1" visible="no" active="yes"/>
 <layer number="49" name="Reference" color="7" fill="1" visible="no" active="yes"/>
 <layer number="50" name="dxf" color="7" fill="1" visible="no" active="no"/>
-<layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="51" name="tDocu" color="7" fill="1" visible="no" active="yes"/>
 <layer number="52" name="bDocu" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="53" name="tGND_GNDA" color="7" fill="9" visible="no" active="no"/>
 <layer number="54" name="bGND_GNDA" color="1" fill="9" visible="no" active="no"/>
@@ -1347,6 +1347,22 @@ grid 7.5 mm, outline 5.2 x 10.6 mm</description>
 <rectangle x1="0.3556" y1="-0.7239" x2="1.1057" y2="0.7262" layer="51"/>
 <rectangle x1="-0.1001" y1="-0.4001" x2="0.1001" y2="0.4001" layer="35"/>
 </package>
+<package name="R2512" urn="urn:adsk.eagle:footprint:23055/1" library_version="11">
+<description>&lt;b&gt;RESISTOR&lt;/b&gt;</description>
+<wire x1="-2.362" y1="1.473" x2="2.387" y2="1.473" width="0.1524" layer="51"/>
+<wire x1="-2.362" y1="-1.473" x2="2.387" y2="-1.473" width="0.1524" layer="51"/>
+<wire x1="-3.973" y1="1.983" x2="3.973" y2="1.983" width="0.0508" layer="39"/>
+<wire x1="3.973" y1="1.983" x2="3.973" y2="-1.983" width="0.0508" layer="39"/>
+<wire x1="3.973" y1="-1.983" x2="-3.973" y2="-1.983" width="0.0508" layer="39"/>
+<wire x1="-3.973" y1="-1.983" x2="-3.973" y2="1.983" width="0.0508" layer="39"/>
+<smd name="1" x="-2.8" y="0" dx="1.8" dy="3.2" layer="1"/>
+<smd name="2" x="2.8" y="0" dx="1.8" dy="3.2" layer="1"/>
+<text x="-2.54" y="1.905" size="1.27" layer="25">&gt;NAME</text>
+<text x="-2.54" y="-3.175" size="1.27" layer="27">&gt;VALUE</text>
+<rectangle x1="-3.2004" y1="-1.5494" x2="-2.3505" y2="1.5507" layer="51"/>
+<rectangle x1="2.3622" y1="-1.5494" x2="3.2121" y2="1.5507" layer="51"/>
+<rectangle x1="-0.5001" y1="-1" x2="0.5001" y2="1" layer="35"/>
+</package>
 </packages>
 <packages3d>
 <package3d name="C075-052X106" urn="urn:adsk.eagle:package:23650/1" type="box" library_version="11">
@@ -1360,6 +1376,12 @@ grid 7.5 mm, outline 5.2 x 10.6 mm</description>
 <description>CAPACITOR</description>
 <packageinstances>
 <packageinstance name="C0805"/>
+</packageinstances>
+</package3d>
+<package3d name="R2512" urn="urn:adsk.eagle:package:23545/2" type="model" library_version="11">
+<description>RESISTOR</description>
+<packageinstances>
+<packageinstance name="R2512"/>
 </packageinstances>
 </package3d>
 </packages3d>
@@ -4033,10 +4055,10 @@ Source: http://eshop.phoenixcontact.com .. 1751248.pdf</description>
 <attribute name="PROD_ID" value=" " x="31.242" y="87.63" size="1.778" layer="27" display="off"/>
 <attribute name="VALUE" x="31.242" y="86.741" size="0.6096" layer="27" font="vector" ratio="20" align="top-center"/>
 </element>
-<element name="R46" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" package="0805" package3d_urn="urn:adsk.eagle:package:39651/1" value="50" x="27.94" y="86.36" smashed="yes" rot="R270">
-<attribute name="NAME" x="27.94" y="84.074" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center"/>
-<attribute name="PROD_ID" value=" " x="27.94" y="86.36" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="VALUE" x="27.051" y="86.36" size="0.6096" layer="27" font="vector" ratio="20" rot="R270" align="top-center"/>
+<element name="R46" library="rcl" library_urn="urn:adsk.eagle:library:334" package="R2512" package3d_urn="urn:adsk.eagle:package:23545/2" value="50" x="24.13" y="86.995" smashed="yes" rot="MR180">
+<attribute name="NAME" x="26.416" y="86.995" size="0.6096" layer="26" font="vector" ratio="20" rot="MR270" align="bottom-center"/>
+<attribute name="POPULARITY" value="0" x="24.13" y="86.995" size="1.778" layer="28" rot="MR180" display="off"/>
+<attribute name="SPICEPREFIX" value="R" x="24.13" y="86.995" size="1.778" layer="28" rot="MR180" display="off"/>
 </element>
 <element name="T2" library="transistor" library_urn="urn:adsk.eagle:library:402" package="SOT23" package3d_urn="urn:adsk.eagle:package:28738/2" value="BC849" x="59.055" y="81.28" smashed="yes" rot="R90">
 <attribute name="NAME" x="62.865" y="80.01" size="1.27" layer="25" rot="R90"/>
@@ -4048,10 +4070,10 @@ Source: http://eshop.phoenixcontact.com .. 1751248.pdf</description>
 <attribute name="PROD_ID" value=" " x="59.69" y="78.74" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="VALUE" x="59.69" y="79.629" size="0.6096" layer="27" font="vector" ratio="20" rot="R180" align="top-center"/>
 </element>
-<element name="R48" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" package="0805" package3d_urn="urn:adsk.eagle:package:39651/1" value="50" x="59.055" y="83.82" smashed="yes">
-<attribute name="NAME" x="59.055" y="84.709" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center"/>
-<attribute name="PROD_ID" value=" " x="55.88" y="80.01" size="1.778" layer="27" display="off"/>
-<attribute name="VALUE" x="59.055" y="82.931" size="0.6096" layer="27" font="vector" ratio="20" align="top-center"/>
+<element name="R48" library="rcl" library_urn="urn:adsk.eagle:library:334" package="R2512" package3d_urn="urn:adsk.eagle:package:23545/2" value="50" x="65.405" y="90.805" smashed="yes" rot="MR180">
+<attribute name="NAME" x="65.405" y="89.916" size="0.6096" layer="26" font="vector" ratio="20" rot="MR180" align="bottom-center"/>
+<attribute name="POPULARITY" value="0" x="65.405" y="90.805" size="1.778" layer="28" rot="MR180" display="off"/>
+<attribute name="SPICEPREFIX" value="R" x="65.405" y="90.805" size="1.778" layer="28" rot="MR180" display="off"/>
 </element>
 <element name="T3" library="transistor" library_urn="urn:adsk.eagle:library:402" package="SOT23" package3d_urn="urn:adsk.eagle:package:28738/2" value="BC849" x="60.325" y="90.805" smashed="yes" rot="R90">
 <attribute name="NAME" x="64.77" y="91.44" size="1.27" layer="25" rot="R180"/>
@@ -4063,10 +4085,10 @@ Source: http://eshop.phoenixcontact.com .. 1751248.pdf</description>
 <attribute name="PROD_ID" value=" " x="60.325" y="86.995" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="VALUE" x="60.325" y="87.884" size="0.6096" layer="27" font="vector" ratio="20" rot="R180" align="top-center"/>
 </element>
-<element name="R50" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" package="0805" package3d_urn="urn:adsk.eagle:package:39651/1" value="50" x="59.69" y="94.615" smashed="yes">
-<attribute name="NAME" x="59.69" y="95.504" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center"/>
-<attribute name="PROD_ID" value=" " x="56.515" y="90.805" size="1.778" layer="27" display="off"/>
-<attribute name="VALUE" x="59.69" y="93.726" size="0.6096" layer="27" font="vector" ratio="20" align="top-center"/>
+<element name="R50" library="rcl" library_urn="urn:adsk.eagle:library:334" package="R2512" package3d_urn="urn:adsk.eagle:package:23545/2" value="50" x="65.405" y="95.885" smashed="yes" rot="MR0">
+<attribute name="NAME" x="65.405" y="96.774" size="0.6096" layer="26" font="vector" ratio="20" rot="MR0" align="bottom-center"/>
+<attribute name="POPULARITY" value="0" x="65.405" y="95.885" size="1.778" layer="28" rot="MR0" display="off"/>
+<attribute name="SPICEPREFIX" value="R" x="65.405" y="95.885" size="1.778" layer="28" rot="MR0" display="off"/>
 </element>
 <element name="T4" library="transistor" library_urn="urn:adsk.eagle:library:402" package="SOT23" package3d_urn="urn:adsk.eagle:package:28738/2" value="BC849" x="46.355" y="15.875" smashed="yes" rot="R90">
 <attribute name="NAME" x="50.165" y="15.24" size="1.27" layer="25" rot="R90"/>
@@ -4078,10 +4100,10 @@ Source: http://eshop.phoenixcontact.com .. 1751248.pdf</description>
 <attribute name="PROD_ID" value=" " x="37.465" y="12.7" size="1.778" layer="27" display="off"/>
 <attribute name="VALUE" x="43.815" y="11.811" size="0.6096" layer="27" font="vector" ratio="20" align="top-center"/>
 </element>
-<element name="R52" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" package="0805" package3d_urn="urn:adsk.eagle:package:39651/1" value="50" x="45.72" y="19.05" smashed="yes">
-<attribute name="NAME" x="45.72" y="19.939" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center"/>
-<attribute name="PROD_ID" value=" " x="36.195" y="15.24" size="1.778" layer="27" display="off"/>
-<attribute name="VALUE" x="45.72" y="18.161" size="0.6096" layer="27" font="vector" ratio="20" align="top-center"/>
+<element name="R52" library="rcl" library_urn="urn:adsk.eagle:library:334" package="R2512" package3d_urn="urn:adsk.eagle:package:23545/2" value="50" x="64.77" y="5.08" smashed="yes" rot="MR180">
+<attribute name="NAME" x="64.77" y="4.191" size="0.6096" layer="26" font="vector" ratio="20" rot="MR180" align="bottom-center"/>
+<attribute name="POPULARITY" value="0" x="64.77" y="5.08" size="1.778" layer="28" rot="MR180" display="off"/>
+<attribute name="SPICEPREFIX" value="R" x="64.77" y="5.08" size="1.778" layer="28" rot="MR180" display="off"/>
 </element>
 <element name="T5" library="transistor" library_urn="urn:adsk.eagle:library:402" package="SOT23" package3d_urn="urn:adsk.eagle:package:28738/2" value="BC849" x="56.515" y="12.7" smashed="yes" rot="R180">
 <attribute name="NAME" x="57.785" y="15.875" size="1.27" layer="25" rot="R180"/>
@@ -4093,10 +4115,10 @@ Source: http://eshop.phoenixcontact.com .. 1751248.pdf</description>
 <attribute name="PROD_ID" value=" " x="60.96" y="22.225" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="VALUE" x="60.96" y="15.494" size="0.6096" layer="27" font="vector" ratio="20" rot="R180" align="top-center"/>
 </element>
-<element name="R54" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" package="0805" package3d_urn="urn:adsk.eagle:package:39651/1" value="50" x="55.88" y="17.272" smashed="yes">
-<attribute name="NAME" x="55.88" y="18.161" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center"/>
-<attribute name="PROD_ID" value=" " x="52.705" y="5.842" size="1.778" layer="27" display="off"/>
-<attribute name="VALUE" x="55.88" y="16.383" size="0.6096" layer="27" font="vector" ratio="20" align="top-center"/>
+<element name="R54" library="rcl" library_urn="urn:adsk.eagle:library:334" package="R2512" package3d_urn="urn:adsk.eagle:package:23545/2" value="50" x="64.77" y="9.398" smashed="yes" rot="MR180">
+<attribute name="NAME" x="64.77" y="8.509" size="0.6096" layer="26" font="vector" ratio="20" rot="MR180" align="bottom-center"/>
+<attribute name="POPULARITY" value="0" x="64.77" y="9.398" size="1.778" layer="28" rot="MR180" display="off"/>
+<attribute name="SPICEPREFIX" value="R" x="64.77" y="9.398" size="1.778" layer="28" rot="MR180" display="off"/>
 </element>
 <element name="T6" library="transistor" library_urn="urn:adsk.eagle:library:402" package="SOT23" package3d_urn="urn:adsk.eagle:package:28738/2" value="BC849" x="20.955" y="15.24" smashed="yes" rot="R180">
 <attribute name="NAME" x="24.765" y="17.145" size="1.27" layer="25" rot="R180"/>
@@ -4108,10 +4130,10 @@ Source: http://eshop.phoenixcontact.com .. 1751248.pdf</description>
 <attribute name="PROD_ID" value=" " x="19.05" y="8.89" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="VALUE" x="27.559" y="15.24" size="0.6096" layer="27" font="vector" ratio="20" rot="R90" align="top-center"/>
 </element>
-<element name="R56" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" package="0805" package3d_urn="urn:adsk.eagle:package:39651/1" value="50" x="17.78" y="15.24" smashed="yes" rot="R90">
-<attribute name="NAME" x="17.78" y="17.526" size="0.6096" layer="25" font="vector" ratio="20" rot="R180" align="bottom-center"/>
-<attribute name="PROD_ID" value=" " x="13.97" y="5.715" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="VALUE" x="18.669" y="15.24" size="0.6096" layer="27" font="vector" ratio="20" rot="R90" align="top-center"/>
+<element name="R56" library="rcl" library_urn="urn:adsk.eagle:library:334" package="R2512" package3d_urn="urn:adsk.eagle:package:23545/2" value="50" x="8.255" y="12.7" smashed="yes" rot="MR180">
+<attribute name="NAME" x="10.541" y="12.7" size="0.6096" layer="26" font="vector" ratio="20" rot="MR270" align="bottom-center"/>
+<attribute name="POPULARITY" value="0" x="8.255" y="12.7" size="1.778" layer="28" rot="MR180" display="off"/>
+<attribute name="SPICEPREFIX" value="R" x="8.255" y="12.7" size="1.778" layer="28" rot="MR180" display="off"/>
 </element>
 <element name="T7" library="transistor" library_urn="urn:adsk.eagle:library:402" package="SOT23" package3d_urn="urn:adsk.eagle:package:28738/2" value="BC849" x="8.255" y="15.24" smashed="yes" rot="R90">
 <attribute name="NAME" x="5.715" y="14.605" size="1.27" layer="25" rot="R90"/>
@@ -4123,10 +4145,10 @@ Source: http://eshop.phoenixcontact.com .. 1751248.pdf</description>
 <attribute name="PROD_ID" value=" " x="20.955" y="19.685" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="VALUE" x="8.255" y="12.954" size="0.6096" layer="27" font="vector" ratio="20" rot="R180" align="top-center"/>
 </element>
-<element name="R58" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" package="0805" package3d_urn="urn:adsk.eagle:package:39651/1" value="50" x="8.255" y="18.415" smashed="yes">
-<attribute name="NAME" x="8.255" y="19.304" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center"/>
-<attribute name="PROD_ID" value=" " x="-7.62" y="6.985" size="1.778" layer="27" display="off"/>
-<attribute name="VALUE" x="8.255" y="17.526" size="0.6096" layer="27" font="vector" ratio="20" align="top-center"/>
+<element name="R58" library="rcl" library_urn="urn:adsk.eagle:library:334" package="R2512" package3d_urn="urn:adsk.eagle:package:23545/2" value="50" x="8.255" y="17.145" smashed="yes" rot="MR180">
+<attribute name="NAME" x="8.255" y="16.256" size="0.6096" layer="26" font="vector" ratio="20" rot="MR180" align="bottom-center"/>
+<attribute name="POPULARITY" value="0" x="8.255" y="17.145" size="1.778" layer="28" rot="MR180" display="off"/>
+<attribute name="SPICEPREFIX" value="R" x="8.255" y="17.145" size="1.778" layer="28" rot="MR180" display="off"/>
 </element>
 <element name="T8" library="transistor" library_urn="urn:adsk.eagle:library:402" package="SOT23" package3d_urn="urn:adsk.eagle:package:28738/2" value="BC849" x="12.065" y="94.615" smashed="yes" rot="R270">
 <attribute name="NAME" x="8.636" y="95.504" size="1.27" layer="25" rot="R270"/>
@@ -4138,10 +4160,10 @@ Source: http://eshop.phoenixcontact.com .. 1751248.pdf</description>
 <attribute name="PROD_ID" value=" " x="12.065" y="113.03" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="VALUE" x="12.065" y="98.679" size="0.6096" layer="27" font="vector" ratio="20" rot="R180" align="top-center"/>
 </element>
-<element name="R60" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" package="0805" package3d_urn="urn:adsk.eagle:package:39651/1" value="50" x="12.065" y="91.44" smashed="yes">
-<attribute name="NAME" x="12.065" y="92.329" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center"/>
-<attribute name="PROD_ID" value=" " x="8.89" y="72.39" size="1.778" layer="27" display="off"/>
-<attribute name="VALUE" x="12.065" y="90.551" size="0.6096" layer="27" font="vector" ratio="20" align="top-center"/>
+<element name="R60" library="rcl" library_urn="urn:adsk.eagle:library:334" package="R2512" package3d_urn="urn:adsk.eagle:package:23545/2" value="50" x="6.35" y="89.535" smashed="yes" rot="MR180">
+<attribute name="NAME" x="6.35" y="87.376" size="0.6096" layer="26" font="vector" ratio="20" rot="MR180" align="bottom-center"/>
+<attribute name="POPULARITY" value="0" x="6.35" y="89.535" size="1.778" layer="28" rot="MR180" display="off"/>
+<attribute name="SPICEPREFIX" value="R" x="6.35" y="89.535" size="1.778" layer="28" rot="MR180" display="off"/>
 </element>
 <element name="T9" library="transistor" library_urn="urn:adsk.eagle:library:402" package="SOT23" package3d_urn="urn:adsk.eagle:package:28738/2" value="BC849" x="6.985" y="84.455" smashed="yes" rot="R270">
 <attribute name="NAME" x="3.81" y="85.725" size="1.27" layer="25" rot="R270"/>
@@ -4153,10 +4175,10 @@ Source: http://eshop.phoenixcontact.com .. 1751248.pdf</description>
 <attribute name="PROD_ID" value=" " x="13.335" y="118.11" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="VALUE" x="6.985" y="88.519" size="0.6096" layer="27" font="vector" ratio="20" rot="R180" align="top-center"/>
 </element>
-<element name="R62" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" package="0805" package3d_urn="urn:adsk.eagle:package:39651/1" value="50" x="6.35" y="81.28" smashed="yes">
-<attribute name="NAME" x="6.35" y="82.169" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center"/>
-<attribute name="PROD_ID" value=" " x="-3.175" y="46.99" size="1.778" layer="27" display="off"/>
-<attribute name="VALUE" x="6.35" y="80.391" size="0.6096" layer="27" font="vector" ratio="20" align="top-center"/>
+<element name="R62" library="rcl" library_urn="urn:adsk.eagle:library:334" package="R2512" package3d_urn="urn:adsk.eagle:package:23545/2" value="50" x="6.35" y="80.645" smashed="yes" rot="MR180">
+<attribute name="NAME" x="6.35" y="79.756" size="0.6096" layer="26" font="vector" ratio="20" rot="MR180" align="bottom-center"/>
+<attribute name="POPULARITY" value="0" x="6.35" y="80.645" size="1.778" layer="28" rot="MR180" display="off"/>
+<attribute name="SPICEPREFIX" value="R" x="6.35" y="80.645" size="1.778" layer="28" rot="MR180" display="off"/>
 </element>
 <element name="T10" library="transistor" library_urn="urn:adsk.eagle:library:402" package="SOT23" package3d_urn="urn:adsk.eagle:package:28738/2" value="BC849" x="11.43" y="84.455" smashed="yes" rot="R270">
 <attribute name="NAME" x="13.335" y="86.36" size="1.27" layer="25" rot="R270"/>
@@ -4168,10 +4190,10 @@ Source: http://eshop.phoenixcontact.com .. 1751248.pdf</description>
 <attribute name="PROD_ID" value=" " x="24.13" y="133.35" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="VALUE" x="11.43" y="88.519" size="0.6096" layer="27" font="vector" ratio="20" rot="R180" align="top-center"/>
 </element>
-<element name="R64" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" package="0805" package3d_urn="urn:adsk.eagle:package:39651/1" value="50" x="11.43" y="81.28" smashed="yes">
-<attribute name="NAME" x="11.43" y="82.169" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center"/>
-<attribute name="PROD_ID" value=" " x="-4.445" y="31.75" size="1.778" layer="27" display="off"/>
-<attribute name="VALUE" x="11.43" y="80.391" size="0.6096" layer="27" font="vector" ratio="20" align="top-center"/>
+<element name="R64" library="rcl" library_urn="urn:adsk.eagle:library:334" package="R2512" package3d_urn="urn:adsk.eagle:package:23545/2" value="50" x="6.35" y="85.09" smashed="yes" rot="MR180">
+<attribute name="NAME" x="6.35" y="84.201" size="0.6096" layer="26" font="vector" ratio="20" rot="MR180" align="bottom-center"/>
+<attribute name="POPULARITY" value="0" x="6.35" y="85.09" size="1.778" layer="28" rot="MR180" display="off"/>
+<attribute name="SPICEPREFIX" value="R" x="6.35" y="85.09" size="1.778" layer="28" rot="MR180" display="off"/>
 </element>
 <element name="JP1" library="jumper" library_urn="urn:adsk.eagle:library:252" package="JP2" package3d_urn="urn:adsk.eagle:package:15452/1" value="" x="89.89" y="20.54" smashed="yes" rot="R270">
 <attribute name="NAME" x="92.176" y="24.096" size="1.27" layer="25" ratio="10" rot="R270"/>
@@ -4489,8 +4511,6 @@ Source: http://eshop.phoenixcontact.com .. 1751248.pdf</description>
 <wire x1="71.12" y1="28.575" x2="59.69" y2="28.575" width="0.8128" layer="16"/>
 <wire x1="59.69" y1="28.575" x2="58.42" y2="27.305" width="0.8128" layer="16"/>
 <wire x1="58.42" y1="27.305" x2="58.42" y2="23.495" width="0.8128" layer="16"/>
-<wire x1="71.12" y1="13.335" x2="71.12" y2="10.16" width="0.8128" layer="16"/>
-<wire x1="71.12" y1="10.16" x2="71.12" y2="2.54" width="0.8128" layer="16"/>
 <wire x1="19.05" y1="62.23" x2="20.3835" y2="60.8965" width="0.8128" layer="16"/>
 <wire x1="21.59" y1="59.69" x2="20.3835" y2="60.8965" width="0.8128" layer="16"/>
 <wire x1="20.3835" y1="60.8965" x2="19.05" y2="59.69" width="0.3048" layer="16"/>
@@ -4574,15 +4594,12 @@ Source: http://eshop.phoenixcontact.com .. 1751248.pdf</description>
 <wire x1="43.815" y1="14.605" x2="45.085" y2="15.875" width="0.3048" layer="1"/>
 <wire x1="45.085" y1="15.875" x2="45.255" y2="15.875" width="0.3048" layer="1"/>
 <wire x1="22.86" y1="83.82" x2="13.97" y2="83.82" width="0.8128" layer="16"/>
-<wire x1="13.97" y1="83.82" x2="9.525" y2="83.82" width="0.8128" layer="16"/>
+<wire x1="13.97" y1="83.82" x2="13.335" y2="83.82" width="0.8128" layer="16"/>
 <wire x1="13.97" y1="83.82" x2="13.97" y2="84.455" width="0.3048" layer="16"/>
 <via x="13.97" y="84.455" extent="1-16" drill="0.35"/>
 <wire x1="13.97" y1="84.455" x2="12.53" y2="84.455" width="0.3048" layer="1"/>
-<wire x1="8.255" y1="83.185" x2="8.89" y2="83.185" width="0.3048" layer="16"/>
-<wire x1="9.525" y1="83.82" x2="8.89" y2="83.185" width="0.3048" layer="16"/>
-<via x="8.255" y="83.185" extent="1-16" drill="0.35"/>
-<wire x1="8.085" y1="84.455" x2="8.255" y2="84.285" width="0.3048" layer="1"/>
-<wire x1="8.255" y1="84.285" x2="8.255" y2="83.185" width="0.3048" layer="1"/>
+<wire x1="13.335" y1="83.82" x2="11.43" y2="81.915" width="0.3048" layer="16"/>
+<via x="11.43" y="81.915" extent="1-16" drill="0.35"/>
 <wire x1="13.165" y1="94.615" x2="13.97" y2="93.81" width="0.3048" layer="1"/>
 <wire x1="13.97" y1="93.81" x2="13.97" y2="92.71" width="0.3048" layer="1"/>
 <via x="13.97" y="92.71" extent="1-16" drill="0.35"/>
@@ -4592,8 +4609,9 @@ Source: http://eshop.phoenixcontact.com .. 1751248.pdf</description>
 <wire x1="24.13" y1="12.7" x2="22.69" y2="14.14" width="0.3048" layer="1"/>
 <wire x1="22.69" y1="14.14" x2="20.955" y2="14.14" width="0.3048" layer="1"/>
 <wire x1="71.12" y1="93.98" x2="70.485" y2="93.345" width="0.3048" layer="16"/>
-<wire x1="70.485" y1="93.345" x2="59.69" y2="93.345" width="0.3048" layer="16"/>
-<via x="59.69" y="93.345" extent="1-16" drill="0.35"/>
+<wire x1="70.485" y1="93.345" x2="61.595" y2="93.345" width="0.3048" layer="16"/>
+<via x="61.595" y="93.345" extent="1-16" drill="0.35"/>
+<wire x1="61.595" y1="93.345" x2="59.69" y2="93.345" width="0.3048" layer="1"/>
 <wire x1="59.69" y1="93.345" x2="59.225" y2="92.88" width="0.3048" layer="1"/>
 <wire x1="59.225" y1="92.88" x2="59.225" y2="90.805" width="0.3048" layer="1"/>
 <wire x1="34.605" y1="81.45" x2="34.925" y2="81.13" width="0.3048" layer="1"/>
@@ -4607,12 +4625,11 @@ Source: http://eshop.phoenixcontact.com .. 1751248.pdf</description>
 <wire x1="69.215" y1="59.69" x2="71.12" y2="61.595" width="0.8128" layer="16"/>
 <wire x1="71.12" y1="61.595" x2="71.12" y2="65.405" width="0.8128" layer="16"/>
 <wire x1="71.12" y1="65.405" x2="71.12" y2="73.66" width="0.8128" layer="16"/>
-<wire x1="71.12" y1="10.16" x2="56.515" y2="10.16" width="0.3048" layer="16"/>
 <via x="56.515" y="10.16" extent="1-16" drill="0.35"/>
 <wire x1="56.515" y1="11.6" x2="56.515" y2="10.16" width="0.3048" layer="1"/>
 <contactref element="JP1" pad="1"/>
 <wire x1="93.98" y1="40.56" x2="93.98" y2="43.1" width="1.27" layer="16"/>
-<wire x1="71.12" y1="13.335" x2="71.12" y2="2.54" width="1.27" layer="16"/>
+<wire x1="71.12" y1="15.24" x2="71.12" y2="2.54" width="1.27" layer="16"/>
 <wire x1="71.12" y1="2.54" x2="71.755" y2="1.905" width="1.27" layer="16"/>
 <wire x1="71.755" y1="1.905" x2="76.835" y2="1.905" width="1.27" layer="16"/>
 <wire x1="76.835" y1="1.905" x2="77.0128" y2="2.0828" width="1.27" layer="16"/>
@@ -4630,7 +4647,6 @@ Source: http://eshop.phoenixcontact.com .. 1751248.pdf</description>
 <wire x1="75.565" y1="16.435" x2="74.37" y2="15.24" width="1.27" layer="1"/>
 <wire x1="74.37" y1="15.24" x2="73.025" y2="15.24" width="1.27" layer="1"/>
 <wire x1="73.025" y1="15.24" x2="71.12" y2="15.24" width="1.27" layer="16"/>
-<wire x1="71.12" y1="15.24" x2="71.12" y2="13.335" width="1.27" layer="16"/>
 <wire x1="71.12" y1="41.275" x2="71.12" y2="40.005" width="1.27" layer="16"/>
 <wire x1="71.12" y1="40.005" x2="71.12" y2="36.83" width="1.27" layer="16"/>
 <wire x1="71.12" y1="36.83" x2="71.12" y2="28.575" width="1.27" layer="16"/>
@@ -4645,6 +4661,12 @@ Source: http://eshop.phoenixcontact.com .. 1751248.pdf</description>
 <wire x1="75.82" y1="65.405" x2="73.025" y2="65.405" width="0.3048" layer="1"/>
 <via x="73.025" y="65.405" extent="1-16" drill="0.35"/>
 <wire x1="73.025" y1="65.405" x2="71.12" y2="65.405" width="0.3048" layer="16"/>
+<wire x1="8.085" y1="84.455" x2="8.255" y2="84.285" width="0.3048" layer="1"/>
+<wire x1="8.255" y1="84.285" x2="8.255" y2="82.55" width="0.3048" layer="1"/>
+<wire x1="8.255" y1="82.55" x2="8.89" y2="81.915" width="0.3048" layer="1"/>
+<wire x1="8.89" y1="81.915" x2="11.43" y2="81.915" width="0.3048" layer="1"/>
+<wire x1="56.515" y1="10.16" x2="56.515" y2="19.674" width="0.3048" layer="16"/>
+<wire x1="56.515" y1="19.674" x2="57.277" y2="20.436" width="0.3048" layer="16"/>
 </signal>
 <signal name="N$45">
 <contactref element="BUZZER5" pad="2"/>
@@ -5316,8 +5338,10 @@ Source: http://eshop.phoenixcontact.com .. 1751248.pdf</description>
 <signal name="N$2">
 <contactref element="T1" pad="2"/>
 <contactref element="R46" pad="2"/>
-<wire x1="30.165" y1="85.555" x2="28.035" y2="85.555" width="0.3048" layer="1"/>
-<wire x1="28.035" y1="85.555" x2="27.94" y2="85.46" width="0.3048" layer="1"/>
+<wire x1="30.165" y1="85.555" x2="28.67" y2="85.555" width="0.3048" layer="1"/>
+<wire x1="26.93" y1="86.995" x2="27.639821875" y2="86.8026" width="0.3048" layer="16"/>
+<wire x1="28.67" y1="85.555" x2="27.639821875" y2="86.8026" width="0.3048" layer="16"/>
+<via x="28.67" y="85.555" extent="1-16" drill="0.35"/>
 </signal>
 <signal name="N$5">
 <contactref element="R47" pad="2"/>
@@ -5328,8 +5352,13 @@ Source: http://eshop.phoenixcontact.com .. 1751248.pdf</description>
 <signal name="N$8">
 <contactref element="T2" pad="2"/>
 <contactref element="R48" pad="2"/>
-<wire x1="59.955" y1="83.82" x2="60.155" y2="83.62" width="0.3048" layer="1"/>
-<wire x1="60.155" y1="83.62" x2="60.155" y2="82.23" width="0.3048" layer="1"/>
+<wire x1="60.155" y1="82.23" x2="60.325" y2="82.4" width="0.3048" layer="1"/>
+<wire x1="60.325" y1="82.4" x2="60.325" y2="83.82" width="0.3048" layer="1"/>
+<via x="60.325" y="83.82" extent="1-16" drill="0.35"/>
+<wire x1="60.325" y1="83.82" x2="63.5" y2="86.995" width="0.3048" layer="16"/>
+<wire x1="63.5" y1="86.995" x2="66.04" y2="86.995" width="0.3048" layer="16"/>
+<wire x1="66.04" y1="86.995" x2="68.205" y2="89.16" width="0.3048" layer="16"/>
+<wire x1="68.205" y1="89.16" x2="68.205" y2="90.805" width="0.3048" layer="16"/>
 </signal>
 <signal name="N$10">
 <contactref element="R49" pad="2"/>
@@ -5340,8 +5369,11 @@ Source: http://eshop.phoenixcontact.com .. 1751248.pdf</description>
 <signal name="N$11">
 <contactref element="T3" pad="2"/>
 <contactref element="R50" pad="2"/>
-<wire x1="61.425" y1="91.755" x2="61.425" y2="93.78" width="0.3048" layer="1"/>
-<wire x1="61.425" y1="93.78" x2="60.59" y2="94.615" width="0.3048" layer="1"/>
+<wire x1="61.425" y1="91.755" x2="61.28" y2="91.755" width="0.3048" layer="1"/>
+<wire x1="61.28" y1="91.755" x2="60.325" y2="92.71" width="0.3048" layer="1"/>
+<via x="60.325" y="92.71" extent="1-16" drill="0.35"/>
+<wire x1="60.325" y1="92.71" x2="60.325" y2="93.605" width="0.3048" layer="16"/>
+<wire x1="60.325" y1="93.605" x2="62.605" y2="95.885" width="0.3048" layer="16"/>
 </signal>
 <signal name="N$14">
 <contactref element="R51" pad="2"/>
@@ -5352,8 +5384,7 @@ Source: http://eshop.phoenixcontact.com .. 1751248.pdf</description>
 <signal name="N$16">
 <contactref element="T4" pad="2"/>
 <contactref element="R52" pad="2"/>
-<wire x1="47.455" y1="16.825" x2="47.455" y2="18.215" width="0.3048" layer="1"/>
-<wire x1="47.455" y1="18.215" x2="46.62" y2="19.05" width="0.3048" layer="1"/>
+<wire x1="47.455" y1="16.825" x2="67.57" y2="5.08" width="0" layer="19" extent="1-16"/>
 </signal>
 <signal name="N$18">
 <contactref element="R53" pad="2"/>
@@ -5364,8 +5395,7 @@ Source: http://eshop.phoenixcontact.com .. 1751248.pdf</description>
 <signal name="N$20">
 <contactref element="T5" pad="2"/>
 <contactref element="R54" pad="2"/>
-<wire x1="56.78" y1="17.272" x2="55.565" y2="16.057" width="0.3048" layer="1"/>
-<wire x1="55.565" y1="16.057" x2="55.565" y2="13.8" width="0.3048" layer="1"/>
+<wire x1="55.565" y1="13.8" x2="67.57" y2="9.398" width="0" layer="19" extent="1-16"/>
 </signal>
 <signal name="N$21">
 <contactref element="R55" pad="2"/>
@@ -5376,8 +5406,11 @@ Source: http://eshop.phoenixcontact.com .. 1751248.pdf</description>
 <signal name="N$22">
 <contactref element="T6" pad="2"/>
 <contactref element="R56" pad="2"/>
-<wire x1="20.005" y1="16.34" x2="17.98" y2="16.34" width="0.3048" layer="1"/>
-<wire x1="17.98" y1="16.34" x2="17.78" y2="16.14" width="0.3048" layer="1"/>
+<wire x1="11.055" y1="12.7" x2="14.865" y2="16.51" width="0.3048" layer="16"/>
+<wire x1="14.865" y1="16.51" x2="17.78" y2="16.51" width="0.3048" layer="16"/>
+<via x="17.78" y="16.51" extent="1-16" drill="0.35"/>
+<wire x1="17.78" y1="16.51" x2="19.835" y2="16.51" width="0.3048" layer="1"/>
+<wire x1="19.835" y1="16.51" x2="20.005" y2="16.34" width="0.3048" layer="1"/>
 </signal>
 <signal name="N$24">
 <contactref element="R57" pad="2"/>
@@ -5389,7 +5422,9 @@ Source: http://eshop.phoenixcontact.com .. 1751248.pdf</description>
 <contactref element="T7" pad="2"/>
 <contactref element="R58" pad="2"/>
 <wire x1="9.355" y1="16.19" x2="9.355" y2="18.215" width="0.3048" layer="1"/>
-<wire x1="9.355" y1="18.215" x2="9.155" y2="18.415" width="0.3048" layer="1"/>
+<wire x1="9.355" y1="18.215" x2="10.92911875" y2="18.215" width="0.3048" layer="16"/>
+<wire x1="11.055" y1="17.145" x2="10.92911875" y2="18.215" width="0.3048" layer="16"/>
+<via x="9.355" y="18.215" extent="1-16" drill="0.35"/>
 </signal>
 <signal name="N$26">
 <contactref element="R59" pad="2"/>
@@ -5400,8 +5435,11 @@ Source: http://eshop.phoenixcontact.com .. 1751248.pdf</description>
 <signal name="N$27">
 <contactref element="T8" pad="2"/>
 <contactref element="R60" pad="2"/>
-<wire x1="10.965" y1="93.665" x2="12.965" y2="91.665" width="0.3048" layer="1"/>
-<wire x1="12.965" y1="91.665" x2="12.965" y2="91.44" width="0.3048" layer="1"/>
+<wire x1="10.965" y1="93.665" x2="10.965" y2="91.61" width="0.3048" layer="1"/>
+<wire x1="10.965" y1="91.61" x2="10.795" y2="91.44" width="0.3048" layer="1"/>
+<via x="10.795" y="91.44" extent="1-16" drill="0.35"/>
+<wire x1="10.795" y1="91.44" x2="9.15" y2="89.795" width="0.3048" layer="16"/>
+<wire x1="9.15" y1="89.795" x2="9.15" y2="89.535" width="0.3048" layer="16"/>
 </signal>
 <signal name="N$28">
 <contactref element="R61" pad="2"/>
@@ -5412,8 +5450,11 @@ Source: http://eshop.phoenixcontact.com .. 1751248.pdf</description>
 <signal name="N$29">
 <contactref element="T9" pad="2"/>
 <contactref element="R62" pad="2"/>
-<wire x1="5.885" y1="83.505" x2="7.25" y2="82.14" width="0.3048" layer="1"/>
-<wire x1="7.25" y1="82.14" x2="7.25" y2="81.28" width="0.3048" layer="1"/>
+<wire x1="5.885" y1="83.505" x2="6.35" y2="83.04" width="0.3048" layer="1"/>
+<wire x1="6.35" y1="83.04" x2="6.35" y2="81.28" width="0.3048" layer="1"/>
+<via x="6.35" y="81.28" extent="1-16" drill="0.35"/>
+<wire x1="6.35" y1="81.28" x2="8.515" y2="81.28" width="0.3048" layer="16"/>
+<wire x1="8.515" y1="81.28" x2="9.15" y2="80.645" width="0.3048" layer="16"/>
 </signal>
 <signal name="N$30">
 <contactref element="R63" pad="2"/>
@@ -5424,95 +5465,97 @@ Source: http://eshop.phoenixcontact.com .. 1751248.pdf</description>
 <signal name="N$31">
 <contactref element="T10" pad="2"/>
 <contactref element="R64" pad="2"/>
-<wire x1="10.33" y1="83.505" x2="12.33" y2="81.505" width="0.3048" layer="1"/>
-<wire x1="12.33" y1="81.505" x2="12.33" y2="81.28" width="0.3048" layer="1"/>
+<wire x1="9.15" y1="85.09" x2="10.33" y2="83.505" width="0" layer="19" extent="1-16"/>
 </signal>
 <signal name="LED0B1">
 <contactref element="BUZZER2" pad="3"/>
 <contactref element="R56" pad="1"/>
-<wire x1="17.78" y1="14.34" x2="23.185" y2="8.935" width="0.3048" layer="1"/>
-<wire x1="23.185" y1="8.935" x2="23.185" y2="7.52" width="0.3048" layer="1"/>
+<wire x1="5.455" y1="12.7" x2="5.715" y2="12.44" width="0.3048" layer="16"/>
+<wire x1="5.715" y1="12.44" x2="5.715" y2="10.16" width="0.3048" layer="16"/>
+<wire x1="5.715" y1="10.16" x2="6.35" y2="9.525" width="0.3048" layer="16"/>
+<via x="10.795" y="9.525" extent="1-16" drill="0.35"/>
+<wire x1="10.795" y1="9.525" x2="15.875" y2="4.445" width="0.3048" layer="1"/>
+<wire x1="22.86" y1="4.445" x2="23.495" y2="5.08" width="0.3048" layer="1"/>
+<wire x1="23.495" y1="5.08" x2="23.495" y2="7.21" width="0.3048" layer="1"/>
+<wire x1="23.495" y1="7.21" x2="23.185" y2="7.52" width="0.3048" layer="1"/>
+<wire x1="6.35" y1="9.525" x2="10.795" y2="9.525" width="0.3048" layer="16"/>
+<wire x1="15.875" y1="4.445" x2="22.86" y2="4.445" width="0.3048" layer="1"/>
 </signal>
 <signal name="LED0B0">
 <contactref element="BUZZER3" pad="3"/>
 <contactref element="R58" pad="1"/>
-<wire x1="7.355" y1="18.415" x2="7.355" y2="23.005" width="0.3048" layer="1"/>
-<wire x1="7.355" y1="23.005" x2="7.52" y2="23.17" width="0.3048" layer="1"/>
+<wire x1="7.52" y1="23.17" x2="5.39" y2="23.17" width="0.3048" layer="16"/>
+<wire x1="4.445" y1="22.225" x2="4.445" y2="18.155" width="0.3048" layer="16"/>
+<wire x1="4.445" y1="18.155" x2="5.455" y2="17.145" width="0.3048" layer="16"/>
+<wire x1="5.39" y1="23.17" x2="4.445" y2="22.225" width="0.3048" layer="16"/>
 </signal>
 <signal name="LED0A2">
 <contactref element="BUZZER4" pad="3"/>
 <contactref element="R60" pad="1"/>
-<wire x1="11.165" y1="91.44" x2="9.895" y2="90.17" width="0.3048" layer="1"/>
-<wire x1="6.35" y1="90.17" x2="3.175" y2="86.995" width="0.3048" layer="1"/>
-<wire x1="3.175" y1="39.37" x2="4.445" y2="38.1" width="0.3048" layer="1"/>
-<wire x1="4.445" y1="38.1" x2="7.21" y2="38.1" width="0.3048" layer="1"/>
-<wire x1="7.21" y1="38.1" x2="7.52" y2="38.41" width="0.3048" layer="1"/>
-<wire x1="9.895" y1="90.17" x2="6.35" y2="90.17" width="0.3048" layer="1"/>
-<wire x1="3.175" y1="86.995" x2="3.175" y2="39.37" width="0.3048" layer="1"/>
+<wire x1="3.55" y1="89.535" x2="2.915" y2="88.9" width="0.3048" layer="16"/>
+<wire x1="2.915" y1="88.9" x2="1.905" y2="88.9" width="0.3048" layer="16"/>
+<wire x1="1.905" y1="88.9" x2="1.27" y2="88.265" width="0.3048" layer="16"/>
+<via x="1.27" y="88.265" extent="1-16" drill="0.35"/>
+<wire x1="1.27" y1="88.265" x2="1.27" y2="40.005" width="0.3048" layer="1"/>
+<wire x1="1.27" y1="40.005" x2="2.865" y2="38.41" width="0.3048" layer="1"/>
+<wire x1="2.865" y1="38.41" x2="7.52" y2="38.41" width="0.3048" layer="1"/>
 </signal>
 <signal name="LED0A3">
 <contactref element="BUZZER5" pad="3"/>
 <contactref element="R62" pad="1"/>
-<wire x1="5.45" y1="81.28" x2="5.45" y2="81.015" width="0.3048" layer="1"/>
-<wire x1="5.45" y1="81.015" x2="3.81" y2="79.375" width="0.3048" layer="1"/>
-<wire x1="3.81" y1="79.375" x2="3.81" y2="54.61" width="0.3048" layer="1"/>
-<wire x1="3.81" y1="54.61" x2="5.08" y2="53.34" width="0.3048" layer="1"/>
-<wire x1="5.08" y1="53.34" x2="7.21" y2="53.34" width="0.3048" layer="1"/>
+<wire x1="3.55" y1="80.645" x2="3.55" y2="80.385" width="0.3048" layer="16"/>
+<wire x1="3.55" y1="80.385" x2="1.905" y2="78.74" width="0.3048" layer="16"/>
+<wire x1="1.905" y1="78.74" x2="1.905" y2="78.105" width="0.3048" layer="16"/>
+<via x="1.905" y="78.105" extent="1-16" drill="0.35"/>
+<wire x1="1.905" y1="53.975" x2="2.54" y2="53.34" width="0.3048" layer="1"/>
+<wire x1="2.54" y1="53.34" x2="7.21" y2="53.34" width="0.3048" layer="1"/>
 <wire x1="7.21" y1="53.34" x2="7.52" y2="53.65" width="0.3048" layer="1"/>
+<wire x1="1.905" y1="78.105" x2="1.905" y2="53.975" width="0.3048" layer="1"/>
 </signal>
 <signal name="LED0A4">
 <contactref element="BUZZER6" pad="3"/>
 <contactref element="R64" pad="1"/>
-<wire x1="5.08" y1="69.215" x2="5.08" y2="76.835" width="0.3048" layer="1"/>
-<wire x1="5.08" y1="69.215" x2="5.715" y2="68.58" width="0.3048" layer="1"/>
-<wire x1="5.715" y1="68.58" x2="7.21" y2="68.58" width="0.3048" layer="1"/>
+<wire x1="3.55" y1="85.09" x2="5.08" y2="83.56" width="0.3048" layer="16"/>
+<wire x1="5.08" y1="83.56" x2="5.08" y2="77.47" width="0.3048" layer="16"/>
+<via x="5.08" y="77.47" extent="1-16" drill="0.35"/>
+<wire x1="5.08" y1="77.47" x2="5.08" y2="69.85" width="0.3048" layer="1"/>
+<wire x1="5.08" y1="69.85" x2="6.35" y2="68.58" width="0.3048" layer="1"/>
+<wire x1="6.35" y1="68.58" x2="7.21" y2="68.58" width="0.3048" layer="1"/>
 <wire x1="7.21" y1="68.58" x2="7.52" y2="68.89" width="0.3048" layer="1"/>
-<wire x1="6.35" y1="78.105" x2="5.08" y2="76.835" width="0.3048" layer="1"/>
-<wire x1="10.53" y1="81.28" x2="10.16" y2="80.91" width="0.3048" layer="1"/>
-<wire x1="10.16" y1="80.91" x2="10.16" y2="79.375" width="0.3048" layer="1"/>
-<wire x1="10.16" y1="79.375" x2="8.89" y2="78.105" width="0.3048" layer="1"/>
-<wire x1="8.89" y1="78.105" x2="6.35" y2="78.105" width="0.3048" layer="1"/>
 </signal>
 <signal name="LED1A5">
 <contactref element="BUZZER7" pad="3"/>
 <contactref element="R46" pad="1"/>
-<wire x1="27.94" y1="95.885" x2="27.94" y2="87.26" width="0.3048" layer="1"/>
-<wire x1="18.09" y1="92.81" x2="18.09" y2="95.885" width="0.3048" layer="1"/>
-<wire x1="27.305" y1="96.52" x2="27.94" y2="95.885" width="0.3048" layer="1"/>
-<wire x1="18.09" y1="95.885" x2="18.725" y2="96.52" width="0.3048" layer="1"/>
-<wire x1="18.725" y1="96.52" x2="27.305" y2="96.52" width="0.3048" layer="1"/>
+<wire x1="18.09" y1="92.81" x2="18.09" y2="87.32" width="0.3048" layer="16"/>
+<wire x1="18.415" y1="86.995" x2="21.33" y2="86.995" width="0.3048" layer="16"/>
+<wire x1="18.09" y1="87.32" x2="18.415" y2="86.995" width="0.3048" layer="16"/>
 </signal>
 <signal name="LED1A7">
 <contactref element="BUZZER9" pad="3"/>
 <contactref element="R48" pad="1"/>
-<wire x1="57.785" y1="94.615" x2="57.15" y2="95.25" width="0.3048" layer="1"/>
-<wire x1="57.15" y1="95.25" x2="49.53" y2="95.25" width="0.3048" layer="1"/>
-<wire x1="48.57" y1="94.29" x2="48.57" y2="92.81" width="0.3048" layer="1"/>
-<wire x1="49.53" y1="95.25" x2="48.57" y2="94.29" width="0.3048" layer="1"/>
-<wire x1="58.155" y1="83.82" x2="57.785" y2="84.19" width="0.3048" layer="1"/>
-<wire x1="57.785" y1="84.19" x2="57.785" y2="94.615" width="0.3048" layer="1"/>
+<wire x1="48.57" y1="91.765" x2="48.57" y2="92.81" width="0.3048" layer="16"/>
+<wire x1="62.605" y1="90.805" x2="49.53" y2="90.805" width="0.3048" layer="16"/>
+<wire x1="49.53" y1="90.805" x2="48.57" y2="91.765" width="0.3048" layer="16"/>
 </signal>
 <signal name="LED1A6">
 <contactref element="BUZZER8" pad="3"/>
 <contactref element="R50" pad="1"/>
-<wire x1="58.79" y1="94.615" x2="58.79" y2="95.515" width="0.3048" layer="1"/>
-<wire x1="58.79" y1="95.515" x2="58.42" y2="95.885" width="0.3048" layer="1"/>
-<wire x1="58.42" y1="95.885" x2="34.29" y2="95.885" width="0.3048" layer="1"/>
-<wire x1="33.33" y1="94.925" x2="33.33" y2="92.81" width="0.3048" layer="1"/>
-<wire x1="34.29" y1="95.885" x2="33.33" y2="94.925" width="0.3048" layer="1"/>
+<wire x1="68.205" y1="95.885" x2="67.945" y2="96.145" width="0.3048" layer="16"/>
+<wire x1="67.945" y1="96.145" x2="67.945" y2="98.425" width="0.3048" layer="16"/>
+<wire x1="67.945" y1="98.425" x2="67.31" y2="99.06" width="0.3048" layer="16"/>
+<wire x1="67.31" y1="99.06" x2="36.83" y2="99.06" width="0.3048" layer="16"/>
+<wire x1="33.33" y1="95.56" x2="33.33" y2="92.81" width="0.3048" layer="16"/>
+<wire x1="36.83" y1="99.06" x2="33.33" y2="95.56" width="0.3048" layer="16"/>
 </signal>
 <signal name="LED1A0">
 <contactref element="BUZZER1" pad="3"/>
 <contactref element="R52" pad="1"/>
-<wire x1="44.82" y1="19.05" x2="44.82" y2="17.388" width="0.3048" layer="1"/>
-<wire x1="38.425" y1="10.993" x2="38.425" y2="7.52" width="0.3048" layer="1"/>
-<wire x1="44.82" y1="17.388" x2="38.425" y2="10.993" width="0.3048" layer="1"/>
+<wire x1="38.425" y1="7.52" x2="61.97" y2="5.08" width="0" layer="19" extent="16-16"/>
 </signal>
 <signal name="LED1A1">
 <contactref element="BUZZER0" pad="3"/>
 <contactref element="R54" pad="1"/>
-<wire x1="54.98" y1="17.272" x2="53.665" y2="15.957" width="0.3048" layer="1"/>
-<wire x1="53.665" y1="15.957" x2="53.665" y2="7.52" width="0.3048" layer="1"/>
+<wire x1="53.665" y1="7.52" x2="61.97" y2="9.398" width="0" layer="19" extent="16-16"/>
 </signal>
 <signal name="N$33">
 <contactref element="D3" pad="C"/>
