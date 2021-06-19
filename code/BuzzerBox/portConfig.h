@@ -6,6 +6,26 @@ typedef struct buttonConfig {
   uint8_t ledPin;
 }ButtonC;
 
+typedef struct packetType {
+  byte messageType;
+  byte payload1;
+  byte payload2;
+} PacketType;
+
+typedef enum {   
+  BUZZER_PRESSED = 0, 
+  RELEASE_PRESSED = 1, 
+  READ_DATA = 2
+} Message_req_t;
+
+typedef enum {   
+  SET_BUZZER_LEDS = 100,
+  SET_SEGMENTS = 101,
+  SOFT_RELEASE = 102
+
+} Message_res_t;
+ 
+
 const uint8_t BUTTON_COUNT = 10;
 const ButtonC buttons [BUTTON_COUNT] = {
   {4,0,2},

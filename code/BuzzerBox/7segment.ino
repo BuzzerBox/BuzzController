@@ -15,9 +15,13 @@ const byte numbers[10] = {ZERO, ONE, TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, 
 
 void displayNumber(uint8_t number) {
   if (number > 9) return;
-  setExpanderRegister(expanderId7Seg, outRegisterAId, ~numbers[number]);
+  byte output = numbers[number];
+  if (standAlone) output = output | 1<<segments[7];
+  setExpanderRegister(expanderId7Seg, outRegisterAId, ~output);
 }
 
 void clearDisplay() {
-  setExpanderRegister(expanderId7Seg, outRegisterAId, 0xFF);
+  byte output = 0x00;
+  if (standAlone) output = output | 1<<segments[7];
+  setExpanderRegister(expanderId7Seg, outRegisterAId, ~output);
 }
