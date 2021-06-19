@@ -1,6 +1,6 @@
 #include "portConfig.h"
+const uint8_t segments[8] = {2,3,5,6,7,1,0,4}; //A,B,C,D,E,F,G,DP
 
-const int segments[8] = {2,3,5,6,7,1,0,4}; //A,B,C,D,E,F,G,DP
 const byte ZERO = 1<<segments[0] | 1<<segments[1] | 1<<segments[2] | 1<<segments[3] | 1<<segments[4] | 1<<segments[5];
 const byte ONE = 1<<segments[1] | 1<<segments[2];
 const byte TWO = 1<<segments[0] | 1<<segments[1] | 1<<segments[3] | 1<<segments[4] | 1<<segments[6];

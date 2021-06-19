@@ -5,6 +5,11 @@ struct packetType {
   byte payload2;
 };
 
+void initExpanders() {
+  setExpanderRegister(expanderId7Seg, ddrRegisterAId, 0x00);
+  setExpanderRegister(expanderIdButtonLEDs, ddrRegisterAId, 0x00);
+  setExpanderRegister(expanderIdButtonLEDs, ddrRegisterBId, 0x00);
+}
 
 void setExpanderRegister(byte chip, byte register_, byte data) {
   sendI2CPacket(chip, register_, data);
@@ -12,6 +17,22 @@ void setExpanderRegister(byte chip, byte register_, byte data) {
 
 void sendPacketToPi(byte messageType, byte payload) {
   sendI2CPacket(piI2CAddress, messageType, payload);
+}
+
+void turnOffLEDs(){
+  setExpanderRegister(expanderIdButtonLEDs, outRegisterAId, 0x00);
+  setExpanderRegister(expanderIdButtonLEDs, outRegisterBId, 0x00);
+}
+
+void turnOnSingleLED(ButtonC button_){
+  byte outReg = outRegisterAId;
+  byte offReg = outRegisterBId;
+  if (button_.ledPort != 0) {
+    outReg = outRegisterBId;
+    offReg = outRegisterAId;
+  }
+  setExpanderRegister(expanderIdButtonLEDs, outReg, 1<<button_.ledPin);
+  setExpanderRegister(expanderIdButtonLEDs, offReg, 0x00);
 }
 
 struct packetType getDataFromPi() {
