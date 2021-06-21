@@ -1,5 +1,7 @@
 #include <Wire.h>
 #include "portConfig.h"
+#include <avr/wdt.h>
+
 
 boolean isLocked = false;
 boolean standAlone = false;
@@ -7,6 +9,7 @@ uint8_t currentBuzzer = NO_BUZZER;
 
 bool previousState[BUTTON_COUNT] = {HIGH}; 
 void setup() {
+  wdt_enable(WDTO_250MS);
   for (uint8_t i = 0; i < BUTTON_COUNT; i++) {
      pinMode(buttons[i].buttonPin, INPUT_PULLUP);
   }
@@ -64,4 +67,5 @@ void loop() {
     }
     previousState[i] = currentState;
   }
+  wdt_reset();
 }
