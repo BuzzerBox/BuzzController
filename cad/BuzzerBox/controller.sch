@@ -12564,10 +12564,6 @@ CONN_20x2
 <smd name="P$17" x="-3.25" y="3.95" dx="0.3" dy="1.9" layer="1" cream="no"/>
 <smd name="P$18" x="-3.75" y="3.95" dx="0.3" dy="1.9" layer="1" cream="no"/>
 <smd name="P$19" x="-4.25" y="3.95" dx="0.3" dy="1.9" layer="1" cream="no"/>
-<pad name="P$20" x="-7.25" y="3" drill="1.3"/>
-<pad name="P$21" x="7.25" y="3" drill="1.3"/>
-<pad name="P$22" x="7.85" y="-1.9" drill="1.3"/>
-<pad name="P$23" x="-7.85" y="-1.9" drill="1.3"/>
 <wire x1="-6" y1="4" x2="-6.5" y2="4" width="0.127" layer="21"/>
 <wire x1="-6.5" y1="4" x2="-7.5" y2="4" width="0.127" layer="21"/>
 <wire x1="-7.5" y1="4" x2="-7.5" y2="-1.5" width="0.127" layer="21"/>
@@ -12699,6 +12695,34 @@ CONN_20x2
 <rectangle x1="4.1656" y1="3.4318" x2="4.3434" y2="4.7526" layer="31"/>
 <rectangle x1="4.6736" y1="3.4064" x2="4.8514" y2="4.7272" layer="31"/>
 <wire x1="-4.5" y1="5" x2="5" y2="5" width="0.127" layer="21"/>
+<pad name="P$24" x="-7.25" y="2.84" drill="0.9" shape="long" rot="R90"/>
+<wire x1="-7.7" y1="-2.42" x2="-6.8" y2="-2.42" width="0" layer="46" curve="-180"/>
+<wire x1="-6.8" y1="-3.82" x2="-7.7" y2="-3.82" width="0" layer="46" curve="-180"/>
+<pad name="P$25" x="-7.25" y="-3.12" drill="0.9" shape="long" rot="R90"/>
+<wire x1="-7.7" y1="-2.42" x2="-6.8" y2="-2.42" width="0" layer="46" curve="-180"/>
+<wire x1="-7.7" y1="-2.42" x2="-7.7" y2="-3.82" width="0" layer="46"/>
+<wire x1="-6.8" y1="-2.42" x2="-6.8" y2="-3.82" width="0" layer="46"/>
+<wire x1="-6.8" y1="-3.82" x2="-7.7" y2="-3.82" width="0" layer="46" curve="-180"/>
+<pad name="P$26" x="7.25" y="2.84" drill="0.9" shape="long" rot="R90"/>
+<wire x1="6.8" y1="-2.42" x2="7.7" y2="-2.42" width="0" layer="46" curve="-180"/>
+<wire x1="7.7" y1="-3.82" x2="6.8" y2="-3.82" width="0" layer="46" curve="-180"/>
+<pad name="P$27" x="7.25" y="-3.12" drill="0.9" shape="long" rot="R90"/>
+<wire x1="6.8" y1="-2.42" x2="7.7" y2="-2.42" width="0" layer="46" curve="-180"/>
+<wire x1="6.8" y1="-2.42" x2="6.8" y2="-3.82" width="0" layer="46"/>
+<wire x1="7.7" y1="-2.42" x2="7.7" y2="-3.82" width="0" layer="46"/>
+<wire x1="7.7" y1="-3.82" x2="6.8" y2="-3.82" width="0" layer="46" curve="-180"/>
+<wire x1="-7.71" y1="3.52" x2="-6.81" y2="3.52" width="0" layer="46" curve="-180"/>
+<wire x1="-6.81" y1="2.12" x2="-7.71" y2="2.12" width="0" layer="46" curve="-180"/>
+<wire x1="-7.71" y1="3.52" x2="-6.81" y2="3.52" width="0" layer="46" curve="-180"/>
+<wire x1="-7.71" y1="3.52" x2="-7.71" y2="2.12" width="0" layer="46"/>
+<wire x1="-6.81" y1="3.52" x2="-6.81" y2="2.12" width="0" layer="46"/>
+<wire x1="-6.81" y1="2.12" x2="-7.71" y2="2.12" width="0" layer="46" curve="-180"/>
+<wire x1="6.79" y1="3.52" x2="7.69" y2="3.52" width="0" layer="46" curve="-180"/>
+<wire x1="7.69" y1="2.12" x2="6.79" y2="2.12" width="0" layer="46" curve="-180"/>
+<wire x1="6.79" y1="3.52" x2="7.69" y2="3.52" width="0" layer="46" curve="-180"/>
+<wire x1="6.79" y1="3.52" x2="6.79" y2="2.12" width="0" layer="46"/>
+<wire x1="7.69" y1="3.52" x2="7.69" y2="2.12" width="0" layer="46"/>
+<wire x1="7.69" y1="2.12" x2="6.79" y2="2.12" width="0" layer="46" curve="-180"/>
 </package>
 </packages>
 <symbols>
