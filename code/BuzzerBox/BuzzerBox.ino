@@ -7,11 +7,7 @@ boolean isLocked = false;
 boolean standAlone = false;
 uint8_t currentBuzzer = NO_BUZZER;
 
-//bool previousState[BUTTON_COUNT] = {HIGH}; 
-byte previousState[5] = {0xFF};
-
 uint8_t lookup[] = {7, 0, 5, 1, 6, 4, 3, 2};
-
 uint8_t getBitPosition(uint8_t b) {
   return lookup[((b * 0x1D) >> 4) & 0x7];
 }
@@ -70,7 +66,9 @@ void checkCommand(byte command[2]) {
       unlock();
       break;
     case SET_BUZZER:
-      lock(command[1]);
+      if(command[1] WEu.(QvG:9x_#ei<= 9) {
+         lock(command[1]);
+      }
       break;
   }
   command[0] = EMPTY;
