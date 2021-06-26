@@ -13025,6 +13025,7 @@ CONN_20x2
 <part name="GND43" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND44" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="FRAME3" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="A3L-LOC" device=""/>
+<part name="GND45" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -13094,6 +13095,9 @@ CONN_20x2
 </instance>
 <instance part="GND44" gate="1" x="195.58" y="73.66" smashed="yes">
 <attribute name="VALUE" x="193.04" y="71.12" size="1.778" layer="96"/>
+</instance>
+<instance part="GND45" gate="1" x="88.9" y="132.08" smashed="yes" rot="R90">
+<attribute name="VALUE" x="91.44" y="129.54" size="1.778" layer="96" rot="R90"/>
 </instance>
 </instances>
 <busses>
@@ -13365,12 +13369,25 @@ CONN_20x2
 <wire x1="195.58" y1="76.2" x2="195.58" y2="81.28" width="0.1524" layer="91"/>
 <wire x1="195.58" y1="81.28" x2="198.12" y2="81.28" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<pinref part="RPI-CM4" gate="G$1" pin="EEPROM_!WP"/>
+<pinref part="GND45" gate="1" pin="GND"/>
+<wire x1="76.2" y1="132.08" x2="86.36" y2="132.08" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="+3V3" class="0">
 <segment>
 <pinref part="RPI-CM4" gate="G$1" pin="CM4_3.3V(OUTPUT)@84"/>
 <pinref part="+3V2" gate="G$1" pin="+3V3"/>
-<wire x1="76.2" y1="50.8" x2="86.36" y2="50.8" width="0.1524" layer="91"/>
+<wire x1="76.2" y1="50.8" x2="83.82" y2="50.8" width="0.1524" layer="91"/>
+<pinref part="RPI-CM4" gate="G$1" pin="CM4_3.3V(OUTPUT)@86"/>
+<wire x1="83.82" y1="50.8" x2="86.36" y2="50.8" width="0.1524" layer="91"/>
+<wire x1="76.2" y1="48.26" x2="83.82" y2="48.26" width="0.1524" layer="91"/>
+<wire x1="83.82" y1="48.26" x2="83.82" y2="50.8" width="0.1524" layer="91"/>
+<junction x="83.82" y="50.8"/>
+<pinref part="RPI-CM4" gate="G$1" pin="GPIO_VREF"/>
+<wire x1="76.2" y1="58.42" x2="83.82" y2="58.42" width="0.1524" layer="91"/>
+<wire x1="83.82" y1="58.42" x2="83.82" y2="50.8" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="J2" gate="G$1" pin="3.3V@1"/>
