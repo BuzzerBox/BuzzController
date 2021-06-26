@@ -66,7 +66,7 @@ void checkCommand(byte command[2]) {
       unlock();
       break;
     case SET_BUZZER:
-      if(command[1] WEu.(QvG:9x_#ei<= 9) {
+      if(command[1]<= 9) {
          lock(command[1]);
       }
       break;
