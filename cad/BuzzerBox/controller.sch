@@ -8917,9 +8917,9 @@ Source: http://eshop.phoenixcontact.com .. 1751251.pdf</description>
 <text x="-3.048" y="4.191" size="1.27" layer="22" rot="R90">GND</text>
 <text x="0.635" y="4.191" size="1.27" layer="22" rot="R90">BT</text>
 <text x="3.81" y="4.064" size="1.27" layer="22" rot="R90">LED</text>
-<text x="-4.826" y="2.413" size="0.8128" layer="21">GND</text>
-<text x="-0.762" y="2.413" size="0.8128" layer="21">BT</text>
-<text x="2.413" y="2.413" size="0.8128" layer="21">LED</text>
+<text x="-5.207" y="2.413" size="0.8128" layer="21">1GND</text>
+<text x="-0.889" y="2.413" size="0.8128" layer="21">2BT</text>
+<text x="2.032" y="2.413" size="0.8128" layer="21">3LED</text>
 </package>
 <package name="1751248" urn="urn:adsk.eagle:footprint:9371/1" locally_modified="yes">
 <description>&lt;b&gt;MKDS 1/ 2-3,5&lt;/b&gt; Printklemme&lt;p&gt;
@@ -12903,7 +12903,7 @@ CONN_20x2
 <part name="C16" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="100nF"/>
 <part name="P+25" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
 <part name="GND22" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="MCP23017" library="microchip" deviceset="MCP23017" device="-E/SO"/>
+<part name="MCP2" library="microchip" deviceset="MCP23017" device="-E/SO"/>
 <part name="GND23" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="P+26" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
 <part name="Q1" library="SparkFun" deviceset="MOSFET-NCHANNEL" device="SMD" value="BSS138"/>
@@ -12987,7 +12987,7 @@ CONN_20x2
 <part name="R63" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="RESISTOR" device="0805" package3d_urn="urn:adsk.eagle:package:39651/1" value="1K"/>
 <part name="R64" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R2512" package3d_urn="urn:adsk.eagle:package:23545/2" value="50"/>
 <part name="P+39" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
-<part name="RPI-CM1" library="RPI-CM4" deviceset="RPI-CM4" device=""/>
+<part name="RPI-CM4" library="RPI-CM4" deviceset="RPI-CM4" device=""/>
 <part name="GND37" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND38" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="P+5" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
@@ -13007,7 +13007,7 @@ CONN_20x2
 <part name="+3V2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
 <part name="R65" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="RESISTOR" device="0805" package3d_urn="urn:adsk.eagle:package:39651/1" value="10K"/>
 <part name="P+1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
-<part name="J1" library="Custom-Connector" deviceset="USB_A" device="_SMT_FEMALE" package3d_urn="urn:adsk.eagle:package:38297/1"/>
+<part name="USB0" library="Custom-Connector" deviceset="USB_A" device="_SMT_FEMALE" package3d_urn="urn:adsk.eagle:package:38297/1"/>
 <part name="GND2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="P+29" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
 <part name="GND3" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
@@ -13020,7 +13020,7 @@ CONN_20x2
 <part name="GND36" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="P+43" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
 <part name="+3V5" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
-<part name="U$6" library="connectors" deviceset="HDMI-A" device=""/>
+<part name="HDMI0" library="connectors" deviceset="HDMI-A" device=""/>
 <part name="P+44" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
 <part name="GND43" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND44" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
@@ -13036,7 +13036,7 @@ CONN_20x2
 <attribute name="LAST_DATE_TIME" x="260.35" y="-35.56" size="2.286" layer="94"/>
 <attribute name="SHEET" x="273.685" y="-40.64" size="2.54" layer="94"/>
 </instance>
-<instance part="RPI-CM1" gate="G$1" x="93.98" y="10.16" smashed="yes">
+<instance part="RPI-CM4" gate="G$1" x="93.98" y="10.16" smashed="yes">
 <attribute name="NAME" x="93.96168125" y="139.8526" size="2.546109375" layer="95"/>
 <attribute name="VALUE" x="93.96375" y="4.9282" size="2.54541875" layer="96"/>
 </instance>
@@ -13052,7 +13052,7 @@ CONN_20x2
 <instance part="+3V2" gate="G$1" x="162.56" y="33.02" smashed="yes" rot="R270">
 <attribute name="VALUE" x="162.56" y="33.02" size="1.778" layer="96"/>
 </instance>
-<instance part="J1" gate="G$1" x="279.4" y="109.22" smashed="yes">
+<instance part="USB0" gate="G$1" x="279.4" y="109.22" smashed="yes">
 <attribute name="NAME" x="274.32" y="117.094" size="1.778" layer="95" font="vector"/>
 <attribute name="VALUE" x="274.32" y="103.886" size="1.778" layer="96" font="vector" align="top-left"/>
 </instance>
@@ -13062,7 +13062,7 @@ CONN_20x2
 <instance part="P+29" gate="1" x="266.7" y="119.38" smashed="yes">
 <attribute name="VALUE" x="264.16" y="114.3" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="RPI-CM1" gate="G$2" x="185.42" y="10.16" smashed="yes">
+<instance part="RPI-CM4" gate="G$2" x="185.42" y="10.16" smashed="yes">
 <attribute name="NAME" x="185.40168125" y="139.8526" size="2.546109375" layer="95"/>
 <attribute name="VALUE" x="185.40375" y="4.9282" size="2.54541875" layer="96"/>
 </instance>
@@ -13082,7 +13082,7 @@ CONN_20x2
 <instance part="+3V5" gate="G$1" x="-27.94" y="127" smashed="yes">
 <attribute name="VALUE" x="-30.48" y="121.92" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="U$6" gate="G$1" x="279.4" y="38.1" smashed="yes" rot="R180">
+<instance part="HDMI0" gate="G$1" x="279.4" y="38.1" smashed="yes" rot="R180">
 <attribute name="NAME" x="297.18" y="12.7" size="2.54" layer="95" rot="R180"/>
 <attribute name="VALUE" x="297.18" y="71.12" size="2.54" layer="95" rot="R180"/>
 </instance>
@@ -13115,102 +13115,102 @@ CONN_20x2
 <nets>
 <net name="GND" class="0">
 <segment>
-<pinref part="RPI-CM1" gate="G$1" pin="GND@98"/>
+<pinref part="RPI-CM4" gate="G$1" pin="GND@98"/>
 <pinref part="GND37" gate="1" pin="GND"/>
 <wire x1="149.86" y1="15.24" x2="121.92" y2="15.24" width="0.1524" layer="91"/>
 <wire x1="121.92" y1="15.24" x2="121.92" y2="12.7" width="0.1524" layer="91"/>
-<pinref part="RPI-CM1" gate="G$1" pin="GND@74"/>
+<pinref part="RPI-CM4" gate="G$1" pin="GND@74"/>
 <wire x1="149.86" y1="45.72" x2="121.92" y2="45.72" width="0.1524" layer="91"/>
 <wire x1="121.92" y1="45.72" x2="121.92" y2="15.24" width="0.1524" layer="91"/>
 <junction x="121.92" y="15.24"/>
-<pinref part="RPI-CM1" gate="G$1" pin="GND@66"/>
+<pinref part="RPI-CM4" gate="G$1" pin="GND@66"/>
 <wire x1="149.86" y1="55.88" x2="121.92" y2="55.88" width="0.1524" layer="91"/>
 <wire x1="121.92" y1="55.88" x2="121.92" y2="45.72" width="0.1524" layer="91"/>
 <junction x="121.92" y="45.72"/>
-<pinref part="RPI-CM1" gate="G$1" pin="GND@60"/>
+<pinref part="RPI-CM4" gate="G$1" pin="GND@60"/>
 <wire x1="149.86" y1="63.5" x2="121.92" y2="63.5" width="0.1524" layer="91"/>
 <wire x1="121.92" y1="63.5" x2="121.92" y2="55.88" width="0.1524" layer="91"/>
 <junction x="121.92" y="55.88"/>
-<pinref part="RPI-CM1" gate="G$1" pin="GND@52"/>
+<pinref part="RPI-CM4" gate="G$1" pin="GND@52"/>
 <wire x1="149.86" y1="73.66" x2="121.92" y2="73.66" width="0.1524" layer="91"/>
 <junction x="121.92" y="63.5"/>
-<pinref part="RPI-CM1" gate="G$1" pin="GND@42"/>
+<pinref part="RPI-CM4" gate="G$1" pin="GND@42"/>
 <wire x1="121.92" y1="73.66" x2="121.92" y2="63.5" width="0.1524" layer="91"/>
 <wire x1="149.86" y1="86.36" x2="121.92" y2="86.36" width="0.1524" layer="91"/>
 <wire x1="121.92" y1="86.36" x2="121.92" y2="73.66" width="0.1524" layer="91"/>
-<pinref part="RPI-CM1" gate="G$1" pin="GND@32"/>
+<pinref part="RPI-CM4" gate="G$1" pin="GND@32"/>
 <wire x1="149.86" y1="99.06" x2="121.92" y2="99.06" width="0.1524" layer="91"/>
 <wire x1="121.92" y1="99.06" x2="121.92" y2="86.36" width="0.1524" layer="91"/>
 <junction x="121.92" y="86.36"/>
-<pinref part="RPI-CM1" gate="G$1" pin="GND@22"/>
+<pinref part="RPI-CM4" gate="G$1" pin="GND@22"/>
 <wire x1="149.86" y1="111.76" x2="121.92" y2="111.76" width="0.1524" layer="91"/>
 <wire x1="121.92" y1="111.76" x2="121.92" y2="99.06" width="0.1524" layer="91"/>
 <junction x="121.92" y="99.06"/>
-<pinref part="RPI-CM1" gate="G$1" pin="GND@14"/>
+<pinref part="RPI-CM4" gate="G$1" pin="GND@14"/>
 <wire x1="149.86" y1="121.92" x2="121.92" y2="121.92" width="0.1524" layer="91"/>
 <wire x1="121.92" y1="121.92" x2="121.92" y2="111.76" width="0.1524" layer="91"/>
 <junction x="121.92" y="111.76"/>
-<pinref part="RPI-CM1" gate="G$1" pin="GND@8"/>
+<pinref part="RPI-CM4" gate="G$1" pin="GND@8"/>
 <wire x1="149.86" y1="129.54" x2="121.92" y2="129.54" width="0.1524" layer="91"/>
 <wire x1="121.92" y1="129.54" x2="121.92" y2="121.92" width="0.1524" layer="91"/>
 <junction x="121.92" y="121.92"/>
-<pinref part="RPI-CM1" gate="G$1" pin="GND@2"/>
+<pinref part="RPI-CM4" gate="G$1" pin="GND@2"/>
 <wire x1="149.86" y1="137.16" x2="121.92" y2="137.16" width="0.1524" layer="91"/>
 <wire x1="121.92" y1="137.16" x2="121.92" y2="129.54" width="0.1524" layer="91"/>
 <junction x="121.92" y="129.54"/>
 </segment>
 <segment>
-<pinref part="RPI-CM1" gate="G$1" pin="GND@71"/>
+<pinref part="RPI-CM4" gate="G$1" pin="GND@71"/>
 <wire x1="88.9" y1="48.26" x2="116.84" y2="48.26" width="0.1524" layer="91"/>
 <pinref part="GND38" gate="1" pin="GND"/>
 <wire x1="116.84" y1="48.26" x2="116.84" y2="45.72" width="0.1524" layer="91"/>
-<pinref part="RPI-CM1" gate="G$1" pin="GND@65"/>
+<pinref part="RPI-CM4" gate="G$1" pin="GND@65"/>
 <wire x1="88.9" y1="55.88" x2="116.84" y2="55.88" width="0.1524" layer="91"/>
 <wire x1="116.84" y1="55.88" x2="116.84" y2="48.26" width="0.1524" layer="91"/>
 <junction x="116.84" y="48.26"/>
-<pinref part="RPI-CM1" gate="G$1" pin="GND@59"/>
+<pinref part="RPI-CM4" gate="G$1" pin="GND@59"/>
 <wire x1="88.9" y1="63.5" x2="116.84" y2="63.5" width="0.1524" layer="91"/>
 <wire x1="116.84" y1="63.5" x2="116.84" y2="55.88" width="0.1524" layer="91"/>
 <junction x="116.84" y="55.88"/>
-<pinref part="RPI-CM1" gate="G$1" pin="GND@53"/>
+<pinref part="RPI-CM4" gate="G$1" pin="GND@53"/>
 <wire x1="88.9" y1="71.12" x2="116.84" y2="71.12" width="0.1524" layer="91"/>
 <wire x1="116.84" y1="71.12" x2="116.84" y2="63.5" width="0.1524" layer="91"/>
 <junction x="116.84" y="63.5"/>
-<pinref part="RPI-CM1" gate="G$1" pin="GND@43"/>
+<pinref part="RPI-CM4" gate="G$1" pin="GND@43"/>
 <wire x1="88.9" y1="83.82" x2="116.84" y2="83.82" width="0.1524" layer="91"/>
 <wire x1="116.84" y1="83.82" x2="116.84" y2="71.12" width="0.1524" layer="91"/>
 <junction x="116.84" y="71.12"/>
-<pinref part="RPI-CM1" gate="G$1" pin="GND@33"/>
+<pinref part="RPI-CM4" gate="G$1" pin="GND@33"/>
 <wire x1="88.9" y1="96.52" x2="116.84" y2="96.52" width="0.1524" layer="91"/>
 <wire x1="116.84" y1="96.52" x2="116.84" y2="83.82" width="0.1524" layer="91"/>
 <junction x="116.84" y="83.82"/>
-<pinref part="RPI-CM1" gate="G$1" pin="GND@23"/>
+<pinref part="RPI-CM4" gate="G$1" pin="GND@23"/>
 <wire x1="88.9" y1="109.22" x2="116.84" y2="109.22" width="0.1524" layer="91"/>
 <wire x1="116.84" y1="109.22" x2="116.84" y2="96.52" width="0.1524" layer="91"/>
 <junction x="116.84" y="96.52"/>
-<pinref part="RPI-CM1" gate="G$1" pin="GND@13"/>
+<pinref part="RPI-CM4" gate="G$1" pin="GND@13"/>
 <wire x1="88.9" y1="121.92" x2="116.84" y2="121.92" width="0.1524" layer="91"/>
 <junction x="116.84" y="109.22"/>
-<pinref part="RPI-CM1" gate="G$1" pin="GND@7"/>
+<pinref part="RPI-CM4" gate="G$1" pin="GND@7"/>
 <wire x1="116.84" y1="121.92" x2="116.84" y2="109.22" width="0.1524" layer="91"/>
 <wire x1="88.9" y1="129.54" x2="116.84" y2="129.54" width="0.1524" layer="91"/>
-<pinref part="RPI-CM1" gate="G$1" pin="GND@1"/>
+<pinref part="RPI-CM4" gate="G$1" pin="GND@1"/>
 <wire x1="116.84" y1="129.54" x2="116.84" y2="121.92" width="0.1524" layer="91"/>
 <wire x1="88.9" y1="137.16" x2="116.84" y2="137.16" width="0.1524" layer="91"/>
 <wire x1="116.84" y1="137.16" x2="116.84" y2="129.54" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="J1" gate="G$1" pin="GND"/>
+<pinref part="USB0" gate="G$1" pin="GND"/>
 <wire x1="271.78" y1="106.68" x2="266.7" y2="106.68" width="0.1524" layer="91"/>
 <wire x1="266.7" y1="106.68" x2="266.7" y2="99.06" width="0.1524" layer="91"/>
 <pinref part="GND2" gate="1" pin="GND"/>
-<pinref part="J1" gate="G$1" pin="SHIELD"/>
+<pinref part="USB0" gate="G$1" pin="SHIELD"/>
 <wire x1="284.48" y1="111.76" x2="284.48" y2="99.06" width="0.1524" layer="91"/>
 <wire x1="284.48" y1="99.06" x2="266.7" y2="99.06" width="0.1524" layer="91"/>
 <junction x="266.7" y="99.06"/>
 </segment>
 <segment>
-<pinref part="RPI-CM1" gate="G$2" pin="USB_OTG_ID"/>
+<pinref part="RPI-CM4" gate="G$2" pin="USB_OTG_ID"/>
 <wire x1="180.34" y1="137.16" x2="165.1" y2="137.16" width="0.1524" layer="91"/>
 <pinref part="GND3" gate="1" pin="GND"/>
 </segment>
@@ -13249,92 +13249,92 @@ CONN_20x2
 <junction x="-20.32" y="68.58"/>
 </segment>
 <segment>
-<pinref part="RPI-CM1" gate="G$2" pin="GND@107"/>
-<pinref part="RPI-CM1" gate="G$2" pin="GND@108"/>
+<pinref part="RPI-CM4" gate="G$2" pin="GND@107"/>
+<pinref part="RPI-CM4" gate="G$2" pin="GND@108"/>
 <wire x1="180.34" y1="129.54" x2="210.82" y2="129.54" width="0.1524" layer="91"/>
-<pinref part="RPI-CM1" gate="G$2" pin="GND@113"/>
-<pinref part="RPI-CM1" gate="G$2" pin="GND@114"/>
+<pinref part="RPI-CM4" gate="G$2" pin="GND@113"/>
+<pinref part="RPI-CM4" gate="G$2" pin="GND@114"/>
 <wire x1="210.82" y1="129.54" x2="241.3" y2="129.54" width="0.1524" layer="91"/>
 <wire x1="180.34" y1="121.92" x2="210.82" y2="121.92" width="0.1524" layer="91"/>
 <wire x1="210.82" y1="121.92" x2="241.3" y2="121.92" width="0.1524" layer="91"/>
 <wire x1="210.82" y1="129.54" x2="210.82" y2="121.92" width="0.1524" layer="91"/>
 <junction x="210.82" y="121.92"/>
-<pinref part="RPI-CM1" gate="G$2" pin="GND@119"/>
-<pinref part="RPI-CM1" gate="G$2" pin="GND@120"/>
+<pinref part="RPI-CM4" gate="G$2" pin="GND@119"/>
+<pinref part="RPI-CM4" gate="G$2" pin="GND@120"/>
 <wire x1="180.34" y1="114.3" x2="210.82" y2="114.3" width="0.1524" layer="91"/>
 <wire x1="210.82" y1="114.3" x2="241.3" y2="114.3" width="0.1524" layer="91"/>
 <wire x1="210.82" y1="121.92" x2="210.82" y2="114.3" width="0.1524" layer="91"/>
 <junction x="210.82" y="114.3"/>
-<pinref part="RPI-CM1" gate="G$2" pin="GND@125"/>
-<pinref part="RPI-CM1" gate="G$2" pin="GND@126"/>
+<pinref part="RPI-CM4" gate="G$2" pin="GND@125"/>
+<pinref part="RPI-CM4" gate="G$2" pin="GND@126"/>
 <wire x1="180.34" y1="106.68" x2="210.82" y2="106.68" width="0.1524" layer="91"/>
 <wire x1="210.82" y1="106.68" x2="241.3" y2="106.68" width="0.1524" layer="91"/>
 <wire x1="210.82" y1="114.3" x2="210.82" y2="106.68" width="0.1524" layer="91"/>
 <junction x="210.82" y="106.68"/>
-<pinref part="RPI-CM1" gate="G$2" pin="GND@131"/>
-<pinref part="RPI-CM1" gate="G$2" pin="GND@132"/>
+<pinref part="RPI-CM4" gate="G$2" pin="GND@131"/>
+<pinref part="RPI-CM4" gate="G$2" pin="GND@132"/>
 <wire x1="180.34" y1="99.06" x2="210.82" y2="99.06" width="0.1524" layer="91"/>
 <wire x1="210.82" y1="99.06" x2="241.3" y2="99.06" width="0.1524" layer="91"/>
 <wire x1="210.82" y1="106.68" x2="210.82" y2="99.06" width="0.1524" layer="91"/>
 <junction x="210.82" y="99.06"/>
-<pinref part="RPI-CM1" gate="G$2" pin="GND@137"/>
-<pinref part="RPI-CM1" gate="G$2" pin="GND@138"/>
+<pinref part="RPI-CM4" gate="G$2" pin="GND@137"/>
+<pinref part="RPI-CM4" gate="G$2" pin="GND@138"/>
 <wire x1="180.34" y1="91.44" x2="210.82" y2="91.44" width="0.1524" layer="91"/>
 <wire x1="210.82" y1="91.44" x2="241.3" y2="91.44" width="0.1524" layer="91"/>
 <wire x1="210.82" y1="99.06" x2="210.82" y2="91.44" width="0.1524" layer="91"/>
 <junction x="210.82" y="91.44"/>
-<pinref part="RPI-CM1" gate="G$2" pin="GND@144"/>
+<pinref part="RPI-CM4" gate="G$2" pin="GND@144"/>
 <wire x1="241.3" y1="83.82" x2="210.82" y2="83.82" width="0.1524" layer="91"/>
-<pinref part="RPI-CM1" gate="G$2" pin="GND@150"/>
+<pinref part="RPI-CM4" gate="G$2" pin="GND@150"/>
 <wire x1="210.82" y1="83.82" x2="210.82" y2="91.44" width="0.1524" layer="91"/>
 <wire x1="241.3" y1="76.2" x2="210.82" y2="76.2" width="0.1524" layer="91"/>
 <wire x1="210.82" y1="76.2" x2="210.82" y2="83.82" width="0.1524" layer="91"/>
-<pinref part="RPI-CM1" gate="G$2" pin="GND@155"/>
-<pinref part="RPI-CM1" gate="G$2" pin="GND@156"/>
+<pinref part="RPI-CM4" gate="G$2" pin="GND@155"/>
+<pinref part="RPI-CM4" gate="G$2" pin="GND@156"/>
 <wire x1="180.34" y1="68.58" x2="210.82" y2="68.58" width="0.1524" layer="91"/>
 <wire x1="210.82" y1="68.58" x2="241.3" y2="68.58" width="0.1524" layer="91"/>
 <wire x1="210.82" y1="76.2" x2="210.82" y2="68.58" width="0.1524" layer="91"/>
 <junction x="210.82" y="76.2"/>
 <junction x="210.82" y="68.58"/>
-<pinref part="RPI-CM1" gate="G$2" pin="GND@161"/>
-<pinref part="RPI-CM1" gate="G$2" pin="GND@162"/>
+<pinref part="RPI-CM4" gate="G$2" pin="GND@161"/>
+<pinref part="RPI-CM4" gate="G$2" pin="GND@162"/>
 <wire x1="180.34" y1="60.96" x2="210.82" y2="60.96" width="0.1524" layer="91"/>
 <wire x1="210.82" y1="60.96" x2="241.3" y2="60.96" width="0.1524" layer="91"/>
 <wire x1="210.82" y1="68.58" x2="210.82" y2="60.96" width="0.1524" layer="91"/>
 <junction x="210.82" y="60.96"/>
-<pinref part="RPI-CM1" gate="G$2" pin="GND@167"/>
-<pinref part="RPI-CM1" gate="G$2" pin="GND@168"/>
+<pinref part="RPI-CM4" gate="G$2" pin="GND@167"/>
+<pinref part="RPI-CM4" gate="G$2" pin="GND@168"/>
 <wire x1="180.34" y1="53.34" x2="210.82" y2="53.34" width="0.1524" layer="91"/>
 <wire x1="210.82" y1="53.34" x2="241.3" y2="53.34" width="0.1524" layer="91"/>
 <wire x1="210.82" y1="60.96" x2="210.82" y2="53.34" width="0.1524" layer="91"/>
 <junction x="210.82" y="53.34"/>
-<pinref part="RPI-CM1" gate="G$2" pin="GND@173"/>
-<pinref part="RPI-CM1" gate="G$2" pin="GND@174"/>
+<pinref part="RPI-CM4" gate="G$2" pin="GND@173"/>
+<pinref part="RPI-CM4" gate="G$2" pin="GND@174"/>
 <wire x1="180.34" y1="45.72" x2="210.82" y2="45.72" width="0.1524" layer="91"/>
 <wire x1="210.82" y1="45.72" x2="241.3" y2="45.72" width="0.1524" layer="91"/>
 <wire x1="210.82" y1="53.34" x2="210.82" y2="45.72" width="0.1524" layer="91"/>
 <junction x="210.82" y="45.72"/>
-<pinref part="RPI-CM1" gate="G$2" pin="GND@185"/>
-<pinref part="RPI-CM1" gate="G$2" pin="GND@186"/>
+<pinref part="RPI-CM4" gate="G$2" pin="GND@185"/>
+<pinref part="RPI-CM4" gate="G$2" pin="GND@186"/>
 <wire x1="180.34" y1="30.48" x2="210.82" y2="30.48" width="0.1524" layer="91"/>
 <wire x1="210.82" y1="30.48" x2="241.3" y2="30.48" width="0.1524" layer="91"/>
 <wire x1="210.82" y1="45.72" x2="210.82" y2="38.1" width="0.1524" layer="91"/>
 <junction x="210.82" y="30.48"/>
-<pinref part="RPI-CM1" gate="G$2" pin="GND@180"/>
-<pinref part="RPI-CM1" gate="G$2" pin="GND@179"/>
+<pinref part="RPI-CM4" gate="G$2" pin="GND@180"/>
+<pinref part="RPI-CM4" gate="G$2" pin="GND@179"/>
 <wire x1="210.82" y1="38.1" x2="210.82" y2="30.48" width="0.1524" layer="91"/>
 <wire x1="241.3" y1="38.1" x2="210.82" y2="38.1" width="0.1524" layer="91"/>
 <junction x="210.82" y="38.1"/>
 <wire x1="210.82" y1="38.1" x2="180.34" y2="38.1" width="0.1524" layer="91"/>
 <junction x="210.82" y="83.82"/>
-<pinref part="RPI-CM1" gate="G$2" pin="GND@191"/>
-<pinref part="RPI-CM1" gate="G$2" pin="GND@192"/>
+<pinref part="RPI-CM4" gate="G$2" pin="GND@191"/>
+<pinref part="RPI-CM4" gate="G$2" pin="GND@192"/>
 <wire x1="180.34" y1="22.86" x2="210.82" y2="22.86" width="0.1524" layer="91"/>
 <wire x1="210.82" y1="22.86" x2="241.3" y2="22.86" width="0.1524" layer="91"/>
 <wire x1="210.82" y1="30.48" x2="210.82" y2="22.86" width="0.1524" layer="91"/>
 <junction x="210.82" y="22.86"/>
-<pinref part="RPI-CM1" gate="G$2" pin="GND@197"/>
-<pinref part="RPI-CM1" gate="G$2" pin="GND@198"/>
+<pinref part="RPI-CM4" gate="G$2" pin="GND@197"/>
+<pinref part="RPI-CM4" gate="G$2" pin="GND@198"/>
 <wire x1="180.34" y1="15.24" x2="210.82" y2="15.24" width="0.1524" layer="91"/>
 <wire x1="210.82" y1="15.24" x2="241.3" y2="15.24" width="0.1524" layer="91"/>
 <wire x1="210.82" y1="22.86" x2="210.82" y2="15.24" width="0.1524" layer="91"/>
@@ -13343,21 +13343,21 @@ CONN_20x2
 <wire x1="210.82" y1="15.24" x2="210.82" y2="12.7" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="U$6" gate="G$1" pin="DATA2SHIELD"/>
+<pinref part="HDMI0" gate="G$1" pin="DATA2SHIELD"/>
 <pinref part="GND44" gate="1" pin="GND"/>
 <wire x1="274.32" y1="53.34" x2="271.78" y2="53.34" width="0.1524" layer="91"/>
-<pinref part="U$6" gate="G$1" pin="DATA1SHIELD"/>
+<pinref part="HDMI0" gate="G$1" pin="DATA1SHIELD"/>
 <wire x1="274.32" y1="55.88" x2="271.78" y2="55.88" width="0.1524" layer="91"/>
 <wire x1="271.78" y1="55.88" x2="271.78" y2="53.34" width="0.1524" layer="91"/>
-<pinref part="U$6" gate="G$1" pin="DATA0SHIELD"/>
+<pinref part="HDMI0" gate="G$1" pin="DATA0SHIELD"/>
 <wire x1="274.32" y1="58.42" x2="271.78" y2="58.42" width="0.1524" layer="91"/>
 <wire x1="271.78" y1="58.42" x2="271.78" y2="55.88" width="0.1524" layer="91"/>
 <junction x="271.78" y="55.88"/>
-<pinref part="U$6" gate="G$1" pin="CLOCKSHIELD"/>
+<pinref part="HDMI0" gate="G$1" pin="CLOCKSHIELD"/>
 <wire x1="274.32" y1="60.96" x2="271.78" y2="60.96" width="0.1524" layer="91"/>
 <wire x1="271.78" y1="60.96" x2="271.78" y2="58.42" width="0.1524" layer="91"/>
 <junction x="271.78" y="58.42"/>
-<pinref part="U$6" gate="G$1" pin="CECGND"/>
+<pinref part="HDMI0" gate="G$1" pin="CECGND"/>
 <wire x1="274.32" y1="63.5" x2="271.78" y2="63.5" width="0.1524" layer="91"/>
 <wire x1="271.78" y1="63.5" x2="271.78" y2="60.96" width="0.1524" layer="91"/>
 <junction x="271.78" y="60.96"/>
@@ -13368,7 +13368,7 @@ CONN_20x2
 </net>
 <net name="+3V3" class="0">
 <segment>
-<pinref part="RPI-CM1" gate="G$1" pin="CM4_3.3V(OUTPUT)@84"/>
+<pinref part="RPI-CM4" gate="G$1" pin="CM4_3.3V(OUTPUT)@84"/>
 <pinref part="+3V2" gate="G$1" pin="+3V3"/>
 <wire x1="149.86" y1="33.02" x2="160.02" y2="33.02" width="0.1524" layer="91"/>
 </segment>
@@ -13385,34 +13385,34 @@ CONN_20x2
 </net>
 <net name="+5V" class="0">
 <segment>
-<pinref part="RPI-CM1" gate="G$1" pin="+5V(INPUT)@77"/>
+<pinref part="RPI-CM4" gate="G$1" pin="+5V(INPUT)@77"/>
 <pinref part="P+5" gate="1" pin="+5V"/>
 <wire x1="88.9" y1="40.64" x2="78.74" y2="40.64" width="0.1524" layer="91"/>
 <wire x1="78.74" y1="40.64" x2="78.74" y2="43.18" width="0.1524" layer="91"/>
-<pinref part="RPI-CM1" gate="G$1" pin="+5V(INPUT)@79"/>
+<pinref part="RPI-CM4" gate="G$1" pin="+5V(INPUT)@79"/>
 <wire x1="88.9" y1="38.1" x2="78.74" y2="38.1" width="0.1524" layer="91"/>
 <wire x1="78.74" y1="38.1" x2="78.74" y2="40.64" width="0.1524" layer="91"/>
 <junction x="78.74" y="40.64"/>
-<pinref part="RPI-CM1" gate="G$1" pin="+5V(INPUT)@81"/>
+<pinref part="RPI-CM4" gate="G$1" pin="+5V(INPUT)@81"/>
 <wire x1="88.9" y1="35.56" x2="78.74" y2="35.56" width="0.1524" layer="91"/>
 <wire x1="78.74" y1="35.56" x2="78.74" y2="38.1" width="0.1524" layer="91"/>
 <junction x="78.74" y="38.1"/>
-<pinref part="RPI-CM1" gate="G$1" pin="+5V(INPUT)@83"/>
+<pinref part="RPI-CM4" gate="G$1" pin="+5V(INPUT)@83"/>
 <wire x1="88.9" y1="33.02" x2="78.74" y2="33.02" width="0.1524" layer="91"/>
 <wire x1="78.74" y1="33.02" x2="78.74" y2="35.56" width="0.1524" layer="91"/>
 <junction x="78.74" y="35.56"/>
-<pinref part="RPI-CM1" gate="G$1" pin="+5V(INPUT)@85"/>
+<pinref part="RPI-CM4" gate="G$1" pin="+5V(INPUT)@85"/>
 <wire x1="88.9" y1="30.48" x2="78.74" y2="30.48" width="0.1524" layer="91"/>
 <wire x1="78.74" y1="30.48" x2="78.74" y2="33.02" width="0.1524" layer="91"/>
 <junction x="78.74" y="33.02"/>
-<pinref part="RPI-CM1" gate="G$1" pin="+5V(INPUT)@87"/>
+<pinref part="RPI-CM4" gate="G$1" pin="+5V(INPUT)@87"/>
 <wire x1="88.9" y1="27.94" x2="78.74" y2="27.94" width="0.1524" layer="91"/>
 <wire x1="78.74" y1="27.94" x2="78.74" y2="30.48" width="0.1524" layer="91"/>
 <junction x="78.74" y="30.48"/>
 </segment>
 <segment>
 <pinref part="P+29" gate="1" pin="+5V"/>
-<pinref part="J1" gate="G$1" pin="VBUS"/>
+<pinref part="USB0" gate="G$1" pin="VBUS"/>
 <wire x1="266.7" y1="116.84" x2="266.7" y2="114.3" width="0.1524" layer="91"/>
 <wire x1="266.7" y1="114.3" x2="271.78" y2="114.3" width="0.1524" layer="91"/>
 </segment>
@@ -13427,7 +13427,7 @@ CONN_20x2
 <junction x="-20.32" y="121.92"/>
 </segment>
 <segment>
-<pinref part="U$6" gate="G$1" pin="VCC"/>
+<pinref part="HDMI0" gate="G$1" pin="VCC"/>
 <wire x1="274.32" y1="50.8" x2="264.16" y2="50.8" width="0.1524" layer="91"/>
 <wire x1="264.16" y1="50.8" x2="264.16" y2="58.42" width="0.1524" layer="91"/>
 <pinref part="P+44" gate="1" pin="+5V"/>
@@ -13440,7 +13440,7 @@ CONN_20x2
 <label x="15.24" y="121.92" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="RPI-CM1" gate="G$1" pin="SDA0"/>
+<pinref part="RPI-CM4" gate="G$1" pin="SDA0"/>
 <wire x1="149.86" y1="35.56" x2="154.94" y2="35.56" width="0.1524" layer="91"/>
 <label x="152.4" y="35.56" size="1.778" layer="95"/>
 </segment>
@@ -13452,154 +13452,154 @@ CONN_20x2
 <label x="15.24" y="119.38" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="RPI-CM1" gate="G$1" pin="SCL0"/>
+<pinref part="RPI-CM4" gate="G$1" pin="SCL0"/>
 <wire x1="149.86" y1="38.1" x2="152.4" y2="38.1" width="0.1524" layer="91"/>
 <label x="152.4" y="38.1" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="USB_N" class="0">
 <segment>
-<pinref part="RPI-CM1" gate="G$2" pin="USB_N"/>
+<pinref part="RPI-CM4" gate="G$2" pin="USB_N"/>
 <wire x1="180.34" y1="134.62" x2="165.1" y2="134.62" width="0.1524" layer="91"/>
 <label x="165.1" y="134.62" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="J1" gate="G$1" pin="D-"/>
+<pinref part="USB0" gate="G$1" pin="D-"/>
 <wire x1="271.78" y1="111.76" x2="261.62" y2="111.76" width="0.1524" layer="91"/>
 <label x="261.62" y="111.76" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="USB_P" class="0">
 <segment>
-<pinref part="RPI-CM1" gate="G$2" pin="USB_P"/>
+<pinref part="RPI-CM4" gate="G$2" pin="USB_P"/>
 <wire x1="180.34" y1="132.08" x2="165.1" y2="132.08" width="0.1524" layer="91"/>
 <label x="165.1" y="132.08" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="J1" gate="G$1" pin="D+"/>
+<pinref part="USB0" gate="G$1" pin="D+"/>
 <wire x1="271.78" y1="109.22" x2="261.62" y2="109.22" width="0.1524" layer="91"/>
 <label x="261.62" y="109.22" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="HDMI_CLK_N" class="0">
 <segment>
-<pinref part="RPI-CM1" gate="G$2" pin="HDMI0_CLK_N"/>
+<pinref part="RPI-CM4" gate="G$2" pin="HDMI0_CLK_N"/>
 <wire x1="241.3" y1="25.4" x2="246.38" y2="25.4" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="U$6" gate="G$1" pin="CLOCK-"/>
+<pinref part="HDMI0" gate="G$1" pin="CLOCK-"/>
 <wire x1="274.32" y1="35.56" x2="261.62" y2="35.56" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="HDMI_CLK_P" class="0">
 <segment>
-<pinref part="RPI-CM1" gate="G$2" pin="HDMI0_CLK_P"/>
+<pinref part="RPI-CM4" gate="G$2" pin="HDMI0_CLK_P"/>
 <wire x1="241.3" y1="27.94" x2="246.38" y2="27.94" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="U$6" gate="G$1" pin="CLOCK+"/>
+<pinref part="HDMI0" gate="G$1" pin="CLOCK+"/>
 <wire x1="274.32" y1="33.02" x2="261.62" y2="33.02" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="HDMI_D0_N" class="0">
 <segment>
-<pinref part="RPI-CM1" gate="G$2" pin="HDMI0_TX0_N"/>
+<pinref part="RPI-CM4" gate="G$2" pin="HDMI0_TX0_N"/>
 <wire x1="241.3" y1="33.02" x2="246.38" y2="33.02" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="U$6" gate="G$1" pin="DATA0-"/>
+<pinref part="HDMI0" gate="G$1" pin="DATA0-"/>
 <wire x1="274.32" y1="30.48" x2="261.62" y2="30.48" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="HDMI_D0_P" class="0">
 <segment>
-<pinref part="RPI-CM1" gate="G$2" pin="HDMI0_TX0_P"/>
+<pinref part="RPI-CM4" gate="G$2" pin="HDMI0_TX0_P"/>
 <wire x1="241.3" y1="35.56" x2="246.38" y2="35.56" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="U$6" gate="G$1" pin="DATA0+"/>
+<pinref part="HDMI0" gate="G$1" pin="DATA0+"/>
 <wire x1="274.32" y1="27.94" x2="261.62" y2="27.94" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="HDMI_D1_N" class="0">
 <segment>
-<pinref part="RPI-CM1" gate="G$2" pin="HDMI0_TX1_N"/>
+<pinref part="RPI-CM4" gate="G$2" pin="HDMI0_TX1_N"/>
 <wire x1="241.3" y1="40.64" x2="246.38" y2="40.64" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="U$6" gate="G$1" pin="DATA1-"/>
+<pinref part="HDMI0" gate="G$1" pin="DATA1-"/>
 <wire x1="274.32" y1="25.4" x2="261.62" y2="25.4" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="HDMI_D1_P" class="0">
 <segment>
-<pinref part="RPI-CM1" gate="G$2" pin="HDMI0_TX1_P"/>
+<pinref part="RPI-CM4" gate="G$2" pin="HDMI0_TX1_P"/>
 <wire x1="241.3" y1="43.18" x2="246.38" y2="43.18" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="U$6" gate="G$1" pin="DATA1+"/>
+<pinref part="HDMI0" gate="G$1" pin="DATA1+"/>
 <wire x1="274.32" y1="22.86" x2="261.62" y2="22.86" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="HDMI_D2_N" class="0">
 <segment>
-<pinref part="RPI-CM1" gate="G$2" pin="HDMI0_TX2_N"/>
+<pinref part="RPI-CM4" gate="G$2" pin="HDMI0_TX2_N"/>
 <wire x1="241.3" y1="48.26" x2="246.38" y2="48.26" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="U$6" gate="G$1" pin="DATA2-"/>
+<pinref part="HDMI0" gate="G$1" pin="DATA2-"/>
 <wire x1="274.32" y1="20.32" x2="261.62" y2="20.32" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="HDMI_D2_P" class="0">
 <segment>
-<pinref part="RPI-CM1" gate="G$2" pin="HDMI0_TX2_P"/>
+<pinref part="RPI-CM4" gate="G$2" pin="HDMI0_TX2_P"/>
 <wire x1="241.3" y1="50.8" x2="246.38" y2="50.8" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="U$6" gate="G$1" pin="DATA2+"/>
+<pinref part="HDMI0" gate="G$1" pin="DATA2+"/>
 <wire x1="274.32" y1="17.78" x2="261.62" y2="17.78" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="HDMI_SCL" class="0">
 <segment>
-<pinref part="RPI-CM1" gate="G$2" pin="HDMI0_SCL"/>
+<pinref part="RPI-CM4" gate="G$2" pin="HDMI0_SCL"/>
 <wire x1="241.3" y1="12.7" x2="246.38" y2="12.7" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="U$6" gate="G$1" pin="SCL"/>
+<pinref part="HDMI0" gate="G$1" pin="SCL"/>
 <wire x1="274.32" y1="45.72" x2="261.62" y2="45.72" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="HDMI_SDA" class="0">
 <segment>
-<pinref part="U$6" gate="G$1" pin="SDA"/>
+<pinref part="HDMI0" gate="G$1" pin="SDA"/>
 <wire x1="274.32" y1="43.18" x2="261.62" y2="43.18" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <wire x1="246.38" y1="7.62" x2="177.8" y2="7.62" width="0.1524" layer="91"/>
 <wire x1="177.8" y1="7.62" x2="177.8" y2="12.7" width="0.1524" layer="91"/>
-<pinref part="RPI-CM1" gate="G$2" pin="HDMI0_SDA"/>
+<pinref part="RPI-CM4" gate="G$2" pin="HDMI0_SDA"/>
 <wire x1="177.8" y1="12.7" x2="180.34" y2="12.7" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="HDMI_CEC" class="0">
 <segment>
-<pinref part="U$6" gate="G$1" pin="CEC"/>
+<pinref part="HDMI0" gate="G$1" pin="CEC"/>
 <wire x1="274.32" y1="48.26" x2="261.62" y2="48.26" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="RPI-CM1" gate="G$2" pin="HDMI0_CEC"/>
+<pinref part="RPI-CM4" gate="G$2" pin="HDMI0_CEC"/>
 <wire x1="180.34" y1="73.66" x2="167.64" y2="73.66" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="HDMI_HOT" class="0">
 <segment>
-<pinref part="U$6" gate="G$1" pin="HOTPLUG"/>
+<pinref part="HDMI0" gate="G$1" pin="HOTPLUG"/>
 <wire x1="274.32" y1="40.64" x2="261.62" y2="40.64" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="RPI-CM1" gate="G$2" pin="HDMI0_HOTPLUG"/>
+<pinref part="RPI-CM4" gate="G$2" pin="HDMI0_HOTPLUG"/>
 <wire x1="180.34" y1="71.12" x2="167.64" y2="71.12" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -13610,7 +13610,7 @@ CONN_20x2
 <label x="17.78" y="91.44" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="RPI-CM1" gate="G$1" pin="GPIO4"/>
+<pinref part="RPI-CM4" gate="G$1" pin="GPIO4"/>
 <wire x1="149.86" y1="71.12" x2="160.02" y2="71.12" width="0.1524" layer="91"/>
 <label x="152.4" y="71.12" size="1.778" layer="95"/>
 </segment>
@@ -13622,7 +13622,7 @@ CONN_20x2
 <label x="17.78" y="88.9" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="RPI-CM1" gate="G$1" pin="GPIO17"/>
+<pinref part="RPI-CM4" gate="G$1" pin="GPIO17"/>
 <wire x1="149.86" y1="76.2" x2="160.02" y2="76.2" width="0.1524" layer="91"/>
 <label x="152.4" y="76.2" size="1.778" layer="95"/>
 </segment>
@@ -13634,7 +13634,7 @@ CONN_20x2
 <label x="17.78" y="86.36" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="RPI-CM1" gate="G$1" pin="GPIO18"/>
+<pinref part="RPI-CM4" gate="G$1" pin="GPIO18"/>
 <wire x1="88.9" y1="76.2" x2="76.2" y2="76.2" width="0.1524" layer="91"/>
 <label x="76.2" y="76.2" size="1.778" layer="95"/>
 </segment>
@@ -13646,7 +13646,7 @@ CONN_20x2
 <label x="17.78" y="83.82" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="RPI-CM1" gate="G$1" pin="GPIO22"/>
+<pinref part="RPI-CM4" gate="G$1" pin="GPIO22"/>
 <wire x1="149.86" y1="81.28" x2="160.02" y2="81.28" width="0.1524" layer="91"/>
 <label x="152.4" y="81.28" size="1.778" layer="95"/>
 </segment>
@@ -13658,7 +13658,7 @@ CONN_20x2
 <label x="17.78" y="81.28" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="RPI-CM1" gate="G$1" pin="GPIO23"/>
+<pinref part="RPI-CM4" gate="G$1" pin="GPIO23"/>
 <wire x1="88.9" y1="78.74" x2="76.2" y2="78.74" width="0.1524" layer="91"/>
 <label x="76.2" y="78.74" size="1.778" layer="95"/>
 </segment>
@@ -13670,7 +13670,7 @@ CONN_20x2
 <label x="17.78" y="78.74" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="RPI-CM1" gate="G$1" pin="GPIO24"/>
+<pinref part="RPI-CM4" gate="G$1" pin="GPIO24"/>
 <wire x1="88.9" y1="81.28" x2="76.2" y2="81.28" width="0.1524" layer="91"/>
 <label x="76.2" y="81.28" size="1.778" layer="95"/>
 </segment>
@@ -13682,7 +13682,7 @@ CONN_20x2
 <label x="17.78" y="76.2" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="RPI-CM1" gate="G$1" pin="GPIO25"/>
+<pinref part="RPI-CM4" gate="G$1" pin="GPIO25"/>
 <wire x1="88.9" y1="86.36" x2="76.2" y2="86.36" width="0.1524" layer="91"/>
 <label x="76.2" y="86.36" size="1.778" layer="95"/>
 </segment>
@@ -13694,7 +13694,7 @@ CONN_20x2
 <label x="17.78" y="73.66" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="RPI-CM1" gate="G$1" pin="GPIO27"/>
+<pinref part="RPI-CM4" gate="G$1" pin="GPIO27"/>
 <wire x1="149.86" y1="78.74" x2="160.02" y2="78.74" width="0.1524" layer="91"/>
 <label x="152.4" y="78.74" size="1.778" layer="95"/>
 </segment>
@@ -13706,7 +13706,7 @@ CONN_20x2
 <label x="17.78" y="68.58" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="RPI-CM1" gate="G$1" pin="ID_SD"/>
+<pinref part="RPI-CM4" gate="G$1" pin="ID_SD"/>
 <wire x1="149.86" y1="93.98" x2="160.02" y2="93.98" width="0.1524" layer="91"/>
 <label x="152.4" y="93.98" size="1.778" layer="95"/>
 </segment>
@@ -13718,7 +13718,7 @@ CONN_20x2
 <label x="17.78" y="66.04" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="RPI-CM1" gate="G$1" pin="ID_SC"/>
+<pinref part="RPI-CM4" gate="G$1" pin="ID_SC"/>
 <wire x1="88.9" y1="93.98" x2="76.2" y2="93.98" width="0.1524" layer="91"/>
 <label x="76.2" y="93.98" size="1.778" layer="95"/>
 </segment>
@@ -13730,7 +13730,7 @@ CONN_20x2
 <label x="-27.94" y="104.14" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="RPI-CM1" gate="G$1" pin="GPIO12"/>
+<pinref part="RPI-CM4" gate="G$1" pin="GPIO12"/>
 <wire x1="88.9" y1="99.06" x2="76.2" y2="99.06" width="0.1524" layer="91"/>
 <label x="76.2" y="99.06" size="1.778" layer="95"/>
 </segment>
@@ -13742,7 +13742,7 @@ CONN_20x2
 <label x="-27.94" y="101.6" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="RPI-CM1" gate="G$1" pin="GPIO13"/>
+<pinref part="RPI-CM4" gate="G$1" pin="GPIO13"/>
 <wire x1="149.86" y1="104.14" x2="160.02" y2="104.14" width="0.1524" layer="91"/>
 <label x="152.4" y="104.14" size="1.778" layer="95"/>
 </segment>
@@ -13754,7 +13754,7 @@ CONN_20x2
 <label x="-27.94" y="99.06" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="RPI-CM1" gate="G$1" pin="GPIO16"/>
+<pinref part="RPI-CM4" gate="G$1" pin="GPIO16"/>
 <wire x1="88.9" y1="101.6" x2="76.2" y2="101.6" width="0.1524" layer="91"/>
 <label x="76.2" y="101.6" size="1.778" layer="95"/>
 </segment>
@@ -13766,7 +13766,7 @@ CONN_20x2
 <label x="-27.94" y="106.68" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="RPI-CM1" gate="G$1" pin="GPIO6"/>
+<pinref part="RPI-CM4" gate="G$1" pin="GPIO6"/>
 <wire x1="149.86" y1="101.6" x2="160.02" y2="101.6" width="0.1524" layer="91"/>
 <label x="152.4" y="101.6" size="1.778" layer="95"/>
 </segment>
@@ -13778,7 +13778,7 @@ CONN_20x2
 <label x="-27.94" y="109.22" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="RPI-CM1" gate="G$1" pin="GPIO5"/>
+<pinref part="RPI-CM4" gate="G$1" pin="GPIO5"/>
 <wire x1="149.86" y1="96.52" x2="160.02" y2="96.52" width="0.1524" layer="91"/>
 <label x="152.4" y="96.52" size="1.778" layer="95"/>
 </segment>
@@ -13790,7 +13790,7 @@ CONN_20x2
 <label x="-27.94" y="96.52" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="RPI-CM1" gate="G$1" pin="GPIO19"/>
+<pinref part="RPI-CM4" gate="G$1" pin="GPIO19"/>
 <wire x1="149.86" y1="106.68" x2="160.02" y2="106.68" width="0.1524" layer="91"/>
 <label x="152.4" y="106.68" size="1.778" layer="95"/>
 </segment>
@@ -13802,7 +13802,7 @@ CONN_20x2
 <label x="-27.94" y="93.98" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="RPI-CM1" gate="G$1" pin="GPIO20"/>
+<pinref part="RPI-CM4" gate="G$1" pin="GPIO20"/>
 <wire x1="88.9" y1="104.14" x2="76.2" y2="104.14" width="0.1524" layer="91"/>
 <label x="76.2" y="104.14" size="1.778" layer="95"/>
 </segment>
@@ -13814,7 +13814,7 @@ CONN_20x2
 <label x="-27.94" y="91.44" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="RPI-CM1" gate="G$1" pin="GPIO21"/>
+<pinref part="RPI-CM4" gate="G$1" pin="GPIO21"/>
 <wire x1="88.9" y1="106.68" x2="76.2" y2="106.68" width="0.1524" layer="91"/>
 <label x="76.2" y="106.68" size="1.778" layer="95"/>
 </segment>
@@ -13826,14 +13826,14 @@ CONN_20x2
 <label x="-27.94" y="88.9" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="RPI-CM1" gate="G$1" pin="GPIO26"/>
+<pinref part="RPI-CM4" gate="G$1" pin="GPIO26"/>
 <wire x1="149.86" y1="109.22" x2="160.02" y2="109.22" width="0.1524" layer="91"/>
 <label x="152.4" y="109.22" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="GP7" class="0">
 <segment>
-<pinref part="RPI-CM1" gate="G$1" pin="GPIO7"/>
+<pinref part="RPI-CM4" gate="G$1" pin="GPIO7"/>
 <wire x1="88.9" y1="91.44" x2="76.2" y2="91.44" width="0.1524" layer="91"/>
 <label x="76.2" y="91.44" size="1.778" layer="95"/>
 </segment>
@@ -13845,7 +13845,7 @@ CONN_20x2
 </net>
 <net name="GP8" class="0">
 <segment>
-<pinref part="RPI-CM1" gate="G$1" pin="GPIO8"/>
+<pinref part="RPI-CM4" gate="G$1" pin="GPIO8"/>
 <wire x1="88.9" y1="88.9" x2="76.2" y2="88.9" width="0.1524" layer="91"/>
 <label x="76.2" y="88.9" size="1.778" layer="95"/>
 </segment>
@@ -13857,7 +13857,7 @@ CONN_20x2
 </net>
 <net name="GP15" class="0">
 <segment>
-<pinref part="RPI-CM1" gate="G$1" pin="GPIO15"/>
+<pinref part="RPI-CM4" gate="G$1" pin="GPIO15"/>
 <wire x1="88.9" y1="73.66" x2="76.2" y2="73.66" width="0.1524" layer="91"/>
 <label x="76.2" y="73.66" size="1.778" layer="95"/>
 </segment>
@@ -13869,7 +13869,7 @@ CONN_20x2
 </net>
 <net name="GP14" class="0">
 <segment>
-<pinref part="RPI-CM1" gate="G$1" pin="GPIO14"/>
+<pinref part="RPI-CM4" gate="G$1" pin="GPIO14"/>
 <wire x1="88.9" y1="68.58" x2="76.2" y2="68.58" width="0.1524" layer="91"/>
 <label x="76.2" y="68.58" size="1.778" layer="95"/>
 </segment>
@@ -13881,7 +13881,7 @@ CONN_20x2
 </net>
 <net name="GP11" class="0">
 <segment>
-<pinref part="RPI-CM1" gate="G$1" pin="GPIO11"/>
+<pinref part="RPI-CM4" gate="G$1" pin="GPIO11"/>
 <wire x1="149.86" y1="91.44" x2="160.02" y2="91.44" width="0.1524" layer="91"/>
 <label x="152.4" y="91.44" size="1.778" layer="95"/>
 </segment>
@@ -13893,7 +13893,7 @@ CONN_20x2
 </net>
 <net name="GP9" class="0">
 <segment>
-<pinref part="RPI-CM1" gate="G$1" pin="GPIO9"/>
+<pinref part="RPI-CM4" gate="G$1" pin="GPIO9"/>
 <wire x1="149.86" y1="88.9" x2="160.02" y2="88.9" width="0.1524" layer="91"/>
 <label x="152.4" y="88.9" size="1.778" layer="95"/>
 </segment>
@@ -13905,7 +13905,7 @@ CONN_20x2
 </net>
 <net name="GP10" class="0">
 <segment>
-<pinref part="RPI-CM1" gate="G$1" pin="GPIO10"/>
+<pinref part="RPI-CM4" gate="G$1" pin="GPIO10"/>
 <wire x1="149.86" y1="83.82" x2="160.02" y2="83.82" width="0.1524" layer="91"/>
 <label x="152.4" y="83.82" size="1.778" layer="95"/>
 </segment>
@@ -13917,14 +13917,14 @@ CONN_20x2
 </net>
 <net name="GP3" class="0">
 <segment>
-<pinref part="RPI-CM1" gate="G$1" pin="GPIO3"/>
+<pinref part="RPI-CM4" gate="G$1" pin="GPIO3"/>
 <wire x1="149.86" y1="68.58" x2="160.02" y2="68.58" width="0.1524" layer="91"/>
 <label x="152.4" y="68.58" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="GP2" class="0">
 <segment>
-<pinref part="RPI-CM1" gate="G$1" pin="GPIO2"/>
+<pinref part="RPI-CM4" gate="G$1" pin="GPIO2"/>
 <wire x1="149.86" y1="66.04" x2="160.02" y2="66.04" width="0.1524" layer="91"/>
 <label x="152.4" y="66.04" size="1.778" layer="95"/>
 </segment>
@@ -15537,7 +15537,7 @@ CONN_20x2
 <attribute name="NAME" x="-66.548" y="62.992" size="1.778" layer="95" font="vector" rot="R90" align="bottom-center"/>
 <attribute name="VALUE" x="-64.516" y="58.42" size="1.778" layer="96" font="vector" rot="R90" align="top-center"/>
 </instance>
-<instance part="MCP23017" gate="G$1" x="-40.64" y="116.84" smashed="yes" rot="R180">
+<instance part="MCP2" gate="G$1" x="-40.64" y="116.84" smashed="yes" rot="R180">
 <attribute name="NAME" x="-27.94" y="88.9" size="1.27" layer="95" font="vector" rot="R180"/>
 <attribute name="VALUE" x="-27.94" y="91.44" size="1.27" layer="96" font="vector" rot="R180"/>
 </instance>
@@ -15704,19 +15704,19 @@ CONN_20x2
 <wire x1="-63.5" y1="45.72" x2="-63.5" y2="43.18" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="MCP23017" gate="G$1" pin="VSS"/>
+<pinref part="MCP2" gate="G$1" pin="VSS"/>
 <wire x1="-22.86" y1="137.16" x2="-15.24" y2="137.16" width="0.1524" layer="91"/>
 <pinref part="GND23" gate="1" pin="GND"/>
 <wire x1="-15.24" y1="137.16" x2="-15.24" y2="114.3" width="0.1524" layer="91"/>
-<pinref part="MCP23017" gate="G$1" pin="A2"/>
+<pinref part="MCP2" gate="G$1" pin="A2"/>
 <wire x1="-15.24" y1="114.3" x2="-15.24" y2="111.76" width="0.1524" layer="91"/>
 <wire x1="-15.24" y1="111.76" x2="-15.24" y2="109.22" width="0.1524" layer="91"/>
 <wire x1="-22.86" y1="114.3" x2="-15.24" y2="114.3" width="0.1524" layer="91"/>
 <junction x="-15.24" y="114.3"/>
-<pinref part="MCP23017" gate="G$1" pin="A1"/>
+<pinref part="MCP2" gate="G$1" pin="A1"/>
 <wire x1="-22.86" y1="111.76" x2="-15.24" y2="111.76" width="0.1524" layer="91"/>
 <junction x="-15.24" y="111.76"/>
-<pinref part="MCP23017" gate="G$1" pin="A0"/>
+<pinref part="MCP2" gate="G$1" pin="A0"/>
 <wire x1="-22.86" y1="109.22" x2="-15.24" y2="109.22" width="0.1524" layer="91"/>
 <junction x="-15.24" y="109.22"/>
 </segment>
@@ -15807,10 +15807,10 @@ CONN_20x2
 <wire x1="-60.96" y1="38.1" x2="-58.42" y2="38.1" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="MCP23017" gate="G$1" pin="!RESET"/>
+<pinref part="MCP2" gate="G$1" pin="!RESET"/>
 <wire x1="-22.86" y1="119.38" x2="-20.32" y2="119.38" width="0.1524" layer="91"/>
 <wire x1="-20.32" y1="119.38" x2="-20.32" y2="96.52" width="0.1524" layer="91"/>
-<pinref part="MCP23017" gate="G$1" pin="VDD"/>
+<pinref part="MCP2" gate="G$1" pin="VDD"/>
 <wire x1="-22.86" y1="96.52" x2="-20.32" y2="96.52" width="0.1524" layer="91"/>
 <pinref part="P+26" gate="1" pin="+5V"/>
 <wire x1="-20.32" y1="119.38" x2="-20.32" y2="147.32" width="0.1524" layer="91"/>
@@ -15886,7 +15886,7 @@ CONN_20x2
 <junction x="-66.04" y="53.34"/>
 </segment>
 <segment>
-<pinref part="MCP23017" gate="G$1" pin="SDA"/>
+<pinref part="MCP2" gate="G$1" pin="SDA"/>
 <wire x1="-22.86" y1="104.14" x2="-10.16" y2="104.14" width="0.1524" layer="91"/>
 <wire x1="-10.16" y1="104.14" x2="-10.16" y2="132.08" width="0.1524" layer="91"/>
 <pinref part="Q1" gate="G$1" pin="D"/>
@@ -15968,7 +15968,7 @@ CONN_20x2
 <junction x="-63.5" y="55.88"/>
 </segment>
 <segment>
-<pinref part="MCP23017" gate="G$1" pin="SCK"/>
+<pinref part="MCP2" gate="G$1" pin="SCK"/>
 <pinref part="Q2" gate="G$1" pin="D"/>
 <pinref part="R33" gate="G$1" pin="1"/>
 <wire x1="-2.54" y1="101.6" x2="-5.08" y2="101.6" width="0.1524" layer="91"/>
@@ -16122,63 +16122,63 @@ CONN_20x2
 </net>
 <net name="GPA1" class="0">
 <segment>
-<pinref part="MCP23017" gate="G$1" pin="GPA1"/>
+<pinref part="MCP2" gate="G$1" pin="GPA1"/>
 <wire x1="-66.04" y1="99.06" x2="-58.42" y2="99.06" width="0.1524" layer="91"/>
 <label x="-66.04" y="99.06" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="GPA0" class="0">
 <segment>
-<pinref part="MCP23017" gate="G$1" pin="GPA0"/>
+<pinref part="MCP2" gate="G$1" pin="GPA0"/>
 <wire x1="-66.04" y1="96.52" x2="-58.42" y2="96.52" width="0.1524" layer="91"/>
 <label x="-66.04" y="96.52" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="GPA6" class="0">
 <segment>
-<pinref part="MCP23017" gate="G$1" pin="GPA6"/>
+<pinref part="MCP2" gate="G$1" pin="GPA6"/>
 <wire x1="-66.04" y1="111.76" x2="-58.42" y2="111.76" width="0.1524" layer="91"/>
 <label x="-66.04" y="111.76" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="GPA7" class="0">
 <segment>
-<pinref part="MCP23017" gate="G$1" pin="GPA7"/>
+<pinref part="MCP2" gate="G$1" pin="GPA7"/>
 <wire x1="-66.04" y1="114.3" x2="-58.42" y2="114.3" width="0.1524" layer="91"/>
 <label x="-66.04" y="114.3" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="GPA5" class="0">
 <segment>
-<pinref part="MCP23017" gate="G$1" pin="GPA5"/>
+<pinref part="MCP2" gate="G$1" pin="GPA5"/>
 <wire x1="-66.04" y1="109.22" x2="-58.42" y2="109.22" width="0.1524" layer="91"/>
 <label x="-66.04" y="109.22" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="GPA4" class="0">
 <segment>
-<pinref part="MCP23017" gate="G$1" pin="GPA4"/>
+<pinref part="MCP2" gate="G$1" pin="GPA4"/>
 <wire x1="-66.04" y1="106.68" x2="-58.42" y2="106.68" width="0.1524" layer="91"/>
 <label x="-66.04" y="106.68" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="GPA3" class="0">
 <segment>
-<pinref part="MCP23017" gate="G$1" pin="GPA3"/>
+<pinref part="MCP2" gate="G$1" pin="GPA3"/>
 <wire x1="-58.42" y1="104.14" x2="-66.04" y2="104.14" width="0.1524" layer="91"/>
 <label x="-66.04" y="104.14" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="GPB0" class="0">
 <segment>
-<pinref part="MCP23017" gate="G$1" pin="GPB0"/>
+<pinref part="MCP2" gate="G$1" pin="GPB0"/>
 <wire x1="-66.04" y1="119.38" x2="-58.42" y2="119.38" width="0.1524" layer="91"/>
 <label x="-66.04" y="119.38" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="GPB1" class="0">
 <segment>
-<pinref part="MCP23017" gate="G$1" pin="GPB1"/>
+<pinref part="MCP2" gate="G$1" pin="GPB1"/>
 <wire x1="-66.04" y1="121.92" x2="-58.42" y2="121.92" width="0.1524" layer="91"/>
 <label x="-66.04" y="121.92" size="1.778" layer="95"/>
 </segment>
@@ -16195,7 +16195,7 @@ CONN_20x2
 </net>
 <net name="GPA2" class="0">
 <segment>
-<pinref part="MCP23017" gate="G$1" pin="GPA2"/>
+<pinref part="MCP2" gate="G$1" pin="GPA2"/>
 <wire x1="-66.04" y1="101.6" x2="-58.42" y2="101.6" width="0.1524" layer="91"/>
 <label x="-66.04" y="101.6" size="1.778" layer="95"/>
 </segment>
