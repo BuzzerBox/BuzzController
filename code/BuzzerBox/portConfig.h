@@ -1,10 +1,16 @@
 #pragma once
 
-typedef struct buttonConfig {
-  uint8_t buttonPin;
+typedef struct LEDConfig {
   uint8_t ledPort;
   uint8_t ledPin;
 }ButtonC;
+
+typedef struct buttonBConfig {
+  uint8_t number;
+  uint8_t ledPort;
+  uint8_t ledPin;
+}ButtonB;
+
 
 typedef enum {   
   EMPTY = 0x00,
@@ -16,17 +22,28 @@ typedef enum {
 const byte NO_BUZZER = 0x7f;
 
 const uint8_t BUTTON_COUNT = 10;
-const ButtonC buttons [BUTTON_COUNT] = {
-  {16,0,1}, 
-  {10,0,0},
-  {14,1,1}, 
-  {15,1,0},
-  {4,0,2},
-  {5,0,3}, 
-  {6,0,4}, 
-  {7,0,5}, 
-  {9,0,6},
-  {8,0,7} 
+const ButtonB buttonsB [8] = {
+  {0,0,0}, //UNUSED
+  {3,1,0},
+  {0,0,1}, 
+  {2,1,1}, 
+  {9,0,7}, 
+  {8,0,6},
+  {1,0,0},
+  {7,0,0} // UNUSED
+};
+
+const LEDConfig buttons [BUTTON_COUNT] = {
+  {0,1}, 
+  {0,0},
+  {1,1}, 
+  {1,0},
+  {0,2},
+  {0,3}, 
+  {0,4}, 
+  {0,5}, 
+  {0,6},
+  {0,7} 
 };
 const uint8_t resetButton = A0;
 const uint8_t leds[10] = {0};

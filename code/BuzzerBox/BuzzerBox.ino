@@ -7,18 +7,39 @@ boolean isLocked = false;
 boolean standAlone = false;
 uint8_t currentBuzzer = NO_BUZZER;
 
-bool previousState[BUTTON_COUNT] = {HIGH}; 
+//bool previousState[BUTTON_COUNT] = {HIGH}; 
+byte previousState[5] = {0xFF};
+
+uint8_t lookup[] = {7, 0, 5, 1, 6, 4, 3, 2};
+
+uint8_t getBitPosition(uint8_t b) {
+  return lookup[((b * 0x1D) >> 4) & 0x7];
+}
+
+
 void setup() {
   //wdt_enable(WDTO_250MS);
-  for (uint8_t i = 0; i < BUTTON_COUNT; i++) {
-     pinMode(buttons[i].buttonPin, INPUT_PULLUP);
-  }
-  pinMode(resetButton, INPUT_PULLUP);
+  
+  DDRB = B00000000;
+  PORTB = B01111110 | PORTB;
+  
+  DDRC = B00000000;
+  PORTC = B01000000 | PORTC;
+  
+  DDRD = B00000000;
+  PORTD = B10010000 | PORTD;
+  
+  DDRE = B00000000;
+  PORTE = B01000000 | PORTE;
+  
+  DDRF = B00000000;
+  PORTF = B10000000 | PORTF;
+  
   Wire.begin(0x19);
   Wire.onReceive(receiveEvent);
   Wire.onRequest(requestEvent);
-  Serial.begin(9600);      
-  if(digitalRead(resetButton) == LOW) {
+   
+  if((~(PINF >> 7) & 1)) { // Check if Release Button is pressed at Startup
     standAlone = true;
   }
   initExpanders();
@@ -57,15 +78,24 @@ void checkCommand(byte command[2]) {
 
 void loop() {
   checkCommand(lastCommand);
-  if(digitalRead(resetButton) == LOW) {
+  if((~(PINF >> 7) & 1)) {
     unlock();
   }  
-  for (uint8_t i = 0; i < BUTTON_COUNT; i++) {
-    int currentState = digitalRead(buttons[i].buttonPin);
-    if (currentState != previousState[i] && currentState == LOW && (isLocked == false)) {   
-        lock(i);
-    }
-    previousState[i] = currentState;
+
+  uint8_t pinb = PINB | 0b10000001; //& 0b01111110;
+  uint8_t pinc = PINC | 0b10111111; //& 0b01000000;
+  uint8_t pind = PIND | 0b01101111; //& 0b10010000;
+
+  if((~(PINE >> 6) & 1)) {
+    lock(7);
+  } else if (pinb != 0xFF) {
+    lock(buttonsB[getBitPosition(~pinb)].number);
+  } else if (pinc != 0xFF) {
+    lock(5);
+  } else if (pind>>7 == 0) {
+    lock(6);
+  } else if ((pind & 0b00010000)>>4 == 0) {
+    lock(4);
   }
   //wdt_reset();
 }
