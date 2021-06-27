@@ -4,7 +4,10 @@
 
 
 boolean isLocked = false;
-boolean standAlone = false;
+boolean rPiIsConnected = false;
+boolean rPiJustConnected = false;
+//unsigned long lastConnection;
+
 uint8_t currentBuzzer = NO_BUZZER;
 
 uint8_t lookup[] = {7, 0, 5, 1, 6, 4, 3, 2};
@@ -34,10 +37,7 @@ void setup() {
   Wire.begin(0x19);
   Wire.onReceive(receiveEvent);
   Wire.onRequest(requestEvent);
-   
-  if((~(PINF >> 7) & 1)) { // Check if Release Button is pressed at Startup
-    standAlone = true;
-  }
+
   initExpanders();
   clearDisplay();
   turnOffLEDs();
@@ -59,9 +59,8 @@ void lock(uint8_t buttonID) {
 
 void checkCommand(byte command[2]) {
   if(command[0] == EMPTY) return;
+  rPiIsConnected = true;
   switch(command[0]) {
-    case EMPTY:
-      break;
     case SOFT_RELEASE:
       unlock();
       break;
@@ -74,7 +73,32 @@ void checkCommand(byte command[2]) {
   command[0] = EMPTY;
 }
 
+void displayCurrentState() {
+  if(currentBuzzer == NO_BUZZER) {
+    clearDisplay();
+  } else {
+    displayNumber(currentBuzzer);
+  }
+}
+
+void handleRpiConnectionState() {
+  if (!rPiIsConnected  && rPiJustConnected) {
+    rPiJustConnected = false;
+    rPiIsConnected = true;
+    displayCurrentState();
+  }
+//    lastConnection = millis();
+//    displayCurrentState();
+//  } else {
+//    if (lastConnection + 2000 < millis()) {
+//      rPiIsConnected = false;
+//      displayCurrentState();
+//    }
+//  }
+}
+
 void loop() {
+  handleRpiConnectionState();
   checkCommand(lastCommand);
   if((~(PINF >> 7) & 1)) {
     unlock();
