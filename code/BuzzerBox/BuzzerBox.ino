@@ -107,17 +107,18 @@ void loop() {
   uint8_t pinb = PINB | 0b10000001; //& 0b01111110;
   uint8_t pinc = PINC | 0b10111111; //& 0b01000000;
   uint8_t pind = PIND | 0b01101111; //& 0b10010000;
-
-  if((~(PINE >> 6) & 1)) {
-    lock(7);
-  } else if (pinb != 0xFF) {
-    lock(buttonsB[getBitPosition(~pinb)].number);
-  } else if (pinc != 0xFF) {
-    lock(5);
-  } else if (pind>>7 == 0) {
-    lock(6);
-  } else if ((pind & 0b00010000)>>4 == 0) {
-    lock(4);
+  if (!isLocked) {
+    if((~(PINE >> 6) & 1)) {
+      lock(7);
+    } else if (pinb != 0xFF) {
+      lock(buttonsB[getBitPosition(~pinb)].number);
+    } else if (pinc != 0xFF) {
+      lock(5);
+    } else if (pind>>7 == 0) {
+      lock(6);
+    } else if ((pind & 0b00010000)>>4 == 0) {
+      lock(4);
+    }
   }
   //wdt_reset();
 }

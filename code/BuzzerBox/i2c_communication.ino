@@ -8,8 +8,8 @@ void receiveEvent(int howMany) {
 }
 
 void requestEvent() {
-  rPiJustConnected = true;
   Wire.write(currentBuzzer | (isLocked << 7));
+  //rPiJustConnected = true;
 }
 
 void initExpanders() {
