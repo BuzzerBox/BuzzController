@@ -7,11 +7,6 @@ void receiveEvent(int howMany) {
   }
 }
 
-void requestEvent() {
-  Wire.write(currentBuzzer | (isLocked << 7));
-  //rPiJustConnected = true;
-}
-
 void initExpanders() {
   setExpanderRegister(expanderId7Seg, ddrRegisterAId, 0x00);
   setExpanderRegister(expanderIdButtonLEDs, ddrRegisterAId, 0x00);

@@ -1,5 +1,7 @@
 #include <Wire.h>
 #include "portConfig.h"
+#include "Keyboard.h"
+
 //#include <avr/wdt.h>
 
 
@@ -36,7 +38,7 @@ void setup() {
   
   Wire.begin(0x19);
   Wire.onReceive(receiveEvent);
-  Wire.onRequest(requestEvent);
+  Keyboard.begin();
 
   initExpanders();
   clearDisplay();
@@ -48,6 +50,7 @@ void unlock() {
   currentBuzzer = NO_BUZZER;
   clearDisplay();
   turnOffLEDs();
+  Keyboard.print('q');
 }
 
 void lock(uint8_t buttonID) {
@@ -55,6 +58,7 @@ void lock(uint8_t buttonID) {
   currentBuzzer = buttonID;
   displayNumber(buttonID);
   turnOnSingleLED(buttons[buttonID]);
+  Keyboard.print(String(buttonID));
 }
 
 void checkCommand(byte command[2]) {
@@ -100,7 +104,7 @@ void handleRpiConnectionState() {
 void loop() {
   handleRpiConnectionState();
   checkCommand(lastCommand);
-  if((~(PINF >> 7) & 1)) {
+  if((~(PINF >> 7) & 1) && isLocked == true) {
     unlock();
   }  
 
