@@ -13763,6 +13763,8 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <classes>
 <class number="0" name="default" width="0" drill="0">
 </class>
+<class number="1" name="USB" width="0.17500625" drill="0">
+</class>
 </classes>
 <parts>
 <part name="SUPPLY1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
@@ -14443,7 +14445,7 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <label x="78.74" y="55.88" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="USB_N" class="0">
+<net name="USB_N" class="1">
 <segment>
 <pinref part="RPI-CM4" gate="G$2" pin="USB_N"/>
 <wire x1="106.68" y1="152.4" x2="91.44" y2="152.4" width="0.1524" layer="91"/>
@@ -14455,7 +14457,7 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <label x="203.2" y="109.22" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="USB_P" class="0">
+<net name="USB_P" class="1">
 <segment>
 <pinref part="RPI-CM4" gate="G$2" pin="USB_P"/>
 <wire x1="106.68" y1="149.86" x2="91.44" y2="149.86" width="0.1524" layer="91"/>
@@ -14841,30 +14843,6 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <label x="-27.94" y="99.06" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="GP15" class="0">
-<segment>
-<pinref part="RPI-CM4" gate="G$1" pin="GPIO15"/>
-<wire x1="15.24" y1="91.44" x2="2.54" y2="91.44" width="0.1524" layer="91"/>
-<label x="2.54" y="91.44" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="J2" gate="G$1" pin="RXI"/>
-<wire x1="-30.48" y1="111.76" x2="-17.78" y2="111.76" width="0.1524" layer="91"/>
-<label x="-27.94" y="111.76" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="GP14" class="0">
-<segment>
-<pinref part="RPI-CM4" gate="G$1" pin="GPIO14"/>
-<wire x1="15.24" y1="86.36" x2="2.54" y2="86.36" width="0.1524" layer="91"/>
-<label x="2.54" y="86.36" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="J2" gate="G$1" pin="TXO"/>
-<wire x1="-30.48" y1="114.3" x2="-17.78" y2="114.3" width="0.1524" layer="91"/>
-<label x="-27.94" y="114.3" size="1.778" layer="95"/>
-</segment>
-</net>
 <net name="GP11" class="0">
 <segment>
 <pinref part="RPI-CM4" gate="G$1" pin="GPIO11"/>
@@ -14913,6 +14891,30 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <pinref part="RPI-CM4" gate="G$1" pin="GPIO2"/>
 <wire x1="76.2" y1="83.82" x2="86.36" y2="83.82" width="0.1524" layer="91"/>
 <label x="78.74" y="83.82" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="RXD" class="0">
+<segment>
+<pinref part="RPI-CM4" gate="G$1" pin="GPIO14"/>
+<wire x1="15.24" y1="86.36" x2="2.54" y2="86.36" width="0.1524" layer="91"/>
+<label x="2.54" y="86.36" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="J2" gate="G$1" pin="TXO"/>
+<wire x1="-30.48" y1="114.3" x2="-17.78" y2="114.3" width="0.1524" layer="91"/>
+<label x="-27.94" y="114.3" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="TXD" class="0">
+<segment>
+<pinref part="RPI-CM4" gate="G$1" pin="GPIO15"/>
+<wire x1="15.24" y1="91.44" x2="2.54" y2="91.44" width="0.1524" layer="91"/>
+<label x="2.54" y="91.44" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="J2" gate="G$1" pin="RXI"/>
+<wire x1="-30.48" y1="111.76" x2="-17.78" y2="111.76" width="0.1524" layer="91"/>
+<label x="-27.94" y="111.76" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
@@ -17353,16 +17355,18 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <junction x="241.3" y="88.9"/>
 </segment>
 </net>
-<net name="N$48" class="0">
+<net name="TXD" class="0">
 <segment>
 <pinref part="U1" gate="A" pin="PD1"/>
 <wire x1="213.36" y1="91.44" x2="226.06" y2="91.44" width="0.1524" layer="91"/>
+<label x="215.9" y="91.44" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$49" class="0">
+<net name="RXD" class="0">
 <segment>
 <pinref part="U1" gate="A" pin="PD0"/>
 <wire x1="213.36" y1="93.98" x2="226.06" y2="93.98" width="0.1524" layer="91"/>
+<label x="215.9" y="93.98" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="D3" class="0">
