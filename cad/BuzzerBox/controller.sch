@@ -13763,7 +13763,11 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <classes>
 <class number="0" name="default" width="0" drill="0">
 </class>
-<class number="1" name="USB" width="0.17500625" drill="0">
+<class number="1" name="USB" width="0.228853125" drill="0">
+<clearance class="1" value="0.1524"/>
+</class>
+<class number="2" name="HDMI" width="0.17500625" drill="0">
+<clearance class="2" value="0.1524"/>
 </class>
 </classes>
 <parts>
@@ -14469,7 +14473,7 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <label x="203.2" y="106.68" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="HDMI_CLK_N" class="0">
+<net name="HDMI_CLK_N" class="2">
 <segment>
 <pinref part="RPI-CM4" gate="G$2" pin="HDMI0_CLK_N"/>
 <wire x1="167.64" y1="43.18" x2="172.72" y2="43.18" width="0.1524" layer="91"/>
@@ -14479,7 +14483,7 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <wire x1="200.66" y1="53.34" x2="187.96" y2="53.34" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="HDMI_CLK_P" class="0">
+<net name="HDMI_CLK_P" class="2">
 <segment>
 <pinref part="RPI-CM4" gate="G$2" pin="HDMI0_CLK_P"/>
 <wire x1="167.64" y1="45.72" x2="172.72" y2="45.72" width="0.1524" layer="91"/>
@@ -14489,7 +14493,7 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <wire x1="200.66" y1="50.8" x2="187.96" y2="50.8" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="HDMI_D0_N" class="0">
+<net name="HDMI_D0_N" class="2">
 <segment>
 <pinref part="RPI-CM4" gate="G$2" pin="HDMI0_TX0_N"/>
 <wire x1="167.64" y1="50.8" x2="172.72" y2="50.8" width="0.1524" layer="91"/>
@@ -14499,7 +14503,7 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <wire x1="200.66" y1="48.26" x2="187.96" y2="48.26" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="HDMI_D0_P" class="0">
+<net name="HDMI_D0_P" class="2">
 <segment>
 <pinref part="RPI-CM4" gate="G$2" pin="HDMI0_TX0_P"/>
 <wire x1="167.64" y1="53.34" x2="172.72" y2="53.34" width="0.1524" layer="91"/>
@@ -14509,7 +14513,7 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <wire x1="200.66" y1="45.72" x2="187.96" y2="45.72" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="HDMI_D1_N" class="0">
+<net name="HDMI_D1_N" class="2">
 <segment>
 <pinref part="RPI-CM4" gate="G$2" pin="HDMI0_TX1_N"/>
 <wire x1="167.64" y1="58.42" x2="172.72" y2="58.42" width="0.1524" layer="91"/>
@@ -14519,7 +14523,7 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <wire x1="200.66" y1="43.18" x2="187.96" y2="43.18" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="HDMI_D1_P" class="0">
+<net name="HDMI_D1_P" class="2">
 <segment>
 <pinref part="RPI-CM4" gate="G$2" pin="HDMI0_TX1_P"/>
 <wire x1="167.64" y1="60.96" x2="172.72" y2="60.96" width="0.1524" layer="91"/>
@@ -14529,7 +14533,7 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <wire x1="200.66" y1="40.64" x2="187.96" y2="40.64" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="HDMI_D2_N" class="0">
+<net name="HDMI_D2_N" class="2">
 <segment>
 <pinref part="RPI-CM4" gate="G$2" pin="HDMI0_TX2_N"/>
 <wire x1="167.64" y1="66.04" x2="172.72" y2="66.04" width="0.1524" layer="91"/>
@@ -14539,7 +14543,7 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <wire x1="200.66" y1="38.1" x2="187.96" y2="38.1" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="HDMI_D2_P" class="0">
+<net name="HDMI_D2_P" class="2">
 <segment>
 <pinref part="RPI-CM4" gate="G$2" pin="HDMI0_TX2_P"/>
 <wire x1="167.64" y1="68.58" x2="172.72" y2="68.58" width="0.1524" layer="91"/>
