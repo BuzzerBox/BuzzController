@@ -189,9 +189,9 @@
 <fusionsync huburn="a.YnVzaW5lc3M6cnd0aGFhY2hlbjg2NQ" projecturn="a.YnVzaW5lc3M6cnd0aGFhY2hlbjg2NSNEMjAyMDEwMjgzNDc0OTUwNzY" f3durn="urn:adsk.wipprod:dm.lineage:_MTUCvl_S86BugRhATzk1g" pcbguid="" lastpulledtime="" lastsyncedchangeguid="" latestrevisionid="" lastsyncedrevisionid="" lastboardhashguid="" lastpushedtime="" linktopcb3d="true"/>
 <plain>
 <wire x1="5" y1="0" x2="95" y2="0" width="0" layer="20"/>
-<text x="94.869" y="41.91" size="1.778" layer="21" rot="R270">BuzzerBox v3</text>
-<text x="97.155" y="37.211" size="1.778" layer="25" rot="R270">GoeffelDevices</text>
-<text x="98.8568" y="38.0492" size="1.27" layer="25" font="vector" rot="R90">2021</text>
+<text x="94.8944" y="23.6982" size="1.778" layer="21" rot="R270">BuzzerBox v4</text>
+<text x="97.3582" y="25.2222" size="1.778" layer="25" rot="R270">GoeffelDevices</text>
+<text x="99.06" y="25.8572" size="1.27" layer="25" font="vector" rot="R90">2021</text>
 <wire x1="99.9996625" y1="5.115121875" x2="99.9996625" y2="95.115121875" width="0" layer="20"/>
 <wire x1="95" y1="100" x2="5" y2="100" width="0" layer="20"/>
 <wire x1="0" y1="95" x2="0" y2="5" width="0" layer="20"/>
@@ -2385,6 +2385,18 @@ by exp-lbrs.ulp</description>
 <rectangle x1="0" y1="18.5" x2="6.5" y2="29.5" layer="41"/>
 <rectangle x1="0" y1="18.5" x2="6.5" y2="29.5" layer="42"/>
 <rectangle x1="0" y1="18.5" x2="6.5" y2="29.5" layer="43"/>
+<polygon width="0" layer="2" pour="cutout">
+<vertex x="0.0508" y="18.4912"/>
+<vertex x="6.5278" y="18.4912"/>
+<vertex x="6.5278" y="29.4894"/>
+<vertex x="0.0508" y="29.4894"/>
+</polygon>
+<polygon width="0" layer="15" pour="cutout">
+<vertex x="0.0508" y="18.4912"/>
+<vertex x="6.5278" y="18.4912"/>
+<vertex x="6.5278" y="29.4894"/>
+<vertex x="0.0508" y="29.4894"/>
+</polygon>
 </package>
 </packages>
 </library>
@@ -4264,7 +4276,7 @@ einem neuen Namen ab.</description>
 <contactref element="HDMI0" pad="P$27"/>
 <contactref element="HDMI0" pad="P$24"/>
 <contactref element="HDMI0" pad="P$25"/>
-<polygon width="0.1524" layer="2">
+<polygon width="0.1524" layer="2" rank="6">
 <vertex x="-3.4" y="107.4"/>
 <vertex x="110.4" y="107.4"/>
 <vertex x="110.4" y="-4.2"/>
@@ -4318,7 +4330,7 @@ einem neuen Namen ab.</description>
 <via x="43.8912" y="54.864" extent="1-16" drill="0.35"/>
 <via x="55.6768" y="41.2496" extent="1-16" drill="0.35"/>
 <via x="34.7472" y="41.2496" extent="1-16" drill="0.35"/>
-<via x="94.8944" y="17.6784" extent="1-16" drill="0.35"/>
+<via x="92.456" y="16.256" extent="1-16" drill="0.35"/>
 <via x="71.7296" y="86.1568" extent="1-16" drill="0.35"/>
 <via x="60.5536" y="62.992" extent="1-16" drill="0.35"/>
 <via x="62.7888" y="72.136" extent="1-16" drill="0.35"/>
@@ -4491,7 +4503,7 @@ einem neuen Namen ab.</description>
 <contactref element="J2" pad="2"/>
 <contactref element="HDMI0" pad="P$18"/>
 <contactref element="D1" pad="C"/>
-<polygon width="0.127" layer="15" isolate="0.2032">
+<polygon width="0.127" layer="15" isolate="0.2032" rank="6">
 <vertex x="-5.54" y="-5.762240625"/>
 <vertex x="-5.54" y="105.9468"/>
 <vertex x="120.0054" y="105.9468"/>

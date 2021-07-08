@@ -10496,6 +10496,18 @@ by exp-lbrs.ulp</description>
 <rectangle x1="0" y1="18.5" x2="6.5" y2="29.5" layer="41"/>
 <rectangle x1="0" y1="18.5" x2="6.5" y2="29.5" layer="42"/>
 <rectangle x1="0" y1="18.5" x2="6.5" y2="29.5" layer="43"/>
+<polygon width="0" layer="2" pour="cutout">
+<vertex x="0.0508" y="18.4912"/>
+<vertex x="6.5278" y="18.4912"/>
+<vertex x="6.5278" y="29.4894"/>
+<vertex x="0.0508" y="29.4894"/>
+</polygon>
+<polygon width="0" layer="15" pour="cutout">
+<vertex x="0.0508" y="18.4912"/>
+<vertex x="6.5278" y="18.4912"/>
+<vertex x="6.5278" y="29.4894"/>
+<vertex x="0.0508" y="29.4894"/>
+</polygon>
 </package>
 </packages>
 <symbols>
