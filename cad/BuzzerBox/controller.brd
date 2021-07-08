@@ -4271,7 +4271,7 @@ einem neuen Namen ab.</description>
 <vertex x="-3.6" y="-4.2"/>
 <vertex x="-3.6" y="107.2"/>
 </polygon>
-<polygon width="0.127" layer="1" isolate="0.2032">
+<polygon width="0.127" layer="16" isolate="0.2032">
 <vertex x="-10.94" y="-1.762240625"/>
 <vertex x="-10.94" y="109.9468"/>
 <vertex x="115.0054" y="109.9468"/>
@@ -4325,6 +4325,23 @@ einem neuen Namen ab.</description>
 <via x="72.136" y="69.6976" extent="1-16" drill="0.35"/>
 <via x="60.3504" y="60.96" extent="1-16" drill="0.35"/>
 <via x="28.448" y="61.3664" extent="1-16" drill="0.35"/>
+<polygon width="0.127" layer="1" isolate="0.2032">
+<vertex x="-20.8968" y="-5.216640625"/>
+<vertex x="-20.8968" y="106.4924"/>
+<vertex x="105.0486" y="106.4924"/>
+<vertex x="105.0486" y="-4.84391875"/>
+</polygon>
+<via x="28.0416" y="78.0288" extent="1-16" drill="0.35"/>
+<via x="46.5328" y="34.544" extent="1-16" drill="0.35"/>
+<via x="35.3568" y="35.9664" extent="1-16" drill="0.35"/>
+<via x="15.0368" y="29.464" extent="1-16" drill="0.35"/>
+<via x="19.7104" y="25.4" extent="1-16" drill="0.35"/>
+<via x="15.24" y="17.4752" extent="1-16" drill="0.35"/>
+<via x="84.328" y="54.6608" extent="1-16" drill="0.35"/>
+<via x="84.7344" y="35.9664" extent="1-16" drill="0.35"/>
+<via x="49.9872" y="73.7616" extent="1-16" drill="0.35"/>
+<via x="56.896" y="80.6704" extent="1-16" drill="0.35"/>
+<via x="39.2176" y="79.0448" extent="1-16" drill="0.35"/>
 </signal>
 <signal name="D10">
 <contactref element="U1" pad="14"/>
