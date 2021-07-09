@@ -10508,6 +10508,102 @@ by exp-lbrs.ulp</description>
 <vertex x="6.5278" y="29.4894"/>
 <vertex x="0.0508" y="29.4894"/>
 </polygon>
+<polygon width="0" layer="2" pour="cutout">
+<vertex x="3.175" y="38.608"/>
+<vertex x="4.318" y="38.608"/>
+<vertex x="5.588" y="37.338"/>
+<vertex x="5.588" y="35.687"/>
+<vertex x="4.318" y="34.417"/>
+<vertex x="2.667" y="34.417"/>
+<vertex x="1.524" y="35.56"/>
+<vertex x="1.397" y="35.687"/>
+<vertex x="1.397" y="36.703"/>
+<vertex x="1.397" y="37.084"/>
+<vertex x="1.397" y="37.338"/>
+<vertex x="2.667" y="38.608"/>
+</polygon>
+<polygon width="0" layer="2" pour="cutout">
+<vertex x="51.181" y="38.608"/>
+<vertex x="52.324" y="38.608"/>
+<vertex x="53.594" y="37.338"/>
+<vertex x="53.594" y="35.687"/>
+<vertex x="52.324" y="34.417"/>
+<vertex x="50.673" y="34.417"/>
+<vertex x="49.53" y="35.56"/>
+<vertex x="49.403" y="35.687"/>
+<vertex x="49.403" y="36.703"/>
+<vertex x="49.403" y="37.084"/>
+<vertex x="49.403" y="37.338"/>
+<vertex x="50.673" y="38.608"/>
+</polygon>
+<polygon width="0" layer="2" pour="cutout">
+<vertex x="51.181" y="5.588"/>
+<vertex x="52.324" y="5.588"/>
+<vertex x="53.594" y="4.318"/>
+<vertex x="53.594" y="2.667"/>
+<vertex x="52.324" y="1.397"/>
+<vertex x="50.673" y="1.397"/>
+<vertex x="49.53" y="2.54"/>
+<vertex x="49.403" y="2.667"/>
+<vertex x="49.403" y="3.683"/>
+<vertex x="49.403" y="4.064"/>
+<vertex x="49.403" y="4.318"/>
+<vertex x="50.673" y="5.588"/>
+</polygon>
+<polygon width="0" layer="2" pour="cutout">
+<vertex x="3.175" y="5.588"/>
+<vertex x="4.318" y="5.588"/>
+<vertex x="5.588" y="4.318"/>
+<vertex x="5.588" y="2.667"/>
+<vertex x="4.318" y="1.397"/>
+<vertex x="2.667" y="1.397"/>
+<vertex x="1.524" y="2.54"/>
+<vertex x="1.397" y="2.667"/>
+<vertex x="1.397" y="3.683"/>
+<vertex x="1.397" y="4.064"/>
+<vertex x="1.397" y="4.318"/>
+<vertex x="2.667" y="5.588"/>
+</polygon>
+<polygon width="0" layer="15" pour="cutout">
+<vertex x="2.667" y="38.608"/>
+<vertex x="4.318" y="38.608"/>
+<vertex x="5.588" y="37.338"/>
+<vertex x="5.588" y="35.687"/>
+<vertex x="4.318" y="34.417"/>
+<vertex x="2.667" y="34.417"/>
+<vertex x="1.397" y="35.687"/>
+<vertex x="1.397" y="37.338"/>
+</polygon>
+<polygon width="0" layer="15" pour="cutout">
+<vertex x="50.673" y="38.608"/>
+<vertex x="52.324" y="38.608"/>
+<vertex x="53.594" y="37.338"/>
+<vertex x="53.594" y="35.687"/>
+<vertex x="52.324" y="34.417"/>
+<vertex x="50.673" y="34.417"/>
+<vertex x="49.403" y="35.687"/>
+<vertex x="49.403" y="37.338"/>
+</polygon>
+<polygon width="0" layer="15" pour="cutout">
+<vertex x="50.673" y="5.588"/>
+<vertex x="52.324" y="5.588"/>
+<vertex x="53.594" y="4.318"/>
+<vertex x="53.594" y="2.667"/>
+<vertex x="52.324" y="1.397"/>
+<vertex x="50.673" y="1.397"/>
+<vertex x="49.403" y="2.667"/>
+<vertex x="49.403" y="4.318"/>
+</polygon>
+<polygon width="0" layer="15" pour="cutout">
+<vertex x="2.667" y="5.588"/>
+<vertex x="4.318" y="5.588"/>
+<vertex x="5.588" y="4.318"/>
+<vertex x="5.588" y="2.667"/>
+<vertex x="4.318" y="1.397"/>
+<vertex x="2.667" y="1.397"/>
+<vertex x="1.397" y="2.667"/>
+<vertex x="1.397" y="4.318"/>
+</polygon>
 </package>
 </packages>
 <symbols>
