@@ -9,11 +9,16 @@ boolean isLocked = false;
 boolean rPiIsConnected = false;
 boolean rPiJustConnected = false;
 //unsigned long lastConnection;
+uint8_t last_state[10] = {1};
+uint8_t last_release_button_state = 1;
 
 uint8_t currentBuzzer = NO_BUZZER;
 
 uint8_t lookup[] = {7, 0, 5, 1, 6, 4, 3, 2};
 uint8_t getBitPosition(uint8_t b) {
+  //int i=0;
+  //while( !((b >> i++) & 0x01) ) { ; }
+  //return i;
   return lookup[((b * 0x1D) >> 4) & 0x7];
 }
 
@@ -104,16 +109,24 @@ void handleRpiConnectionState() {
 void loop() {
   handleRpiConnectionState();
   checkCommand(lastCommand);
-  if((~(PINF >> 7) & 1) && isLocked == true) {
-    unlock();
-  }  
-
+  if(~(PINF >> 7) & 1) {
+    if (isLocked == true && last_release_button_state == 1) {
+      unlock();
+    }
+    last_release_button_state = 0;
+  } else {
+    last_release_button_state = 1;
+  }
+  
   uint8_t pinb = PINB | 0b10000001; //& 0b01111110;
   uint8_t pinc = PINC | 0b10111111; //& 0b01000000;
   uint8_t pind = PIND | 0b01101111; //& 0b10010000;
   if (!isLocked) {
     if((~(PINE >> 6) & 1)) {
-      lock(7);
+     // if (last_state[7] == 1) {
+        lock(7);
+     // }
+      last_state[7] = 0;
     } else if (pinb != 0xFF) {
       lock(buttonsB[getBitPosition(~pinb)].number);
     } else if (pinc != 0xFF) {
