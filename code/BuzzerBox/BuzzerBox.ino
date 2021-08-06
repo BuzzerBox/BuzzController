@@ -27,23 +27,17 @@ void setup() {
   //wdt_enable(WDTO_250MS);
   
   DDRB = B00000000;
-  PORTB = B01111110 | PORTB;
+  PORTB = B00000111 | PORTB;
   
   DDRC = B00000000;
-  PORTC = B01000000 | PORTC;
+  PORTC = B00001011 | PORTC;
   
   DDRD = B00000000;
-  PORTD = B10010000 | PORTD;
-  
-  DDRE = B00000000;
-  PORTE = B01000000 | PORTE;
-  
-  DDRF = B00000000;
-  PORTF = B10000000 | PORTF;
+  PORTD = B11111000 | PORTD;
   
   Wire.begin(0x19);
   Wire.onReceive(receiveEvent);
-  Keyboard.begin();
+  //Keyboard.begin();
 
   initExpanders();
   clearDisplay();
@@ -55,7 +49,7 @@ void unlock() {
   currentBuzzer = NO_BUZZER;
   clearDisplay();
   turnOffLEDs();
-  Keyboard.print('q');
+  //Keyboard.print('q');
 }
 
 void lock(uint8_t buttonID) {
@@ -63,7 +57,7 @@ void lock(uint8_t buttonID) {
   currentBuzzer = buttonID;
   displayNumber(buttonID);
   turnOnSingleLED(buttons[buttonID]);
-  Keyboard.print(String(buttonID));
+  //Keyboard.print(String(buttonID));
 }
 
 void checkCommand(byte command[2]) {
@@ -109,33 +103,29 @@ void handleRpiConnectionState() {
 void loop() {
   handleRpiConnectionState();
   checkCommand(lastCommand);
-  if(~(PINF >> 7) & 1) {
+  uint8_t pinb = PINB | 0b11111000; //& 0b01111110;
+  uint8_t pinc = PINC | 0b11110100; //& 0b01000000;
+  uint8_t pind = PIND | 0b00000111; //& 0b10010000;
+  
+  if((~pinc) & 1) {
     if (isLocked == true && last_release_button_state == 1) {
       unlock();
     }
     last_release_button_state = 0;
   } else {
     last_release_button_state = 1;
-  }
-  
-  uint8_t pinb = PINB | 0b10000001; //& 0b01111110;
-  uint8_t pinc = PINC | 0b10111111; //& 0b01000000;
-  uint8_t pind = PIND | 0b01101111; //& 0b10010000;
-  if (!isLocked) {
-    if((~(PINE >> 6) & 1)) {
-     // if (last_state[7] == 1) {
-        lock(7);
-     // }
-      last_state[7] = 0;
-    } else if (pinb != 0xFF) {
-      lock(buttonsB[getBitPosition(~pinb)].number);
-    } else if (pinc != 0xFF) {
-      lock(5);
-    } else if (pind>>7 == 0) {
-      lock(6);
-    } else if ((pind & 0b00010000)>>4 == 0) {
-      lock(4);
+     if (!isLocked) {
+      if (pinb != 0xFF) {
+        lock(buttonsB[getBitPosition(~pinb)].number);
+      } else if (pinc != 0xFF) {
+        lock(buttonsC[getBitPosition(~pinc)].number);
+      } else if (pind != 0xFF) {
+        lock(buttonsD[getBitPosition(~pind)].number);
+      }
     }
   }
+  
+
+ 
   //wdt_reset();
 }

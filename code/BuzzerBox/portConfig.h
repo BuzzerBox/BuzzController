@@ -9,7 +9,7 @@ typedef struct buttonBConfig {
   uint8_t number;
   uint8_t ledPort;
   uint8_t ledPin;
-}ButtonB;
+}ButtonPort;
 
 
 typedef enum {   
@@ -22,15 +22,35 @@ typedef enum {
 const byte NO_BUZZER = 0x7f;
 
 const uint8_t BUTTON_COUNT = 10;
-const ButtonB buttonsB [8] = {
+const ButtonPort buttonsB [8] = {
+  {3,1,0}, //Done
+  {1,0,0}, //Done
+  {0,0,1},  //Done
   {0,0,0}, //UNUSED
-  {3,1,0},
-  {0,0,1}, 
-  {2,1,1}, 
-  {9,0,7}, 
-  {8,0,6},
-  {1,0,0},
+  {0,0,0}, //UNUSED
+  {0,0,0},//UNUSED
+  {0,0,0},//UNUSED
+  {0,0,0} // UNUSED
+};
+const ButtonPort buttonsC [8] = {
+  {0,0,0}, // UNUSED
+  {2,1,1}, // Done
+  {0,0,1}, // UNUSED
+  {9,0,7}, //Done
+  {9,0,7}, // UNUSED
+  {8,0,6},// UNUSED
+  {1,0,0},// UNUSED
   {7,0,0} // UNUSED
+};
+const ButtonPort buttonsD [8] = {
+  {0,0,0}, // UNUSED
+  {3,1,0},// UNUSED
+  {9,0,7}, // UNUSED
+  {8,0,6}, //Done 
+  {7,0,5},//Done
+  {6,0,4}, //Done
+  {5,0,3},// Done
+  {4,0,2} //Done
 };
 
 const LEDConfig buttons [BUTTON_COUNT] = {
