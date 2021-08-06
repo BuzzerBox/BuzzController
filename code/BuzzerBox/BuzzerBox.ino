@@ -1,9 +1,16 @@
 #include <Wire.h>
 #include "portConfig.h"
 #include "Keyboard.h"
+#include <avr/interrupt.h>
+
 
 //#include <avr/wdt.h>
+uint8_t port_interrupt_flag = 255;
+uint8_t pin_data = 0xFF;
 
+uint8_t b_select = B00000111;
+uint8_t c_select = B00001010;
+uint8_t d_select = B11111000;
 
 boolean isLocked = false;
 boolean rPiIsConnected = false;
@@ -25,15 +32,21 @@ uint8_t getBitPosition(uint8_t b) {
 
 void setup() {
   //wdt_enable(WDTO_250MS);
-  
+
   DDRB = B00000000;
-  PORTB = B00000111 | PORTB;
-  
   DDRC = B00000000;
-  PORTC = B00001011 | PORTC;
-  
   DDRD = B00000000;
-  PORTD = B11111000 | PORTD;
+
+  PORTB |= b_select;
+  PORTC |= c_select & 1; // Also configure Release
+  PORTD |= d_select;
+
+  cli();
+  PCMSK0 |= b_select;
+  PCMSK1 |= c_select;
+  PCMSK2 |= d_select; // enable Interrupts on active pins for port d
+  PCICR  |= 0b00000111; // enable Interrupt on all 3 ports
+  sei();
   
   Wire.begin(0x19);
   Wire.onReceive(receiveEvent);
@@ -44,11 +57,48 @@ void setup() {
   turnOffLEDs();
 }
 
+ISR(PCINT0_vect)
+{
+  if (port_interrupt_flag == 255) {
+    pin_data = PINB | ~b_select; 
+    if (pin_data != 0xFF) {
+      PCICR  &= ~0b00000111;
+      port_interrupt_flag = 0;
+    }
+  }
+}
+
+ISR(PCINT1_vect)
+{
+  if (port_interrupt_flag == 255) {
+    pin_data = PINC | ~c_select; 
+    if (pin_data != 0xFF) {
+      PCICR  &= ~0b00000111;
+      port_interrupt_flag = 1;
+    }
+  }
+}
+
+ISR(PCINT2_vect)
+{
+  if (port_interrupt_flag == 255) {
+    pin_data = PIND | ~d_select; 
+    if (pin_data != 0xFF) {
+      PCICR  &= ~0b00000111;
+      port_interrupt_flag = 2;
+    }
+  }
+}
+
+
 void unlock() {
   isLocked = false;
   currentBuzzer = NO_BUZZER;
   clearDisplay();
   turnOffLEDs();
+  cli();
+  PCICR  |= 0b00000111;
+  sei();
   //Keyboard.print('q');
 }
 
@@ -103,29 +153,28 @@ void handleRpiConnectionState() {
 void loop() {
   handleRpiConnectionState();
   checkCommand(lastCommand);
-  uint8_t pinb = PINB | 0b11111000; //& 0b01111110;
-  uint8_t pinc = PINC | 0b11110100; //& 0b01000000;
-  uint8_t pind = PIND | 0b00000111; //& 0b10010000;
-  
-  if((~pinc) & 1) {
-    if (isLocked == true && last_release_button_state == 1) {
-      unlock();
-    }
-    last_release_button_state = 0;
+  if (~(PINC) & 1) {
+      if (isLocked == true && last_release_button_state == 1) {
+        unlock();
+      }
+      last_release_button_state = 0;
   } else {
     last_release_button_state = 1;
+  }
+    
+  
+  if(port_interrupt_flag != 255) {
      if (!isLocked) {
-      if (pinb != 0xFF) {
-        lock(buttonsB[getBitPosition(~pinb)].number);
-      } else if (pinc != 0xFF) {
-        lock(buttonsC[getBitPosition(~pinc)].number);
-      } else if (pind != 0xFF) {
-        lock(buttonsD[getBitPosition(~pind)].number);
+      if (port_interrupt_flag == 0) {
+        lock(buttonsB[getBitPosition(~pin_data)].number);
+      } else if (port_interrupt_flag == 1) {
+        lock(buttonsC[getBitPosition(~pin_data)].number);
+      } else if (port_interrupt_flag == 2) {
+        lock(buttonsD[getBitPosition(~pin_data)].number);
       }
     }
+    port_interrupt_flag = 255;
   }
-  
-
  
   //wdt_reset();
 }
