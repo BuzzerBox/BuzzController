@@ -17,16 +17,18 @@ boolean rPiIsConnected = false;
 boolean rPiJustConnected = false;
 //unsigned long lastConnection;
 uint8_t last_state[10] = {1};
-uint8_t last_release_button_state = 1;
+uint8_t release_down_count = 0;
 
 uint8_t currentBuzzer = NO_BUZZER;
 
 uint8_t lookup[] = {7, 0, 5, 1, 6, 4, 3, 2};
 uint8_t getBitPosition(uint8_t b) {
-  //int i=0;
-  //while( !((b >> i++) & 0x01) ) { ; }
-  //return i;
-  return lookup[((b * 0x1D) >> 4) & 0x7];
+  int i=0;
+  while( !((b >> i) & 1) ) { 
+    i++;  
+  }
+  return i;
+  //return lookup[((b * 0x1D) >> 4) & 0x7];
 }
 
 
@@ -38,7 +40,7 @@ void setup() {
   DDRD = B00000000;
 
   PORTB |= b_select;
-  PORTC |= c_select & 1; // Also configure Release
+  PORTC |= (c_select | 1); // Also configure Release
   PORTD |= d_select;
 
   cli();
@@ -153,13 +155,13 @@ void handleRpiConnectionState() {
 void loop() {
   handleRpiConnectionState();
   checkCommand(lastCommand);
-  if (~(PINC) & 1) {
-      if (isLocked == true && last_release_button_state == 1) {
+  if (~PINC & 1) {
+      if (isLocked == true && release_down_count > 10) {
         unlock();
       }
-      last_release_button_state = 0;
+      release_down_count++;
   } else {
-    last_release_button_state = 1;
+    release_down_count = 0;
   }
     
   
