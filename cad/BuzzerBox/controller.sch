@@ -14115,6 +14115,15 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <part name="R71" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="RESISTOR" device="0805" package3d_urn="urn:adsk.eagle:package:39651/1" value="10K"/>
 <part name="P+46" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
 <part name="+3V7" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
+<part name="D2" library="avago" library_urn="urn:adsk.eagle:library:107" deviceset="HSMS-2852" device="" package3d_urn="urn:adsk.eagle:package:4488/1"/>
+<part name="P+47" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
+<part name="GND46" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="R72" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="RESISTOR" device="0805" package3d_urn="urn:adsk.eagle:package:39651/1" value="10"/>
+<part name="R73" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="RESISTOR" device="0805" package3d_urn="urn:adsk.eagle:package:39651/1" value="1k"/>
+<part name="R74" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="RESISTOR" device="0805" package3d_urn="urn:adsk.eagle:package:39651/1" value="100k"/>
+<part name="C4" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="100nF"/>
+<part name="P+48" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
+<part name="GND47" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -16774,16 +16783,16 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <attribute name="NAME" x="177.356" y="192.1106" size="1.778" layer="95"/>
 <attribute name="VALUE" x="178.166" y="198.5866" size="1.778" layer="96" align="center"/>
 </instance>
-<instance part="RLSBT" gate="-1" x="246.38" y="198.12" smashed="yes">
-<attribute name="NAME" x="247.65" y="197.231" size="1.778" layer="95"/>
-<attribute name="VALUE" x="260.35" y="197.231" size="1.778" layer="96"/>
+<instance part="RLSBT" gate="-1" x="66.04" y="182.88" smashed="yes">
+<attribute name="NAME" x="67.31" y="181.991" size="1.778" layer="95"/>
+<attribute name="VALUE" x="80.01" y="181.991" size="1.778" layer="96"/>
 </instance>
-<instance part="RLSBT" gate="-2" x="246.38" y="190.5" smashed="yes">
-<attribute name="NAME" x="247.65" y="189.611" size="1.778" layer="95"/>
-<attribute name="VALUE" x="260.35" y="189.611" size="1.778" layer="96"/>
+<instance part="RLSBT" gate="-2" x="66.04" y="175.26" smashed="yes">
+<attribute name="NAME" x="67.31" y="174.371" size="1.778" layer="95"/>
+<attribute name="VALUE" x="80.01" y="174.371" size="1.778" layer="96"/>
 </instance>
-<instance part="GND25" gate="1" x="243.84" y="182.88" smashed="yes">
-<attribute name="VALUE" x="241.3" y="180.34" size="1.778" layer="96"/>
+<instance part="GND25" gate="1" x="63.5" y="167.64" smashed="yes">
+<attribute name="VALUE" x="60.96" y="165.1" size="1.778" layer="96"/>
 </instance>
 <instance part="J4" gate="A" x="215.9" y="187.96" smashed="yes">
 <attribute name="NAME" x="209.55" y="193.675" size="1.778" layer="95"/>
@@ -16834,6 +16843,38 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 </instance>
 <instance part="+3V7" gate="G$1" x="274.32" y="91.44" smashed="yes">
 <attribute name="VALUE" x="271.78" y="86.36" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="D2" gate="A" x="111.76" y="182.88" smashed="yes" rot="R270">
+<attribute name="NAME" x="113.7666" y="182.118" size="1.778" layer="95" rot="R270"/>
+<attribute name="VALUE" x="108.3056" y="187.706" size="1.778" layer="96" rot="R270"/>
+</instance>
+<instance part="P+47" gate="1" x="111.76" y="195.58" smashed="yes">
+<attribute name="VALUE" x="111.76" y="195.58" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="GND46" gate="1" x="111.76" y="170.18" smashed="yes">
+<attribute name="VALUE" x="109.22" y="167.64" size="1.778" layer="96"/>
+</instance>
+<instance part="R72" gate="G$1" x="99.06" y="182.88" smashed="yes">
+<attribute name="NAME" x="99.06" y="184.404" size="1.778" layer="95" font="vector" align="bottom-center"/>
+<attribute name="VALUE" x="99.06" y="181.356" size="1.778" layer="96" font="vector" align="top-center"/>
+</instance>
+<instance part="R73" gate="G$1" x="121.92" y="182.88" smashed="yes">
+<attribute name="NAME" x="121.92" y="184.404" size="1.778" layer="95" font="vector" align="bottom-center"/>
+<attribute name="VALUE" x="121.92" y="181.356" size="1.778" layer="96" font="vector" align="top-center"/>
+</instance>
+<instance part="R74" gate="G$1" x="132.08" y="187.96" smashed="yes" rot="R90">
+<attribute name="NAME" x="130.556" y="187.96" size="1.778" layer="95" font="vector" rot="R90" align="bottom-center"/>
+<attribute name="VALUE" x="133.604" y="187.96" size="1.778" layer="96" font="vector" rot="R90" align="top-center"/>
+</instance>
+<instance part="C4" gate="G$1" x="129.54" y="180.34" smashed="yes">
+<attribute name="NAME" x="131.064" y="180.721" size="1.778" layer="95"/>
+<attribute name="VALUE" x="131.064" y="175.641" size="1.778" layer="96"/>
+</instance>
+<instance part="P+48" gate="1" x="132.08" y="195.58" smashed="yes">
+<attribute name="VALUE" x="132.08" y="195.58" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="GND47" gate="1" x="129.54" y="170.18" smashed="yes">
+<attribute name="VALUE" x="127" y="167.64" size="1.778" layer="96"/>
 </instance>
 </instances>
 <busses>
@@ -16918,13 +16959,23 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <segment>
 <pinref part="RLSBT" gate="-2" pin="K"/>
 <pinref part="GND25" gate="1" pin="GND"/>
-<wire x1="243.84" y1="190.5" x2="243.84" y2="185.42" width="0.1524" layer="91"/>
+<wire x1="63.5" y1="175.26" x2="63.5" y2="170.18" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="J4" gate="A" pin="6"/>
 <wire x1="220.98" y1="185.42" x2="228.6" y2="185.42" width="0.1524" layer="91"/>
 <pinref part="GND42" gate="1" pin="GND"/>
 <wire x1="228.6" y1="185.42" x2="228.6" y2="182.88" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="GND46" gate="1" pin="GND"/>
+<pinref part="D2" gate="A" pin="A"/>
+<wire x1="111.76" y1="172.72" x2="111.76" y2="177.8" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="C4" gate="G$1" pin="2"/>
+<pinref part="GND47" gate="1" pin="GND"/>
+<wire x1="129.54" y1="175.26" x2="129.54" y2="172.72" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="+5V" class="0">
@@ -17043,6 +17094,15 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <pinref part="R70" gate="G$1" pin="2"/>
 <pinref part="P+46" gate="1" pin="+5V"/>
 <wire x1="248.92" y1="106.68" x2="248.92" y2="109.22" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="D2" gate="A" pin="C"/>
+<pinref part="P+47" gate="1" pin="+5V"/>
+<wire x1="111.76" y1="187.96" x2="111.76" y2="193.04" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="P+48" gate="1" pin="+5V"/>
+<pinref part="R74" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="SDA" class="0">
@@ -17455,9 +17515,15 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <label x="215.9" y="114.3" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="RLSBT" gate="-1" pin="K"/>
-<wire x1="238.76" y1="198.12" x2="243.84" y2="198.12" width="0.1524" layer="91"/>
-<label x="238.76" y="198.12" size="1.778" layer="95"/>
+<pinref part="R74" gate="G$1" pin="1"/>
+<pinref part="R73" gate="G$1" pin="2"/>
+<wire x1="129.54" y1="182.88" x2="127" y2="182.88" width="0.1524" layer="91"/>
+<pinref part="C4" gate="G$1" pin="1"/>
+<junction x="129.54" y="182.88"/>
+<wire x1="129.54" y1="182.88" x2="132.08" y2="182.88" width="0.1524" layer="91"/>
+<wire x1="132.08" y1="182.88" x2="142.24" y2="182.88" width="0.1524" layer="91"/>
+<junction x="132.08" y="182.88"/>
+<label x="137.16" y="182.88" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$33" class="0">
@@ -17641,6 +17707,28 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <junction x="266.7" y="96.52"/>
 <label x="269.24" y="96.52" size="1.778" layer="95"/>
 <label x="269.24" y="96.52" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="N$41" class="0">
+<segment>
+<pinref part="R73" gate="G$1" pin="1"/>
+<pinref part="D2" gate="A" pin="AC"/>
+<wire x1="116.84" y1="182.88" x2="114.3" y2="182.88" width="0.1524" layer="91"/>
+<pinref part="R72" gate="G$1" pin="2"/>
+<wire x1="114.3" y1="182.88" x2="104.14" y2="182.88" width="0.1524" layer="91"/>
+<junction x="114.3" y="182.88"/>
+</segment>
+</net>
+<net name="RLSBT" class="0">
+<segment>
+<pinref part="RLSBT" gate="-1" pin="K"/>
+<wire x1="58.42" y1="182.88" x2="63.5" y2="182.88" width="0.1524" layer="91"/>
+<label x="58.42" y="182.88" size="1.778" layer="95"/>
+<wire x1="58.42" y1="182.88" x2="58.42" y2="187.96" width="0.1524" layer="91"/>
+<wire x1="58.42" y1="187.96" x2="91.44" y2="187.96" width="0.1524" layer="91"/>
+<wire x1="91.44" y1="187.96" x2="91.44" y2="182.88" width="0.1524" layer="91"/>
+<pinref part="R72" gate="G$1" pin="1"/>
+<wire x1="91.44" y1="182.88" x2="93.98" y2="182.88" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
