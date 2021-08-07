@@ -18,10 +18,11 @@ boolean rPiJustConnected = false;
 //unsigned long lastConnection;
 uint8_t last_state[10] = {1};
 uint8_t release_down_count = 0;
+uint8_t release_was_high = 1;
 
 uint8_t currentBuzzer = NO_BUZZER;
 
-uint8_t lookup[] = {7, 0, 5, 1, 6, 4, 3, 2};
+// uint8_t lookup[] = {7, 0, 5, 1, 6, 4, 3, 2};
 uint8_t getBitPosition(uint8_t b) {
   int i=0;
   while( !((b >> i) & 1) ) { 
@@ -155,12 +156,15 @@ void handleRpiConnectionState() {
 void loop() {
   handleRpiConnectionState();
   checkCommand(lastCommand);
-  if (~PINC & 1) {
+  uint8_t release_pressed = ~PINC & 1;
+  if (release_pressed && release_was_high == 1) {
       if (isLocked == true && release_down_count > 10) {
         unlock();
+        release_was_high = 0;
       }
       release_down_count++;
   } else {
+    if (!release_pressed) release_was_high = 1;
     release_down_count = 0;
   }
     
