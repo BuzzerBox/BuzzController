@@ -51,6 +51,7 @@ void setup() {
   PCICR  |= 0b00000111; // enable Interrupt on all 3 ports
   sei();
   
+  Serial.begin(115200);
   Wire.begin(0x19);
   Wire.onReceive(receiveEvent);
   //Keyboard.begin();
@@ -102,6 +103,7 @@ void unlock() {
   cli();
   PCICR  |= 0b00000111;
   sei();
+  Serial.write('q');
   //Keyboard.print('q');
 }
 
@@ -111,6 +113,7 @@ void lock(uint8_t buttonID) {
   displayNumber(buttonID);
   turnOnSingleLED(buttons[buttonID]);
   //Keyboard.print(String(buttonID));
+  Serial.write(buttonID +48);
 }
 
 void checkCommand(byte command[2]) {
