@@ -13881,16 +13881,16 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <parts>
 <part name="SUPPLY1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="P+6" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
-<part name="BUZZER8" library="custom-350" deviceset="1751251" device="" package3d_urn="urn:adsk.eagle:package:9394/1"/>
-<part name="BUZZER1" library="custom-350" deviceset="1751251" device="" package3d_urn="urn:adsk.eagle:package:9394/1"/>
-<part name="BUZZER0" library="custom-350" deviceset="1751251" device="" package3d_urn="urn:adsk.eagle:package:9394/1"/>
-<part name="BUZZER6" library="custom-350" deviceset="1751251" device="" package3d_urn="urn:adsk.eagle:package:9394/1"/>
-<part name="BUZZER7" library="custom-350" deviceset="1751251" device="" package3d_urn="urn:adsk.eagle:package:9394/1"/>
-<part name="BUZZER9" library="custom-350" deviceset="1751251" device="" package3d_urn="urn:adsk.eagle:package:9394/1"/>
-<part name="BUZZER3" library="custom-350" deviceset="1751251" device="" package3d_urn="urn:adsk.eagle:package:9394/1"/>
-<part name="BUZZER4" library="custom-350" deviceset="1751251" device="" package3d_urn="urn:adsk.eagle:package:9394/1"/>
-<part name="BUZZER5" library="custom-350" deviceset="1751251" device="" package3d_urn="urn:adsk.eagle:package:9394/1"/>
 <part name="BUZZER2" library="custom-350" deviceset="1751251" device="" package3d_urn="urn:adsk.eagle:package:9394/1"/>
+<part name="BUZZER9" library="custom-350" deviceset="1751251" device="" package3d_urn="urn:adsk.eagle:package:9394/1"/>
+<part name="BUZZER0" library="custom-350" deviceset="1751251" device="" package3d_urn="urn:adsk.eagle:package:9394/1"/>
+<part name="BUZZER4" library="custom-350" deviceset="1751251" device="" package3d_urn="urn:adsk.eagle:package:9394/1"/>
+<part name="BUZZER3" library="custom-350" deviceset="1751251" device="" package3d_urn="urn:adsk.eagle:package:9394/1"/>
+<part name="BUZZER19" library="custom-350" deviceset="1751251" device="" package3d_urn="urn:adsk.eagle:package:9394/1"/>
+<part name="BUZZER7" library="custom-350" deviceset="1751251" device="" package3d_urn="urn:adsk.eagle:package:9394/1"/>
+<part name="BUZZER6" library="custom-350" deviceset="1751251" device="" package3d_urn="urn:adsk.eagle:package:9394/1"/>
+<part name="BUZZER5" library="custom-350" deviceset="1751251" device="" package3d_urn="urn:adsk.eagle:package:9394/1"/>
+<part name="BUZZER8" library="custom-350" deviceset="1751251" device="" package3d_urn="urn:adsk.eagle:package:9394/1"/>
 <part name="D5" library="avago" library_urn="urn:adsk.eagle:library:107" deviceset="HSMS-2852" device="" package3d_urn="urn:adsk.eagle:package:4488/1"/>
 <part name="P+3" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
 <part name="GND4" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
@@ -13984,16 +13984,6 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <part name="MCP2" library="microchip" deviceset="MCP23017" device="-E/SO"/>
 <part name="GND23" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="P+26" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
-<part name="Q1" library="SparkFun" deviceset="MOSFET-NCHANNEL" device="SMD" value="BSS138"/>
-<part name="R31" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="RESISTOR" device="0805" package3d_urn="urn:adsk.eagle:package:39651/1" value="10K"/>
-<part name="R32" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="RESISTOR" device="0805" package3d_urn="urn:adsk.eagle:package:39651/1" value="10K"/>
-<part name="P+27" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
-<part name="+3V1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
-<part name="Q2" library="SparkFun" deviceset="MOSFET-NCHANNEL" device="SMD" value="BSS138"/>
-<part name="R33" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="RESISTOR" device="0805" package3d_urn="urn:adsk.eagle:package:39651/1" value="10K"/>
-<part name="R34" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="RESISTOR" device="0805" package3d_urn="urn:adsk.eagle:package:39651/1" value="10K"/>
-<part name="P+28" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
-<part name="+3V3" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
 <part name="POWER" library="custom-350" deviceset="1751248" device="" package3d_urn="urn:adsk.eagle:package:9395/1"/>
 <part name="D3" library="diode" deviceset="1N4004" device="" package3d_urn="urn:adsk.eagle:package:43336/1" value="1N4002"/>
 <part name="7SEG" library="display-kingbright" library_urn="urn:adsk.eagle:library:213" deviceset="7-SEG_" device="SA10-21" package3d_urn="urn:adsk.eagle:package:13078/1"/>
@@ -15054,27 +15044,27 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <plain>
 </plain>
 <instances>
-<instance part="BUZZER8" gate="-1" x="134.62" y="-66.04" smashed="yes" rot="R180">
+<instance part="BUZZER2" gate="-1" x="134.62" y="-66.04" smashed="yes" rot="R180">
 <attribute name="NAME" x="133.35" y="-65.151" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="118.11" y="-65.151" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="BUZZER8" gate="-2" x="134.62" y="-73.66" smashed="yes" rot="R180">
+<instance part="BUZZER2" gate="-2" x="134.62" y="-73.66" smashed="yes" rot="R180">
 <attribute name="NAME" x="133.35" y="-72.771" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="118.11" y="-72.771" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="BUZZER8" gate="-3" x="134.62" y="-81.28" smashed="yes" rot="R180">
+<instance part="BUZZER2" gate="-3" x="134.62" y="-81.28" smashed="yes" rot="R180">
 <attribute name="NAME" x="133.35" y="-80.391" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="118.11" y="-80.391" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="BUZZER1" gate="-1" x="134.62" y="-101.6" smashed="yes" rot="R180">
+<instance part="BUZZER9" gate="-1" x="134.62" y="-101.6" smashed="yes" rot="R180">
 <attribute name="NAME" x="133.35" y="-100.711" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="118.11" y="-100.711" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="BUZZER1" gate="-2" x="134.62" y="-109.22" smashed="yes" rot="R180">
+<instance part="BUZZER9" gate="-2" x="134.62" y="-109.22" smashed="yes" rot="R180">
 <attribute name="NAME" x="133.35" y="-108.331" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="118.11" y="-108.331" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="BUZZER1" gate="-3" x="134.62" y="-116.84" smashed="yes" rot="R180">
+<instance part="BUZZER9" gate="-3" x="134.62" y="-116.84" smashed="yes" rot="R180">
 <attribute name="NAME" x="133.35" y="-115.951" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="118.11" y="-115.951" size="1.778" layer="96" rot="R180"/>
 </instance>
@@ -15090,63 +15080,63 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <attribute name="NAME" x="133.35" y="-151.511" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="118.11" y="-151.511" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="BUZZER6" gate="-1" x="-68.58" y="-142.24" smashed="yes" rot="R180">
+<instance part="BUZZER4" gate="-1" x="-68.58" y="-142.24" smashed="yes" rot="R180">
 <attribute name="NAME" x="-69.85" y="-141.351" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="-85.09" y="-141.351" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="BUZZER6" gate="-2" x="-68.58" y="-149.86" smashed="yes" rot="R180">
+<instance part="BUZZER4" gate="-2" x="-68.58" y="-149.86" smashed="yes" rot="R180">
 <attribute name="NAME" x="-69.85" y="-148.971" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="-85.09" y="-148.971" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="BUZZER6" gate="-3" x="-68.58" y="-157.48" smashed="yes" rot="R180">
+<instance part="BUZZER4" gate="-3" x="-68.58" y="-157.48" smashed="yes" rot="R180">
 <attribute name="NAME" x="-69.85" y="-156.591" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="-85.09" y="-156.591" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="BUZZER7" gate="-1" x="134.62" y="0" smashed="yes" rot="R180">
+<instance part="BUZZER3" gate="-1" x="134.62" y="0" smashed="yes" rot="R180">
 <attribute name="NAME" x="133.35" y="0.889" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="118.11" y="0.889" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="BUZZER7" gate="-2" x="134.62" y="-7.62" smashed="yes" rot="R180">
+<instance part="BUZZER3" gate="-2" x="134.62" y="-7.62" smashed="yes" rot="R180">
 <attribute name="NAME" x="133.35" y="-6.731" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="118.11" y="-6.731" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="BUZZER7" gate="-3" x="134.62" y="-15.24" smashed="yes" rot="R180">
+<instance part="BUZZER3" gate="-3" x="134.62" y="-15.24" smashed="yes" rot="R180">
 <attribute name="NAME" x="133.35" y="-14.351" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="118.11" y="-14.351" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="BUZZER9" gate="-1" x="134.62" y="-33.02" smashed="yes" rot="R180">
+<instance part="BUZZER19" gate="-1" x="134.62" y="-33.02" smashed="yes" rot="R180">
 <attribute name="NAME" x="133.35" y="-32.131" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="118.11" y="-32.131" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="BUZZER9" gate="-2" x="134.62" y="-40.64" smashed="yes" rot="R180">
+<instance part="BUZZER19" gate="-2" x="134.62" y="-40.64" smashed="yes" rot="R180">
 <attribute name="NAME" x="133.35" y="-39.751" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="118.11" y="-39.751" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="BUZZER9" gate="-3" x="134.62" y="-48.26" smashed="yes" rot="R180">
+<instance part="BUZZER19" gate="-3" x="134.62" y="-48.26" smashed="yes" rot="R180">
 <attribute name="NAME" x="133.35" y="-47.371" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="118.11" y="-47.371" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="BUZZER3" gate="-1" x="-68.58" y="-38.1" smashed="yes" rot="R180">
+<instance part="BUZZER7" gate="-1" x="-68.58" y="-38.1" smashed="yes" rot="R180">
 <attribute name="NAME" x="-69.85" y="-37.211" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="-85.09" y="-37.211" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="BUZZER3" gate="-2" x="-68.58" y="-45.72" smashed="yes" rot="R180">
+<instance part="BUZZER7" gate="-2" x="-68.58" y="-45.72" smashed="yes" rot="R180">
 <attribute name="NAME" x="-69.85" y="-44.831" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="-85.09" y="-44.831" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="BUZZER3" gate="-3" x="-68.58" y="-53.34" smashed="yes" rot="R180">
+<instance part="BUZZER7" gate="-3" x="-68.58" y="-53.34" smashed="yes" rot="R180">
 <attribute name="NAME" x="-69.85" y="-52.451" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="-85.09" y="-52.451" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="BUZZER4" gate="-1" x="-68.58" y="-71.12" smashed="yes" rot="R180">
+<instance part="BUZZER6" gate="-1" x="-68.58" y="-71.12" smashed="yes" rot="R180">
 <attribute name="NAME" x="-69.85" y="-70.231" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="-85.09" y="-70.231" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="BUZZER4" gate="-2" x="-68.58" y="-78.74" smashed="yes" rot="R180">
+<instance part="BUZZER6" gate="-2" x="-68.58" y="-78.74" smashed="yes" rot="R180">
 <attribute name="NAME" x="-69.85" y="-77.851" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="-85.09" y="-77.851" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="BUZZER4" gate="-3" x="-68.58" y="-86.36" smashed="yes" rot="R180">
+<instance part="BUZZER6" gate="-3" x="-68.58" y="-86.36" smashed="yes" rot="R180">
 <attribute name="NAME" x="-69.85" y="-85.471" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="-85.09" y="-85.471" size="1.778" layer="96" rot="R180"/>
 </instance>
@@ -15162,15 +15152,15 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <attribute name="NAME" x="-69.85" y="-121.031" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="-85.09" y="-121.031" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="BUZZER2" gate="-1" x="-68.58" y="-5.08" smashed="yes" rot="R180">
+<instance part="BUZZER8" gate="-1" x="-68.58" y="-5.08" smashed="yes" rot="R180">
 <attribute name="NAME" x="-69.85" y="-4.191" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="-85.09" y="-4.191" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="BUZZER2" gate="-2" x="-68.58" y="-12.7" smashed="yes" rot="R180">
+<instance part="BUZZER8" gate="-2" x="-68.58" y="-12.7" smashed="yes" rot="R180">
 <attribute name="NAME" x="-69.85" y="-11.811" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="-85.09" y="-11.811" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="BUZZER2" gate="-3" x="-68.58" y="-20.32" smashed="yes" rot="R180">
+<instance part="BUZZER8" gate="-3" x="-68.58" y="-20.32" smashed="yes" rot="R180">
 <attribute name="NAME" x="-69.85" y="-19.431" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="-85.09" y="-19.431" size="1.778" layer="96" rot="R180"/>
 </instance>
@@ -15693,28 +15683,28 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <pinref part="GND26" gate="1" pin="GND"/>
 </segment>
 <segment>
-<pinref part="BUZZER1" gate="-1" pin="K"/>
+<pinref part="BUZZER9" gate="-1" pin="K"/>
 <wire x1="137.16" y1="-101.6" x2="147.32" y2="-101.6" width="0.1524" layer="91"/>
 <pinref part="GND27" gate="1" pin="GND"/>
 </segment>
 <segment>
-<pinref part="BUZZER8" gate="-1" pin="K"/>
+<pinref part="BUZZER2" gate="-1" pin="K"/>
 <wire x1="137.16" y1="-66.04" x2="147.32" y2="-66.04" width="0.1524" layer="91"/>
 <pinref part="GND28" gate="1" pin="GND"/>
 </segment>
 <segment>
-<pinref part="BUZZER9" gate="-1" pin="K"/>
+<pinref part="BUZZER19" gate="-1" pin="K"/>
 <wire x1="137.16" y1="-33.02" x2="147.32" y2="-33.02" width="0.1524" layer="91"/>
 <pinref part="GND29" gate="1" pin="GND"/>
 </segment>
 <segment>
-<pinref part="BUZZER7" gate="-1" pin="K"/>
+<pinref part="BUZZER3" gate="-1" pin="K"/>
 <wire x1="137.16" y1="0" x2="147.32" y2="0" width="0.1524" layer="91"/>
 <pinref part="GND30" gate="1" pin="GND"/>
 </segment>
 <segment>
 <pinref part="GND31" gate="1" pin="GND"/>
-<pinref part="BUZZER6" gate="-1" pin="K"/>
+<pinref part="BUZZER4" gate="-1" pin="K"/>
 <wire x1="-66.04" y1="-142.24" x2="-55.88" y2="-142.24" width="0.1524" layer="91"/>
 </segment>
 <segment>
@@ -15724,16 +15714,16 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 </segment>
 <segment>
 <pinref part="GND33" gate="1" pin="GND"/>
-<pinref part="BUZZER4" gate="-1" pin="K"/>
+<pinref part="BUZZER6" gate="-1" pin="K"/>
 <wire x1="-66.04" y1="-71.12" x2="-55.88" y2="-71.12" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="GND34" gate="1" pin="GND"/>
-<pinref part="BUZZER3" gate="-1" pin="K"/>
+<pinref part="BUZZER7" gate="-1" pin="K"/>
 <wire x1="-66.04" y1="-38.1" x2="-55.88" y2="-38.1" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="BUZZER2" gate="-1" pin="K"/>
+<pinref part="BUZZER8" gate="-1" pin="K"/>
 <wire x1="-66.04" y1="-5.08" x2="-55.88" y2="-5.08" width="0.1524" layer="91"/>
 <pinref part="GND35" gate="1" pin="GND"/>
 </segment>
@@ -15998,7 +15988,7 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 </net>
 <net name="N$46" class="0">
 <segment>
-<pinref part="BUZZER6" gate="-2" pin="K"/>
+<pinref part="BUZZER4" gate="-2" pin="K"/>
 <pinref part="R14" gate="G$1" pin="1"/>
 <wire x1="-66.04" y1="-149.86" x2="-50.8" y2="-149.86" width="0.1524" layer="91"/>
 </segment>
@@ -16007,21 +15997,21 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <segment>
 <pinref part="R4" gate="G$1" pin="1"/>
 <wire x1="-50.8" y1="-45.72" x2="-55.88" y2="-45.72" width="0.1524" layer="91"/>
-<pinref part="BUZZER3" gate="-2" pin="K"/>
+<pinref part="BUZZER7" gate="-2" pin="K"/>
 <wire x1="-66.04" y1="-45.72" x2="-50.8" y2="-45.72" width="0.1524" layer="91"/>
 <junction x="-50.8" y="-45.72"/>
 </segment>
 </net>
 <net name="N$23" class="0">
 <segment>
-<pinref part="BUZZER4" gate="-2" pin="K"/>
+<pinref part="BUZZER6" gate="-2" pin="K"/>
 <pinref part="R7" gate="G$1" pin="1"/>
 <wire x1="-50.8" y1="-78.74" x2="-66.04" y2="-78.74" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$38" class="0">
 <segment>
-<pinref part="BUZZER8" gate="-2" pin="K"/>
+<pinref part="BUZZER2" gate="-2" pin="K"/>
 <wire x1="137.16" y1="-73.66" x2="152.4" y2="-73.66" width="0.1524" layer="91"/>
 <pinref part="R22" gate="G$1" pin="1"/>
 </segment>
@@ -16051,7 +16041,7 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 </net>
 <net name="N$4" class="0">
 <segment>
-<pinref part="BUZZER2" gate="-2" pin="K"/>
+<pinref part="BUZZER8" gate="-2" pin="K"/>
 <pinref part="R1" gate="G$1" pin="1"/>
 <wire x1="-66.04" y1="-12.7" x2="-50.8" y2="-12.7" width="0.1524" layer="91"/>
 </segment>
@@ -16200,21 +16190,21 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 </net>
 <net name="N$36" class="0">
 <segment>
-<pinref part="BUZZER7" gate="-2" pin="K"/>
+<pinref part="BUZZER3" gate="-2" pin="K"/>
 <pinref part="R10" gate="G$1" pin="1"/>
 <wire x1="137.16" y1="-7.62" x2="152.4" y2="-7.62" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$37" class="0">
 <segment>
-<pinref part="BUZZER9" gate="-2" pin="K"/>
+<pinref part="BUZZER19" gate="-2" pin="K"/>
 <wire x1="137.16" y1="-40.64" x2="152.4" y2="-40.64" width="0.1524" layer="91"/>
 <pinref part="R19" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="N$39" class="0">
 <segment>
-<pinref part="BUZZER1" gate="-2" pin="K"/>
+<pinref part="BUZZER9" gate="-2" pin="K"/>
 <pinref part="R25" gate="G$1" pin="1"/>
 <wire x1="137.16" y1="-109.22" x2="152.4" y2="-109.22" width="0.1524" layer="91"/>
 </segment>
@@ -16403,7 +16393,7 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 </net>
 <net name="LED0B1" class="0">
 <segment>
-<pinref part="BUZZER2" gate="-3" pin="K"/>
+<pinref part="BUZZER8" gate="-3" pin="K"/>
 <wire x1="-66.04" y1="-20.32" x2="-58.42" y2="-20.32" width="0.1524" layer="91"/>
 <label x="-66.04" y="-20.32" size="1.778" layer="95"/>
 <pinref part="R56" gate="G$1" pin="1"/>
@@ -16414,7 +16404,7 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 </net>
 <net name="LED0B0" class="0">
 <segment>
-<pinref part="BUZZER3" gate="-3" pin="K"/>
+<pinref part="BUZZER7" gate="-3" pin="K"/>
 <wire x1="-66.04" y1="-53.34" x2="-58.42" y2="-53.34" width="0.1524" layer="91"/>
 <label x="-66.04" y="-53.34" size="1.778" layer="95"/>
 <pinref part="R58" gate="G$1" pin="1"/>
@@ -16425,7 +16415,7 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 </net>
 <net name="LED0A2" class="0">
 <segment>
-<pinref part="BUZZER4" gate="-3" pin="K"/>
+<pinref part="BUZZER6" gate="-3" pin="K"/>
 <wire x1="-66.04" y1="-86.36" x2="-55.88" y2="-86.36" width="0.1524" layer="91"/>
 <label x="-63.5" y="-86.36" size="1.778" layer="95"/>
 <pinref part="R60" gate="G$1" pin="1"/>
@@ -16447,7 +16437,7 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 </net>
 <net name="LED0A4" class="0">
 <segment>
-<pinref part="BUZZER6" gate="-3" pin="K"/>
+<pinref part="BUZZER4" gate="-3" pin="K"/>
 <wire x1="-66.04" y1="-157.48" x2="-53.34" y2="-157.48" width="0.1524" layer="91"/>
 <label x="-63.5" y="-157.48" size="1.778" layer="95"/>
 <pinref part="R64" gate="G$1" pin="1"/>
@@ -16458,7 +16448,7 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 </net>
 <net name="LED1A5" class="0">
 <segment>
-<pinref part="BUZZER7" gate="-3" pin="K"/>
+<pinref part="BUZZER3" gate="-3" pin="K"/>
 <wire x1="147.32" y1="-15.24" x2="137.16" y2="-15.24" width="0.1524" layer="91"/>
 <label x="139.7" y="-15.24" size="1.778" layer="95"/>
 <pinref part="R46" gate="G$1" pin="1"/>
@@ -16469,7 +16459,7 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 </net>
 <net name="LED1A7" class="0">
 <segment>
-<pinref part="BUZZER9" gate="-3" pin="K"/>
+<pinref part="BUZZER19" gate="-3" pin="K"/>
 <wire x1="147.32" y1="-48.26" x2="137.16" y2="-48.26" width="0.1524" layer="91"/>
 <label x="139.7" y="-48.26" size="1.778" layer="95"/>
 <pinref part="R48" gate="G$1" pin="1"/>
@@ -16481,7 +16471,7 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 </net>
 <net name="LED1A6" class="0">
 <segment>
-<pinref part="BUZZER8" gate="-3" pin="K"/>
+<pinref part="BUZZER2" gate="-3" pin="K"/>
 <wire x1="137.16" y1="-81.28" x2="147.32" y2="-81.28" width="0.1524" layer="91"/>
 <label x="139.7" y="-81.28" size="1.778" layer="95"/>
 <pinref part="R50" gate="G$1" pin="1"/>
@@ -16492,7 +16482,7 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 </net>
 <net name="LED1A0" class="0">
 <segment>
-<pinref part="BUZZER1" gate="-3" pin="K"/>
+<pinref part="BUZZER9" gate="-3" pin="K"/>
 <wire x1="137.16" y1="-116.84" x2="147.32" y2="-116.84" width="0.1524" layer="91"/>
 <label x="139.7" y="-116.84" size="1.778" layer="95"/>
 <pinref part="R52" gate="G$1" pin="1"/>
@@ -16665,42 +16655,6 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 </instance>
 <instance part="P+26" gate="1" x="-20.32" y="149.86" smashed="yes">
 <attribute name="VALUE" x="-22.86" y="144.78" size="1.778" layer="96" rot="R90"/>
-</instance>
-<instance part="Q1" gate="G$1" x="5.08" y="132.08" smashed="yes" rot="R90">
-<attribute name="NAME" x="8.89" y="127.254" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="10.414" y="137.668" size="1.778" layer="96" rot="R180"/>
-</instance>
-<instance part="R31" gate="G$1" x="-2.54" y="137.16" smashed="yes" rot="R90">
-<attribute name="NAME" x="-4.064" y="137.16" size="1.778" layer="95" font="vector" rot="R90" align="bottom-center"/>
-<attribute name="VALUE" x="-1.016" y="137.16" size="1.778" layer="96" font="vector" rot="R90" align="top-center"/>
-</instance>
-<instance part="R32" gate="G$1" x="12.7" y="127" smashed="yes" rot="R270">
-<attribute name="NAME" x="14.224" y="127" size="1.778" layer="95" font="vector" rot="R270" align="bottom-center"/>
-<attribute name="VALUE" x="11.176" y="127" size="1.778" layer="96" font="vector" rot="R270" align="top-center"/>
-</instance>
-<instance part="P+27" gate="1" x="-2.54" y="149.86" smashed="yes">
-<attribute name="VALUE" x="-5.08" y="144.78" size="1.778" layer="96" rot="R90"/>
-</instance>
-<instance part="+3V1" gate="G$1" x="22.86" y="127" smashed="yes">
-<attribute name="VALUE" x="20.32" y="121.92" size="1.778" layer="96" rot="R90"/>
-</instance>
-<instance part="Q2" gate="G$1" x="2.54" y="101.6" smashed="yes" rot="R90">
-<attribute name="NAME" x="6.35" y="96.774" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="7.874" y="107.188" size="1.778" layer="96" rot="R180"/>
-</instance>
-<instance part="R33" gate="G$1" x="-5.08" y="106.68" smashed="yes" rot="R90">
-<attribute name="NAME" x="-6.604" y="106.68" size="1.778" layer="95" font="vector" rot="R90" align="bottom-center"/>
-<attribute name="VALUE" x="-3.556" y="106.68" size="1.778" layer="96" font="vector" rot="R90" align="top-center"/>
-</instance>
-<instance part="R34" gate="G$1" x="12.7" y="96.52" smashed="yes" rot="R270">
-<attribute name="NAME" x="14.224" y="96.52" size="1.778" layer="95" font="vector" rot="R270" align="bottom-center"/>
-<attribute name="VALUE" x="11.176" y="96.52" size="1.778" layer="96" font="vector" rot="R270" align="top-center"/>
-</instance>
-<instance part="P+28" gate="1" x="-5.08" y="114.3" smashed="yes">
-<attribute name="VALUE" x="-7.62" y="109.22" size="1.778" layer="96" rot="R90"/>
-</instance>
-<instance part="+3V3" gate="G$1" x="22.86" y="93.98" smashed="yes">
-<attribute name="VALUE" x="20.32" y="88.9" size="1.778" layer="96" rot="R90"/>
 </instance>
 <instance part="FRAME3" gate="G$1" x="-101.6" y="-43.18" smashed="yes">
 <attribute name="DRAWING_NAME" x="242.57" y="-27.94" size="2.54" layer="94"/>
@@ -17022,15 +16976,6 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <junction x="-20.32" y="119.38"/>
 </segment>
 <segment>
-<pinref part="P+27" gate="1" pin="+5V"/>
-<pinref part="R31" gate="G$1" pin="2"/>
-<wire x1="-2.54" y1="147.32" x2="-2.54" y2="142.24" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="P+28" gate="1" pin="+5V"/>
-<pinref part="R33" gate="G$1" pin="2"/>
-</segment>
-<segment>
 <pinref part="C2" gate="G$1" pin="1"/>
 <wire x1="142.24" y1="114.3" x2="142.24" y2="116.84" width="0.1524" layer="91"/>
 <wire x1="142.24" y1="116.84" x2="154.94" y2="116.84" width="0.1524" layer="91"/>
@@ -17116,14 +17061,8 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 </segment>
 <segment>
 <pinref part="MCP2" gate="G$1" pin="SDA"/>
-<wire x1="-22.86" y1="104.14" x2="-10.16" y2="104.14" width="0.1524" layer="91"/>
-<wire x1="-10.16" y1="104.14" x2="-10.16" y2="132.08" width="0.1524" layer="91"/>
-<pinref part="Q1" gate="G$1" pin="D"/>
-<pinref part="R31" gate="G$1" pin="1"/>
-<wire x1="0" y1="132.08" x2="-2.54" y2="132.08" width="0.1524" layer="91"/>
-<junction x="-2.54" y="132.08"/>
-<wire x1="-10.16" y1="132.08" x2="-2.54" y2="132.08" width="0.1524" layer="91"/>
-<label x="-10.16" y="116.84" size="1.778" layer="95" rot="R90"/>
+<wire x1="-22.86" y1="104.14" x2="-2.54" y2="104.14" width="0.1524" layer="91"/>
+<label x="0" y="106.68" size="1.778" layer="95" rot="R180"/>
 </segment>
 <segment>
 <pinref part="U1" gate="A" pin="PC4"/>
@@ -17198,12 +17137,8 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 </segment>
 <segment>
 <pinref part="MCP2" gate="G$1" pin="SCK"/>
-<pinref part="Q2" gate="G$1" pin="D"/>
-<pinref part="R33" gate="G$1" pin="1"/>
-<wire x1="-2.54" y1="101.6" x2="-5.08" y2="101.6" width="0.1524" layer="91"/>
-<wire x1="-22.86" y1="101.6" x2="-5.08" y2="101.6" width="0.1524" layer="91"/>
-<junction x="-5.08" y="101.6"/>
-<label x="-10.16" y="99.06" size="1.778" layer="95"/>
+<wire x1="-22.86" y1="101.6" x2="-2.54" y2="101.6" width="0.1524" layer="91"/>
+<label x="-5.08" y="99.06" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="U1" gate="A" pin="PC5"/>
@@ -17317,28 +17252,6 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 </net>
 <net name="+3V3" class="0">
 <segment>
-<pinref part="Q1" gate="G$1" pin="G"/>
-<wire x1="5.08" y1="124.46" x2="5.08" y2="116.84" width="0.1524" layer="91"/>
-<wire x1="5.08" y1="116.84" x2="12.7" y2="116.84" width="0.1524" layer="91"/>
-<pinref part="R32" gate="G$1" pin="2"/>
-<wire x1="12.7" y1="121.92" x2="12.7" y2="116.84" width="0.1524" layer="91"/>
-<pinref part="+3V1" gate="G$1" pin="+3V3"/>
-<junction x="12.7" y="116.84"/>
-<wire x1="12.7" y1="116.84" x2="22.86" y2="116.84" width="0.1524" layer="91"/>
-<wire x1="22.86" y1="116.84" x2="22.86" y2="124.46" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="Q2" gate="G$1" pin="G"/>
-<wire x1="2.54" y1="93.98" x2="2.54" y2="86.36" width="0.1524" layer="91"/>
-<wire x1="2.54" y1="86.36" x2="12.7" y2="86.36" width="0.1524" layer="91"/>
-<pinref part="R34" gate="G$1" pin="2"/>
-<wire x1="12.7" y1="91.44" x2="12.7" y2="86.36" width="0.1524" layer="91"/>
-<pinref part="+3V3" gate="G$1" pin="+3V3"/>
-<wire x1="12.7" y1="86.36" x2="22.86" y2="86.36" width="0.1524" layer="91"/>
-<wire x1="22.86" y1="86.36" x2="22.86" y2="91.44" width="0.1524" layer="91"/>
-<junction x="12.7" y="86.36"/>
-</segment>
-<segment>
 <pinref part="R67" gate="G$1" pin="2"/>
 <pinref part="+3V4" gate="G$1" pin="+3V3"/>
 <wire x1="266.7" y1="45.72" x2="274.32" y2="45.72" width="0.1524" layer="91"/>
@@ -17432,31 +17345,11 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <label x="-66.04" y="121.92" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="SDAPI" class="0">
-<segment>
-<pinref part="Q1" gate="G$1" pin="S"/>
-<pinref part="R32" gate="G$1" pin="1"/>
-<wire x1="10.16" y1="132.08" x2="12.7" y2="132.08" width="0.1524" layer="91"/>
-<wire x1="12.7" y1="132.08" x2="22.86" y2="132.08" width="0.1524" layer="91"/>
-<junction x="12.7" y="132.08"/>
-<label x="15.24" y="132.08" size="1.778" layer="95"/>
-</segment>
-</net>
 <net name="GPA2" class="0">
 <segment>
 <pinref part="MCP2" gate="G$1" pin="GPA2"/>
 <wire x1="-66.04" y1="101.6" x2="-58.42" y2="101.6" width="0.1524" layer="91"/>
 <label x="-66.04" y="101.6" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="SCLPI" class="0">
-<segment>
-<pinref part="Q2" gate="G$1" pin="S"/>
-<pinref part="R34" gate="G$1" pin="1"/>
-<wire x1="7.62" y1="101.6" x2="12.7" y2="101.6" width="0.1524" layer="91"/>
-<junction x="12.7" y="101.6"/>
-<wire x1="12.7" y1="101.6" x2="22.86" y2="101.6" width="0.1524" layer="91"/>
-<label x="15.24" y="101.6" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="D10" class="0">
