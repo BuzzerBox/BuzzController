@@ -3389,15 +3389,15 @@ Source: www.neutrik.com/... 210_123161.pdf</description>
 <wire x1="3.8048" y1="-14.6512" x2="4.3592" y2="-15.4828" width="0.1016" layer="21"/>
 <circle x="-9.5" y="12" radius="1.7" width="0.1016" layer="49"/>
 <circle x="9.5" y="-12" radius="1.7" width="0.1016" layer="49"/>
-<circle x="-9.5" y="12" radius="2.9206" width="0.1016" layer="21"/>
-<circle x="9.5" y="-12" radius="2.9222" width="0.1016" layer="21"/>
+<circle x="-9.5" y="12" radius="2.9206" width="0.1016" layer="39"/>
+<circle x="9.5" y="-12" radius="2.9222" width="0.1016" layer="39"/>
 <circle x="0" y="0" radius="12" width="0.1016" layer="49"/>
 <text x="-15.24" y="-22.86" size="1.27" layer="25">&gt;NAME</text>
 <text x="8.89" y="-22.86" size="1.27" layer="27">&gt;VALUE</text>
 <circle x="9.5" y="12" radius="1.7" width="0.1016" layer="49"/>
-<circle x="9.5" y="12" radius="2.9206" width="0.1016" layer="21"/>
+<circle x="9.5" y="12" radius="2.9206" width="0.1016" layer="39"/>
 <circle x="-9.5" y="-12" radius="1.7" width="0.1016" layer="49"/>
-<circle x="-9.5" y="-12" radius="2.9206" width="0.1016" layer="21"/>
+<circle x="-9.5" y="-12" radius="2.9206" width="0.1016" layer="39"/>
 <hole x="-9.5" y="12" drill="3.2"/>
 <hole x="9.5" y="12" drill="3.2"/>
 <hole x="9.5" y="-12" drill="3.2"/>
@@ -3409,6 +3409,33 @@ Source: www.neutrik.com/... 210_123161.pdf</description>
 <wire x1="-7.62" y1="-17.78" x2="-5.08" y2="-20.32" width="0.127" layer="21"/>
 <wire x1="-5.08" y1="-20.32" x2="5.08" y2="-20.32" width="0.127" layer="21"/>
 <wire x1="5.08" y1="-20.32" x2="7.62" y2="-17.78" width="0.127" layer="21"/>
+<circle x="-9.5" y="12" radius="2.9206" width="0.1016" layer="21"/>
+<circle x="9.55" y="12" radius="2.9206" width="0.1016" layer="21"/>
+<circle x="-9.5" y="-12" radius="2.9206" width="0.1016" layer="21"/>
+<circle x="9.5" y="-12" radius="2.9222" width="0.1016" layer="21"/>
+<circle x="-9.5" y="12" radius="2.9206" width="0.1016" layer="42"/>
+<circle x="9.5" y="-12" radius="2.9222" width="0.1016" layer="42"/>
+<circle x="9.5" y="12" radius="2.9206" width="0.1016" layer="42"/>
+<circle x="-9.5" y="-12" radius="2.9206" width="0.1016" layer="42"/>
+<circle x="9.5" y="-12" radius="2.9222" width="0.1016" layer="30"/>
+<circle x="9.5" y="12" radius="2.9206" width="0.1016" layer="30"/>
+<circle x="-9.5" y="-12" radius="2.9206" width="0.1016" layer="30"/>
+<circle x="-9.5" y="12" radius="2.9206" width="0.1016" layer="41"/>
+<circle x="9.5" y="-12" radius="2.9222" width="0.1016" layer="41"/>
+<circle x="9.5" y="12" radius="2.9206" width="0.1016" layer="41"/>
+<circle x="-9.5" y="-12" radius="2.9206" width="0.1016" layer="41"/>
+<circle x="-9.5" y="12" radius="2.9206" width="0.1016" layer="40"/>
+<circle x="9.5" y="-12" radius="2.9222" width="0.1016" layer="40"/>
+<circle x="9.5" y="12" radius="2.9206" width="0.1016" layer="40"/>
+<circle x="-9.5" y="-12" radius="2.9206" width="0.1016" layer="40"/>
+<circle x="-9.525" y="12.065" radius="1.3208" width="3.048" layer="29"/>
+<circle x="9.525" y="12.065" radius="1.3208" width="3.048" layer="29"/>
+<circle x="9.525" y="-12.065" radius="1.3208" width="3.048" layer="29"/>
+<circle x="-9.525" y="-12.065" radius="1.3208" width="3.048" layer="29"/>
+<circle x="-9.525" y="12.065" radius="1.3208" width="3.048" layer="30"/>
+<circle x="9.525" y="12.065" radius="1.3208" width="3.048" layer="30"/>
+<circle x="9.525" y="-12.065" radius="1.3208" width="3.048" layer="30"/>
+<circle x="-9.525" y="-12.065" radius="1.3208" width="3.048" layer="30"/>
 </package>
 </packages>
 <symbols>
