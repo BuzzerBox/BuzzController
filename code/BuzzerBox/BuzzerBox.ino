@@ -52,9 +52,7 @@ void setup() {
   sei();
   
   Serial.begin(115200);
-  Wire.begin(0x19);
-  Wire.onReceive(receiveEvent);
-  //Keyboard.begin();
+  Wire.begin();
 
   initExpanders();
   clearDisplay();
@@ -116,7 +114,7 @@ void lock(uint8_t buttonID) {
   Serial.write(buttonID +48);
 }
 
-void checkCommand(byte command[2]) {
+void checkCommand(byte command[3]) {
   if(command[0] == EMPTY) return;
   rPiIsConnected = true;
   switch(command[0]) {
@@ -157,8 +155,11 @@ void handleRpiConnectionState() {
 }
 
 void loop() {
+  if (Serial.available() >= 3) {
+    receiveEvent(2);
+    checkCommand(lastCommand);  
+  }
   handleRpiConnectionState();
-  checkCommand(lastCommand);
   uint8_t release_pressed = ~PINC & 1;
   if (release_pressed && release_was_high == 1) {
       if (isLocked == true && release_down_count > 10) {

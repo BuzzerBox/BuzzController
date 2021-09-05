@@ -2,8 +2,8 @@
 
 void receiveEvent(int howMany) {
   rPiJustConnected = true;
-  for (uint8_t i = 0; i < 2; i++) {
-    lastCommand[i] = Wire.read();
+  for (uint8_t i = 0; i < 3; i++) {
+    lastCommand[i] = Serial.read();
   }
 }
 
