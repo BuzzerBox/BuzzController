@@ -1,13 +1,17 @@
 #include <Arduino.h>
-#include <Wire.h>
-#include "portConfig.h"
+#include "portConfig.hpp"
 #include <avr/interrupt.h>
-#include "7segment.h"
-#include "i2c_communication.h"
+#include "7segment.hpp"
+#include "i2c_communication.hpp"
+#include "rpi_communication.hpp"
 
 //#include <avr/wdt.h>
 uint8_t port_interrupt_flag = 255;
 uint8_t pin_data = 0xFF;
+
+RpiComm* rpiComm;
+SevenSeg* sevenSeg;
+I2CComm* i2cComm;
 
 byte lastCommand[3] = {0x00, 0x00, 0x00};
 
@@ -55,12 +59,10 @@ void setup() {
   PCICR  |= 0b00000111; // enable Interrupt on all 3 ports
   sei();
   
-  Serial.begin(115200);
-  Wire.begin();
-
-  initExpanders();
-  clearDisplay(!rPiIsConnected);
-  turnOffLEDs();
+  rpiComm = new RpiComm();
+  i2cComm = new I2CComm();
+  sevenSeg = new SevenSeg(!rPiIsConnected, i2cComm);
+  i2cComm->turnOffLEDs();
 }
 
 ISR(PCINT0_vect)
@@ -100,22 +102,21 @@ ISR(PCINT2_vect)
 void unlock() {
   isLocked = false;
   currentBuzzer = NO_BUZZER;
-  clearDisplay(!rPiIsConnected);
-  turnOffLEDs();
+  sevenSeg->clearDisplay(!rPiIsConnected);
+  i2cComm->turnOffLEDs();
   cli();
   PCICR  |= 0b00000111;
   sei();
-  Serial.write('q');
+  rpiComm->sendData('q');
   //Keyboard.print('q');
 }
 
 void lock(uint8_t buttonID) {
   isLocked = true;
   currentBuzzer = buttonID;
-  displayNumber(buttonID, !rPiIsConnected);
-  turnOnSingleLED(buttons[buttonID]);
-  //Keyboard.print(String(buttonID));
-  Serial.write(buttonID +48);
+  sevenSeg->displayNumber(buttonID, !rPiIsConnected);
+  i2cComm->turnOnSingleLED(buttons[buttonID]);
+  rpiComm->sendData(buttonID +48);
 }
 
 void checkCommand(byte command[3]) {
@@ -136,9 +137,9 @@ void checkCommand(byte command[3]) {
 
 void displayCurrentState() {
   if(currentBuzzer == NO_BUZZER) {
-    clearDisplay(!rPiIsConnected);
+    sevenSeg->clearDisplay(!rPiIsConnected);
   } else {
-    displayNumber(currentBuzzer, !rPiIsConnected);
+    sevenSeg->displayNumber(currentBuzzer, !rPiIsConnected);
   }
 }
 
@@ -159,11 +160,11 @@ void handleRpiConnectionState() {
 }
 
 void loop() {
-  if (Serial.available() >= 3) {
+  if (rpiComm->checkData(lastCommand)) {
     rPiJustConnected = true;
-    receiveEvent(3, lastCommand);
     checkCommand(lastCommand);  
   }
+  
   handleRpiConnectionState();
   uint8_t release_pressed = ~PINC & 1;
   if (release_pressed && release_was_high == 1) {
