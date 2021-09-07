@@ -2,7 +2,6 @@
 #define segment_h
 
 #include <Arduino.h>
-#include "portConfig.hpp"
 #include "i2c_communication.hpp"
 const uint8_t segments[8] = {2,3,5,6,7,1,0,4}; //A,B,C,D,E,F,G,DP
 

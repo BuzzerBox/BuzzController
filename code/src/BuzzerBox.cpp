@@ -22,8 +22,6 @@ uint8_t d_select = B11111000;
 
 boolean isLocked = false;
 boolean rPiIsConnected = false;
-boolean rPiJustConnected = false;
-//unsigned long lastConnection;
 uint8_t last_state[10] = {1};
 uint8_t release_down_count = 0;
 uint8_t release_was_high = 1;
@@ -61,7 +59,7 @@ void setup() {
   
   rpiComm = new RpiComm();
   i2cComm = new I2CComm();
-  sevenSeg = new SevenSeg(!rPiIsConnected, i2cComm);
+  sevenSeg = new SevenSeg(true, i2cComm);
   i2cComm->turnOffAll();
 }
 
@@ -143,24 +141,26 @@ void displayCurrentState() {
 }
 
 void handleRpiConnectionState() {
-  if (!rPiIsConnected  && rPiJustConnected) {
-    rPiJustConnected = false;
+  Pi_connection_state_t state = rpiComm->getConnectionState();
+  if (state == JUST_CONNECTED) {
     rPiIsConnected = true;
+    rpiComm->setConnectionState(CONNECTED);
     displayCurrentState();
+  } else if (state == JUST_TIMED_OUT) {
+    rPiIsConnected = false;
+    rpiComm->setConnectionState(NO_CONNECTION);
+    displayCurrentState();
+  } else if (state == CONNECTED) {
+    if (rpiComm->isTimedOut()) {
+      rPiIsConnected = false;
+      displayCurrentState();
+      rpiComm->setConnectionState(NO_CONNECTION);
+    }
   }
-//    lastConnection = millis();
-//    displayCurrentState();
-//  } else {
-//    if (lastConnection + 2000 < millis()) {
-//      rPiIsConnected = false;
-//      displayCurrentState();
-//    }
-//  }
 }
 
 void loop() {
   if (rpiComm->checkData(lastCommand)) {
-    rPiJustConnected = true;
     checkCommand(lastCommand);  
   }
   
