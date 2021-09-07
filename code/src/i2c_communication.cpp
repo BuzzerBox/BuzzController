@@ -15,12 +15,12 @@ void I2CComm::setExpanderRegister(byte chip, byte register_, byte data) {
   sendI2CPacket(chip, register_, data);
 }
 
-void I2CComm::turnOffLEDs(){
+void I2CComm::turnOffAll(){
   setExpanderRegister(expanderIdButtonLEDs, outRegisterAId, 0x00);
   setExpanderRegister(expanderIdButtonLEDs, outRegisterBId, 0x00);
 }
 
-void I2CComm::turnOnSingleLED(ButtonC button_){
+void I2CComm::turnOnSingle(ButtonC button_){
   byte outReg = outRegisterAId;
   byte offReg = outRegisterBId;
   if (button_.ledPort != 0) {

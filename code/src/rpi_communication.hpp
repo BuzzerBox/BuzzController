@@ -8,7 +8,10 @@ class RpiComm {
   void init();
   boolean checkData(byte cmd[3]);
   void receiveEvent(int howMany, byte cmd[3]);
-  void sendData(byte data);
+  void sendUnlock();
+  void sendButtonSelected(byte buttonID);
+ private:
+   void sendRawData(byte data);
 };
 
 #endif

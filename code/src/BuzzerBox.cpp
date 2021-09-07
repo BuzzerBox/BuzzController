@@ -5,7 +5,7 @@
 #include "i2c_communication.hpp"
 #include "rpi_communication.hpp"
 
-//#include <avr/wdt.h>
+#include <avr/wdt.h>
 uint8_t port_interrupt_flag = 255;
 uint8_t pin_data = 0xFF;
 
@@ -42,7 +42,7 @@ uint8_t getBitPosition(uint8_t b) {
 
 
 void setup() {
-  //wdt_enable(WDTO_250MS);
+  wdt_enable(WDTO_1S);
 
   DDRB = B00000000;
   DDRC = B00000000;
@@ -62,7 +62,7 @@ void setup() {
   rpiComm = new RpiComm();
   i2cComm = new I2CComm();
   sevenSeg = new SevenSeg(!rPiIsConnected, i2cComm);
-  i2cComm->turnOffLEDs();
+  i2cComm->turnOffAll();
 }
 
 ISR(PCINT0_vect)
@@ -103,20 +103,19 @@ void unlock() {
   isLocked = false;
   currentBuzzer = NO_BUZZER;
   sevenSeg->clearDisplay(!rPiIsConnected);
-  i2cComm->turnOffLEDs();
+  i2cComm->turnOffAll();
   cli();
   PCICR  |= 0b00000111;
   sei();
-  rpiComm->sendData('q');
-  //Keyboard.print('q');
+  rpiComm->sendUnlock();
 }
 
 void lock(uint8_t buttonID) {
   isLocked = true;
   currentBuzzer = buttonID;
   sevenSeg->displayNumber(buttonID, !rPiIsConnected);
-  i2cComm->turnOnSingleLED(buttons[buttonID]);
-  rpiComm->sendData(buttonID +48);
+  i2cComm->turnOnSingle(buttons[buttonID]);
+  rpiComm->sendButtonSelected(buttonID);
 }
 
 void checkCommand(byte command[3]) {
@@ -192,5 +191,5 @@ void loop() {
     port_interrupt_flag = 255;
   }
  
-  //wdt_reset();
+  wdt_reset();
 }

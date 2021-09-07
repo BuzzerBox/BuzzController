@@ -10,8 +10,8 @@ class I2CComm {
     I2CComm();
     void initExpanders();
     void setExpanderRegister(byte chip, byte register_, byte data);
-    void turnOffLEDs();
-    void turnOnSingleLED(ButtonC button_);
+    void turnOffAll();
+    void turnOnSingle(ButtonC button_);
     void sendI2CPacket(byte address, byte messageType, byte payload);
 };
 

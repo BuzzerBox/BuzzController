@@ -19,8 +19,17 @@ void RpiComm::receiveEvent(int howMany, byte cmd[3]) {
   for (uint8_t i = 0; i < 3; i++) {
     cmd[i] = Serial.read();
   }
+}  
+
+void RpiComm::sendRawData(byte data) {
+    Serial.write(data);
 }
 
-void RpiComm::sendData(byte data) {
-    Serial.write(data);
+void RpiComm::sendUnlock() {
+   this->sendRawData('q');
+}
+
+
+void RpiComm::sendButtonSelected(byte buttonID) {
+  this->sendButtonSelected(buttonID + 48);
 }
