@@ -10,11 +10,15 @@ typedef enum {
   JUST_TIMED_OUT = 3,
 } Pi_connection_state_t;
 
+typedef struct cmd {
+  byte command;
+  byte data;
+}PiCmd;
+
 class RpiComm {
  public:
   RpiComm(int heartbeatTimeout = 6000);
-  boolean checkData(byte cmd[3]);
-  void receiveEvent(int howMany, byte cmd[3]);
+  boolean checkData();
   void sendUnlock();
   void sendButtonSelected(uint8_t buttonID);
   void sendRawData(byte data);
@@ -23,11 +27,14 @@ class RpiComm {
   void setConnectionState(Pi_connection_state_t state);
   void heartbeatDetected();
   bool isTimedOut();
+  PiCmd getLastCmd();
 
  private:
   Pi_connection_state_t connection_state;
   unsigned long lastConnection;
   int heartbeatTimeout;
+  PiCmd current_command = {0,0};
+  uint8_t cmd_fill = 0;
 
 };
 

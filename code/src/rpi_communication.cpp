@@ -11,22 +11,33 @@ void RpiComm::sendRawData(byte data) {
     Serial.write(data);
 }
 
-//TODO make resilent against missing bytes with the third termination byte.
-boolean RpiComm::checkData(byte cmd[3]) {
-  if (Serial.available() >= 3) {
-    heartbeatDetected();
-    this->receiveEvent(3, cmd);
-    return true;
+boolean RpiComm::checkData() {
+  boolean hasCompleteMessage = false;
+  if (Serial.available()) {
+    byte readByte = Serial.read();
+    if (readByte == 0xFF) {
+      heartbeatDetected();
+      if (cmd_fill == 2) {
+        hasCompleteMessage = true;
+      }
+      cmd_fill = 0;
+    } else {
+      cmd_fill++;
+      if (cmd_fill == 1) {
+        current_command.command = readByte;
+      } else if (cmd_fill == 2) {
+        current_command.data = readByte;
+      } else {
+        cmd_fill = 0;
+      }
+    }
   }
-  return false;
+  return hasCompleteMessage;
 }
 
-
-void RpiComm::receiveEvent(int howMany, byte cmd[3]) {
-  for (uint8_t i = 0; i < 3; i++) {
-    cmd[i] = Serial.read();
-  }
-}  
+PiCmd RpiComm::getLastCmd() {
+  return current_command;
+}
 
 void RpiComm::sendUnlock() {
    this->sendRawData('q');

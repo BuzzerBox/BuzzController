@@ -13,9 +13,6 @@ RpiComm* rpiComm;
 SevenSeg* sevenSeg;
 I2CComm* i2cComm;
 
-byte lastCommand[3] = {0x00, 0x00, 0x00};
-
-
 uint8_t b_select = B00000111;
 uint8_t c_select = B00001010;
 uint8_t d_select = B11111000;
@@ -116,20 +113,20 @@ void lock(uint8_t buttonID) {
   rpiComm->sendButtonSelected(buttonID);
 }
 
-void checkCommand(byte command[3]) {
-  if(command[0] == EMPTY) return;
+void checkCommand(PiCmd command) {
+  if(command.command == EMPTY) return;
   rPiIsConnected = true;
-  switch(command[0]) {
+  switch(command.command) {
     case SOFT_RELEASE:
       unlock();
       break;
     case SET_BUZZER:
-      if(command[1]<= 9) {
-         lock(command[1]);
+      if(command.data <= 9) {
+         lock(command.data);
       }
       break;
   }
-  command[0] = EMPTY;
+  command.command = EMPTY;
 }
 
 void displayCurrentState() {
@@ -160,8 +157,8 @@ void handleRpiConnectionState() {
 }
 
 void loop() {
-  if (rpiComm->checkData(lastCommand)) {
-    checkCommand(lastCommand);  
+  if (rpiComm->checkData()) {
+    checkCommand(rpiComm->getLastCmd());  
   }
   
   handleRpiConnectionState();
