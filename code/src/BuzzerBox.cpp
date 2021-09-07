@@ -5,7 +5,7 @@
 #include "i2c_communication.hpp"
 #include "rpi_communication.hpp"
 
-//#include <avr/wdt.h>
+#include <avr/wdt.h>
 uint8_t port_interrupt_flag = 255;
 uint8_t pin_data = 0xFF;
 
@@ -57,7 +57,7 @@ void setup() {
   PCICR  |= 0b00000111; // enable Interrupt on all 3 ports
   sei();
 
-  //wdt_enable(WDTO_8S);
+  wdt_enable(WDTO_1S);
   
   rpiComm = new RpiComm();
   i2cComm = new I2CComm();
@@ -159,7 +159,6 @@ void handleRpiConnectionState() {
 }
 
 void loop() {
-  //wdt_reset();
   if (rpiComm->checkData(lastCommand)) {
     rPiJustConnected = true;
     checkCommand(lastCommand);  
@@ -191,4 +190,5 @@ void loop() {
     }
     port_interrupt_flag = 255;
   }
+  wdt_reset();
 }

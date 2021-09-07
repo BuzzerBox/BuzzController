@@ -31,5 +31,5 @@ void RpiComm::sendUnlock() {
 
 
 void RpiComm::sendButtonSelected(byte buttonID) {
-  this->sendButtonSelected(buttonID + 48);
+  this->sendRawData(buttonID + 48);
 }
