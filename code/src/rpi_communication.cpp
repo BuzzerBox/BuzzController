@@ -5,6 +5,10 @@ RpiComm::RpiComm() {
     Serial.begin(115200);
 }
 
+void RpiComm::sendRawData(byte data) {
+    Serial.write(data);
+}
+
 //TODO make resilent against missing bytes with the third termination byte.
 boolean RpiComm::checkData(byte cmd[3]) {
   if (Serial.available() >= 3) {
@@ -20,10 +24,6 @@ void RpiComm::receiveEvent(int howMany, byte cmd[3]) {
     cmd[i] = Serial.read();
   }
 }  
-
-void RpiComm::sendRawData(byte data) {
-    Serial.write(data);
-}
 
 void RpiComm::sendUnlock() {
    this->sendRawData('q');
