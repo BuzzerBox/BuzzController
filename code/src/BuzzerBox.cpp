@@ -58,6 +58,8 @@ void setup() {
   i2cComm = new I2CComm();
   sevenSeg = new SevenSeg(true, i2cComm);
   i2cComm->turnOffAll();
+  i2cComm->turnOnSingle(buttons[4]);
+
 }
 
 ISR(PCINT0_vect)

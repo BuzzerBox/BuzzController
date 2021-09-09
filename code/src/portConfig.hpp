@@ -24,8 +24,8 @@ const byte NO_BUZZER = 0x7f;
 
 const uint8_t BUTTON_COUNT = 10;
 const ButtonPort buttonsB [8] = {
-  {3,1,0}, //Done
-  {1,0,0}, //Done
+  {7,1,0}, //Done
+  {9,0,0}, //Done
   {0,0,1},  //Done
   {0,0,0}, //UNUSED
   {0,0,0}, //UNUSED
@@ -35,9 +35,9 @@ const ButtonPort buttonsB [8] = {
 };
 const ButtonPort buttonsC [8] = {
   {0,0,0}, // UNUSED
-  {2,1,1}, // Done
+  {8,1,1}, // Done
   {0,0,1}, // UNUSED
-  {9,0,7}, //Done
+  {1,0,7}, //Done
   {9,0,7}, // UNUSED
   {8,0,6},// UNUSED
   {1,0,0},// UNUSED
@@ -47,24 +47,24 @@ const ButtonPort buttonsD [8] = {
   {0,0,0}, // UNUSED
   {3,1,0},// UNUSED
   {9,0,7}, // UNUSED
-  {8,0,6}, //Done 
-  {7,0,5},//Done
-  {6,0,4}, //Done
+  {2,0,6}, //Done 
+  {3,0,5},//Done
+  {4,0,4}, //Done
   {5,0,3},// Done
-  {4,0,2} //Done
+  {6,0,2} //Done
 };
 
 const LEDConfig buttons [BUTTON_COUNT] = {
   {0,1}, 
-  {0,0},
-  {1,1}, 
-  {1,0},
-  {0,2},
+  {0,7},
+  {0,6}, 
+  {0,5},
+  {0,4},
   {0,3}, 
-  {0,4}, 
-  {0,5}, 
-  {0,6},
-  {0,7} 
+  {0,2}, 
+  {1,0}, 
+  {1,1},
+  {0,0} 
 };
 const uint8_t resetButton = A0;
 const uint8_t leds[10] = {0};
