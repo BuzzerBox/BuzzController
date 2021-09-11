@@ -8,34 +8,34 @@
 </settings>
 <grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
-<layer number="1" name="Top" color="4" fill="1" visible="yes" active="no"/>
-<layer number="2" name="Route2" color="16" fill="1" visible="yes" active="no"/>
-<layer number="3" name="Route3" color="17" fill="1" visible="yes" active="no"/>
-<layer number="4" name="Route4" color="18" fill="1" visible="yes" active="no"/>
-<layer number="5" name="Route5" color="19" fill="1" visible="yes" active="no"/>
-<layer number="6" name="Route6" color="25" fill="1" visible="yes" active="no"/>
-<layer number="7" name="Route7" color="26" fill="1" visible="yes" active="no"/>
-<layer number="8" name="Route8" color="27" fill="1" visible="yes" active="no"/>
-<layer number="9" name="Route9" color="28" fill="1" visible="yes" active="no"/>
-<layer number="10" name="Route10" color="29" fill="1" visible="yes" active="no"/>
-<layer number="11" name="Route11" color="30" fill="1" visible="yes" active="no"/>
-<layer number="12" name="Route12" color="20" fill="1" visible="yes" active="no"/>
-<layer number="13" name="Route13" color="21" fill="1" visible="yes" active="no"/>
-<layer number="14" name="Route14" color="22" fill="1" visible="yes" active="no"/>
-<layer number="15" name="Route15" color="23" fill="1" visible="yes" active="no"/>
-<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="no"/>
-<layer number="17" name="Pads" color="2" fill="1" visible="yes" active="no"/>
-<layer number="18" name="Vias" color="2" fill="1" visible="yes" active="no"/>
-<layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="no"/>
-<layer number="20" name="Dimension" color="24" fill="1" visible="yes" active="no"/>
-<layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="no"/>
-<layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="no"/>
-<layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="no"/>
-<layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="no"/>
-<layer number="25" name="tNames" color="7" fill="1" visible="yes" active="no"/>
-<layer number="26" name="bNames" color="7" fill="1" visible="yes" active="no"/>
-<layer number="27" name="tValues" color="7" fill="1" visible="yes" active="no"/>
-<layer number="28" name="bValues" color="7" fill="1" visible="yes" active="no"/>
+<layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
+<layer number="2" name="Route2" color="16" fill="1" visible="no" active="no"/>
+<layer number="3" name="Route3" color="17" fill="1" visible="no" active="no"/>
+<layer number="4" name="Route4" color="18" fill="1" visible="no" active="no"/>
+<layer number="5" name="Route5" color="19" fill="1" visible="no" active="no"/>
+<layer number="6" name="Route6" color="25" fill="1" visible="no" active="no"/>
+<layer number="7" name="Route7" color="26" fill="1" visible="no" active="no"/>
+<layer number="8" name="Route8" color="27" fill="1" visible="no" active="no"/>
+<layer number="9" name="Route9" color="28" fill="1" visible="no" active="no"/>
+<layer number="10" name="Route10" color="29" fill="1" visible="no" active="no"/>
+<layer number="11" name="Route11" color="30" fill="1" visible="no" active="no"/>
+<layer number="12" name="Route12" color="20" fill="1" visible="no" active="no"/>
+<layer number="13" name="Route13" color="21" fill="1" visible="no" active="no"/>
+<layer number="14" name="Route14" color="22" fill="1" visible="no" active="no"/>
+<layer number="15" name="Route15" color="23" fill="1" visible="no" active="no"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
+<layer number="17" name="Pads" color="2" fill="1" visible="no" active="no"/>
+<layer number="18" name="Vias" color="2" fill="1" visible="no" active="no"/>
+<layer number="19" name="Unrouted" color="6" fill="1" visible="no" active="no"/>
+<layer number="20" name="Dimension" color="24" fill="1" visible="no" active="no"/>
+<layer number="21" name="tPlace" color="7" fill="1" visible="no" active="no"/>
+<layer number="22" name="bPlace" color="7" fill="1" visible="no" active="no"/>
+<layer number="23" name="tOrigins" color="15" fill="1" visible="no" active="no"/>
+<layer number="24" name="bOrigins" color="15" fill="1" visible="no" active="no"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="no" active="no"/>
+<layer number="26" name="bNames" color="7" fill="1" visible="no" active="no"/>
+<layer number="27" name="tValues" color="7" fill="1" visible="no" active="no"/>
+<layer number="28" name="bValues" color="7" fill="1" visible="no" active="no"/>
 <layer number="29" name="tStop" color="7" fill="3" visible="no" active="no"/>
 <layer number="30" name="bStop" color="7" fill="6" visible="no" active="no"/>
 <layer number="31" name="tCream" color="7" fill="4" visible="no" active="no"/>
@@ -44,8 +44,8 @@
 <layer number="34" name="bFinish" color="6" fill="6" visible="no" active="no"/>
 <layer number="35" name="tGlue" color="7" fill="4" visible="no" active="no"/>
 <layer number="36" name="bGlue" color="7" fill="5" visible="no" active="no"/>
-<layer number="37" name="tTest" color="7" fill="1" visible="yes" active="no"/>
-<layer number="38" name="bTest" color="7" fill="1" visible="yes" active="no"/>
+<layer number="37" name="tTest" color="7" fill="1" visible="no" active="no"/>
+<layer number="38" name="bTest" color="7" fill="1" visible="no" active="no"/>
 <layer number="39" name="tKeepout" color="4" fill="11" visible="no" active="no"/>
 <layer number="40" name="bKeepout" color="1" fill="11" visible="no" active="no"/>
 <layer number="41" name="tRestrict" color="4" fill="10" visible="no" active="no"/>
@@ -53,20 +53,20 @@
 <layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="no"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="no"/>
 <layer number="45" name="Holes" color="7" fill="1" visible="no" active="no"/>
-<layer number="46" name="Milling" color="3" fill="1" visible="yes" active="no"/>
-<layer number="47" name="Measures" color="7" fill="1" visible="yes" active="no"/>
-<layer number="48" name="Document" color="7" fill="1" visible="yes" active="no"/>
-<layer number="49" name="Reference" color="7" fill="1" visible="yes" active="no"/>
-<layer number="50" name="dxf" color="7" fill="1" visible="yes" active="no"/>
-<layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="no"/>
-<layer number="52" name="bDocu" color="7" fill="1" visible="yes" active="no"/>
-<layer number="53" name="tGND_GNDA" color="7" fill="9" visible="yes" active="no"/>
-<layer number="54" name="bGND_GNDA" color="1" fill="9" visible="yes" active="no"/>
-<layer number="56" name="wert" color="7" fill="1" visible="yes" active="no"/>
-<layer number="57" name="tCAD" color="7" fill="1" visible="yes" active="no"/>
-<layer number="58" name="tCAD" color="7" fill="1" visible="yes" active="no"/>
-<layer number="59" name="tCarbon" color="7" fill="1" visible="yes" active="no"/>
-<layer number="60" name="bCarbon" color="7" fill="1" visible="yes" active="no"/>
+<layer number="46" name="Milling" color="3" fill="1" visible="no" active="no"/>
+<layer number="47" name="Measures" color="7" fill="1" visible="no" active="no"/>
+<layer number="48" name="Document" color="7" fill="1" visible="no" active="no"/>
+<layer number="49" name="Reference" color="7" fill="1" visible="no" active="no"/>
+<layer number="50" name="dxf" color="7" fill="1" visible="no" active="no"/>
+<layer number="51" name="tDocu" color="7" fill="1" visible="no" active="no"/>
+<layer number="52" name="bDocu" color="7" fill="1" visible="no" active="no"/>
+<layer number="53" name="tGND_GNDA" color="7" fill="9" visible="no" active="no"/>
+<layer number="54" name="bGND_GNDA" color="1" fill="9" visible="no" active="no"/>
+<layer number="56" name="wert" color="7" fill="1" visible="no" active="no"/>
+<layer number="57" name="tCAD" color="7" fill="1" visible="no" active="no"/>
+<layer number="58" name="tCAD" color="7" fill="1" visible="no" active="no"/>
+<layer number="59" name="tCarbon" color="7" fill="1" visible="no" active="no"/>
+<layer number="60" name="bCarbon" color="7" fill="1" visible="no" active="no"/>
 <layer number="88" name="SimResults" color="9" fill="1" visible="yes" active="yes"/>
 <layer number="89" name="SimProbes" color="9" fill="1" visible="yes" active="yes"/>
 <layer number="90" name="Modules" color="5" fill="1" visible="yes" active="yes"/>
@@ -3405,7 +3405,7 @@ Source: www.neutrik.com/... 210_123161.pdf</description>
 <pad name="P$1" x="-4.05" y="-1.55" drill="3.4"/>
 <pad name="P$2" x="0" y="-5.5" drill="3.4"/>
 <pad name="P$3" x="4.05" y="-1.55" drill="3.4"/>
-<pad name="P$4" x="0" y="0" drill="0.6" shape="square"/>
+<pad name="P$4" x="4.558" y="5.689" drill="2" shape="long" rot="R315"/>
 <wire x1="-7.62" y1="-17.78" x2="-5.08" y2="-20.32" width="0.127" layer="21"/>
 <wire x1="-5.08" y1="-20.32" x2="5.08" y2="-20.32" width="0.127" layer="21"/>
 <wire x1="5.08" y1="-20.32" x2="7.62" y2="-17.78" width="0.127" layer="21"/>
@@ -3436,6 +3436,10 @@ Source: www.neutrik.com/... 210_123161.pdf</description>
 <circle x="9.525" y="12.065" radius="1.778" width="3.81" layer="30"/>
 <circle x="9.525" y="-12.065" radius="1.778" width="3.81" layer="30"/>
 <circle x="-9.525" y="-12.065" radius="1.778" width="3.81" layer="30"/>
+<wire x1="2.5146" y1="6.2992" x2="4.064" y2="7.5946" width="0" layer="46" curve="-180"/>
+<wire x1="5.0546" y1="3.7592" x2="6.604" y2="5.0546" width="0" layer="46" curve="180"/>
+<wire x1="2.5146" y1="6.2992" x2="5.0546" y2="3.7592" width="0" layer="46"/>
+<wire x1="4.064" y1="7.5946" x2="6.604" y2="5.0546" width="0" layer="46"/>
 </package>
 </packages>
 <symbols>
@@ -3859,12 +3863,33 @@ Source: www.neutrik.com/</description>
 <text x="-2.54" y="-2.54" size="1.778" layer="96">&gt;VALUE</text>
 <pin name="GND" x="0" y="2.54" visible="off" length="short" direction="sup" rot="R270"/>
 </symbol>
+<symbol name="PE" urn="urn:adsk.eagle:symbol:26941/1" library_version="1">
+<wire x1="-1.905" y1="0" x2="1.905" y2="0" width="0.254" layer="94"/>
+<wire x1="-1.0922" y1="-0.508" x2="1.0922" y2="-0.508" width="0.254" layer="94"/>
+<wire x1="-0.6223" y1="-1.016" x2="0.6223" y2="-1.016" width="0.254" layer="94"/>
+<wire x1="-0.3048" y1="-1.524" x2="0.3302" y2="-1.524" width="0.254" layer="94"/>
+<text x="-2.54" y="-2.54" size="1.778" layer="96" rot="R90">&gt;VALUE</text>
+<pin name="PE" x="0" y="2.54" visible="off" length="short" direction="sup" rot="R270"/>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="GND" urn="urn:adsk.eagle:component:26954/1" prefix="GND" library_version="1">
 <description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
 <gates>
 <gate name="1" symbol="GND" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="PE" urn="urn:adsk.eagle:component:26969/1" prefix="PE" library_version="1">
+<description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
+<gates>
+<gate name="M" symbol="PE" x="0" y="0"/>
 </gates>
 <devices>
 <device name="">
@@ -4122,6 +4147,348 @@ USE AT YOUR OWN RISK!&lt;p&gt;
 </deviceset>
 </devicesets>
 </library>
+<library name="holes" urn="urn:adsk.eagle:library:237">
+<description>&lt;b&gt;Mounting Holes and Pads&lt;/b&gt;&lt;p&gt;
+&lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
+<packages>
+<package name="2,8-PAD" urn="urn:adsk.eagle:footprint:14250/1" library_version="2">
+<description>&lt;b&gt;MOUNTING PAD&lt;/b&gt; 2.8 mm, round</description>
+<wire x1="0" y1="2.921" x2="0" y2="2.667" width="0.0508" layer="21"/>
+<wire x1="0" y1="-2.667" x2="0" y2="-2.921" width="0.0508" layer="21"/>
+<wire x1="-1.778" y1="0" x2="0" y2="-1.778" width="2.286" layer="51" curve="90" cap="flat"/>
+<wire x1="0" y1="1.778" x2="1.778" y2="0" width="2.286" layer="51" curve="-90" cap="flat"/>
+<circle x="0" y="0" radius="0.635" width="0.4572" layer="51"/>
+<circle x="0" y="0" radius="2.921" width="0.1524" layer="21"/>
+<circle x="0" y="0" radius="3.175" width="0.8128" layer="39"/>
+<circle x="0" y="0" radius="3.175" width="0.8128" layer="40"/>
+<circle x="0" y="0" radius="3.175" width="0.8128" layer="43"/>
+<circle x="0" y="0" radius="1.5" width="0.2032" layer="21"/>
+<pad name="B2,8" x="0" y="0" drill="2.8" diameter="5.334"/>
+</package>
+<package name="3,0-PAD" urn="urn:adsk.eagle:footprint:14251/1" library_version="2">
+<description>&lt;b&gt;MOUNTING PAD&lt;/b&gt; 3.0 mm, round</description>
+<wire x1="-2.159" y1="0" x2="0" y2="-2.159" width="2.4892" layer="51" curve="90" cap="flat"/>
+<wire x1="0" y1="2.159" x2="2.159" y2="0" width="2.4892" layer="51" curve="-90" cap="flat"/>
+<circle x="0" y="0" radius="3.429" width="0.1524" layer="21"/>
+<circle x="0" y="0" radius="0.762" width="0.4572" layer="51"/>
+<circle x="0" y="0" radius="3.556" width="1.016" layer="39"/>
+<circle x="0" y="0" radius="3.556" width="1.016" layer="40"/>
+<circle x="0" y="0" radius="3.556" width="1.016" layer="43"/>
+<circle x="0" y="0" radius="1.6" width="0.2032" layer="21"/>
+<pad name="B3,0" x="0" y="0" drill="3" diameter="5.842"/>
+<text x="-1.27" y="-3.81" size="1.27" layer="48">3,0</text>
+</package>
+<package name="3,2-PAD" urn="urn:adsk.eagle:footprint:14252/1" library_version="2">
+<description>&lt;b&gt;MOUNTING PAD&lt;/b&gt; 3.2 mm, round</description>
+<wire x1="-2.159" y1="0" x2="0" y2="-2.159" width="2.4892" layer="51" curve="90" cap="flat"/>
+<wire x1="0" y1="2.159" x2="2.159" y2="0" width="2.4892" layer="51" curve="-90" cap="flat"/>
+<circle x="0" y="0" radius="3.429" width="0.1524" layer="21"/>
+<circle x="0" y="0" radius="0.762" width="0.4572" layer="51"/>
+<circle x="0" y="0" radius="3.683" width="1.27" layer="39"/>
+<circle x="0" y="0" radius="3.683" width="1.27" layer="40"/>
+<circle x="0" y="0" radius="3.556" width="1.016" layer="43"/>
+<circle x="0" y="0" radius="1.7" width="0.1524" layer="21"/>
+<pad name="B3,2" x="0" y="0" drill="3.2" diameter="5.842"/>
+<text x="-1.27" y="-3.81" size="1.27" layer="48">3,2</text>
+</package>
+<package name="3,3-PAD" urn="urn:adsk.eagle:footprint:14253/1" library_version="2">
+<description>&lt;b&gt;MOUNTING PAD&lt;/b&gt; 3.3 mm, round</description>
+<wire x1="-2.159" y1="0" x2="0" y2="-2.159" width="2.4892" layer="51" curve="90" cap="flat"/>
+<wire x1="0" y1="2.159" x2="2.159" y2="0" width="2.4892" layer="51" curve="-90" cap="flat"/>
+<circle x="0" y="0" radius="3.429" width="0.1524" layer="21"/>
+<circle x="0" y="0" radius="0.762" width="0.4572" layer="51"/>
+<circle x="0" y="0" radius="3.683" width="1.27" layer="39"/>
+<circle x="0" y="0" radius="3.683" width="1.27" layer="40"/>
+<circle x="0" y="0" radius="3.556" width="1.016" layer="43"/>
+<circle x="0" y="0" radius="1.7" width="0.2032" layer="21"/>
+<pad name="B3,3" x="0" y="0" drill="3.3" diameter="5.842"/>
+</package>
+<package name="3,6-PAD" urn="urn:adsk.eagle:footprint:14254/1" library_version="2">
+<description>&lt;b&gt;MOUNTING PAD&lt;/b&gt; 3.6 mm, round</description>
+<wire x1="-2.159" y1="0" x2="0" y2="-2.159" width="2.4892" layer="51" curve="90" cap="flat"/>
+<wire x1="0" y1="2.159" x2="2.159" y2="0" width="2.4892" layer="51" curve="-90" cap="flat"/>
+<circle x="0" y="0" radius="3.429" width="0.1524" layer="21"/>
+<circle x="0" y="0" radius="0.762" width="0.4572" layer="51"/>
+<circle x="0" y="0" radius="3.683" width="1.397" layer="39"/>
+<circle x="0" y="0" radius="3.683" width="1.397" layer="40"/>
+<circle x="0" y="0" radius="3.556" width="1.016" layer="43"/>
+<circle x="0" y="0" radius="1.9" width="0.2032" layer="21"/>
+<pad name="B3,6" x="0" y="0" drill="3.6" diameter="5.842"/>
+</package>
+<package name="4,1-PAD" urn="urn:adsk.eagle:footprint:14255/1" library_version="2">
+<description>&lt;b&gt;MOUNTING PAD&lt;/b&gt; 4.1 mm, round</description>
+<wire x1="-2.54" y1="0" x2="0" y2="-2.54" width="3.9116" layer="51" curve="90" cap="flat"/>
+<wire x1="0" y1="2.54" x2="2.54" y2="0" width="3.9116" layer="51" curve="-90" cap="flat"/>
+<circle x="0" y="0" radius="0.762" width="0.4572" layer="51"/>
+<circle x="0" y="0" radius="4.572" width="0.1524" layer="21"/>
+<circle x="0" y="0" radius="5.08" width="2" layer="43"/>
+<circle x="0" y="0" radius="2.15" width="0.2032" layer="21"/>
+<pad name="B4,1" x="0" y="0" drill="4.1" diameter="8"/>
+</package>
+<package name="4,3-PAD" urn="urn:adsk.eagle:footprint:14256/1" library_version="2">
+<description>&lt;b&gt;MOUNTING PAD&lt;/b&gt; 4.3 mm, round</description>
+<wire x1="-2.54" y1="0" x2="0" y2="-2.54" width="3.9116" layer="51" curve="90" cap="flat"/>
+<wire x1="0" y1="2.54" x2="2.54" y2="0" width="3.9116" layer="51" curve="-90" cap="flat"/>
+<circle x="0" y="0" radius="4.4958" width="0.1524" layer="51"/>
+<circle x="0" y="0" radius="0.762" width="0.4572" layer="51"/>
+<circle x="0" y="0" radius="5.588" width="2" layer="43"/>
+<circle x="0" y="0" radius="5.588" width="2" layer="39"/>
+<circle x="0" y="0" radius="5.588" width="2" layer="40"/>
+<circle x="0" y="0" radius="2.25" width="0.1524" layer="21"/>
+<pad name="B4,3" x="0" y="0" drill="4.3" diameter="9"/>
+</package>
+<package name="4,5-PAD" urn="urn:adsk.eagle:footprint:14257/1" library_version="2">
+<description>&lt;b&gt;MOUNTING PAD&lt;/b&gt; 4.5 mm, round</description>
+<wire x1="-2.54" y1="0" x2="0" y2="-2.54" width="3.9116" layer="51" curve="90" cap="flat"/>
+<wire x1="0" y1="2.54" x2="2.54" y2="0" width="3.9116" layer="51" curve="-90" cap="flat"/>
+<circle x="0" y="0" radius="4.4958" width="0.1524" layer="51"/>
+<circle x="0" y="0" radius="0.762" width="0.4572" layer="51"/>
+<circle x="0" y="0" radius="5.588" width="2" layer="43"/>
+<circle x="0" y="0" radius="5.588" width="2" layer="39"/>
+<circle x="0" y="0" radius="5.588" width="2" layer="40"/>
+<circle x="0" y="0" radius="2.35" width="0.1524" layer="21"/>
+<pad name="B4,5" x="0" y="0" drill="4.5" diameter="9"/>
+</package>
+<package name="5,0-PAD" urn="urn:adsk.eagle:footprint:14258/1" library_version="2">
+<description>&lt;b&gt;MOUNTING PAD&lt;/b&gt; 5.0 mm, round</description>
+<wire x1="-2.54" y1="0" x2="0" y2="-2.54" width="3.9116" layer="51" curve="90" cap="flat"/>
+<wire x1="0" y1="2.54" x2="2.54" y2="0" width="3.9116" layer="51" curve="-90" cap="flat"/>
+<circle x="0" y="0" radius="4.4958" width="0.1524" layer="51"/>
+<circle x="0" y="0" radius="0.762" width="0.4572" layer="51"/>
+<circle x="0" y="0" radius="5.588" width="2" layer="43"/>
+<circle x="0" y="0" radius="5.588" width="2" layer="39"/>
+<circle x="0" y="0" radius="5.588" width="2" layer="40"/>
+<circle x="0" y="0" radius="2.6" width="0.1524" layer="21"/>
+<pad name="B5" x="0" y="0" drill="5" diameter="9"/>
+</package>
+<package name="5,5-PAD" urn="urn:adsk.eagle:footprint:14259/1" library_version="2">
+<description>&lt;b&gt;MOUNTING PAD&lt;/b&gt; 5.5 mm, round</description>
+<wire x1="-2.54" y1="0" x2="0" y2="-2.54" width="3.9116" layer="51" curve="90" cap="flat"/>
+<wire x1="0" y1="2.54" x2="2.54" y2="0" width="3.9116" layer="51" curve="-90" cap="flat"/>
+<circle x="0" y="0" radius="4.4958" width="0.1524" layer="51"/>
+<circle x="0" y="0" radius="0.762" width="0.4572" layer="51"/>
+<circle x="0" y="0" radius="5.588" width="2" layer="43"/>
+<circle x="0" y="0" radius="5.588" width="2" layer="39"/>
+<circle x="0" y="0" radius="5.588" width="2" layer="40"/>
+<circle x="0" y="0" radius="2.85" width="0.1524" layer="21"/>
+<pad name="B5,5" x="0" y="0" drill="5.5" diameter="9"/>
+</package>
+</packages>
+<packages3d>
+<package3d name="2,8-PAD" urn="urn:adsk.eagle:package:14281/1" type="box" library_version="2">
+<description>MOUNTING PAD 2.8 mm, round</description>
+<packageinstances>
+<packageinstance name="2,8-PAD"/>
+</packageinstances>
+</package3d>
+<package3d name="3,0-PAD" urn="urn:adsk.eagle:package:14280/1" type="box" library_version="2">
+<description>MOUNTING PAD 3.0 mm, round</description>
+<packageinstances>
+<packageinstance name="3,0-PAD"/>
+</packageinstances>
+</package3d>
+<package3d name="3,2-PAD" urn="urn:adsk.eagle:package:14282/1" type="box" library_version="2">
+<description>MOUNTING PAD 3.2 mm, round</description>
+<packageinstances>
+<packageinstance name="3,2-PAD"/>
+</packageinstances>
+</package3d>
+<package3d name="3,3-PAD" urn="urn:adsk.eagle:package:14283/1" type="box" library_version="2">
+<description>MOUNTING PAD 3.3 mm, round</description>
+<packageinstances>
+<packageinstance name="3,3-PAD"/>
+</packageinstances>
+</package3d>
+<package3d name="3,6-PAD" urn="urn:adsk.eagle:package:14284/1" type="box" library_version="2">
+<description>MOUNTING PAD 3.6 mm, round</description>
+<packageinstances>
+<packageinstance name="3,6-PAD"/>
+</packageinstances>
+</package3d>
+<package3d name="4,1-PAD" urn="urn:adsk.eagle:package:14285/1" type="box" library_version="2">
+<description>MOUNTING PAD 4.1 mm, round</description>
+<packageinstances>
+<packageinstance name="4,1-PAD"/>
+</packageinstances>
+</package3d>
+<package3d name="4,3-PAD" urn="urn:adsk.eagle:package:14286/1" type="box" library_version="2">
+<description>MOUNTING PAD 4.3 mm, round</description>
+<packageinstances>
+<packageinstance name="4,3-PAD"/>
+</packageinstances>
+</package3d>
+<package3d name="4,5-PAD" urn="urn:adsk.eagle:package:14287/1" type="box" library_version="2">
+<description>MOUNTING PAD 4.5 mm, round</description>
+<packageinstances>
+<packageinstance name="4,5-PAD"/>
+</packageinstances>
+</package3d>
+<package3d name="5,0-PAD" urn="urn:adsk.eagle:package:14288/1" type="box" library_version="2">
+<description>MOUNTING PAD 5.0 mm, round</description>
+<packageinstances>
+<packageinstance name="5,0-PAD"/>
+</packageinstances>
+</package3d>
+<package3d name="5,5-PAD" urn="urn:adsk.eagle:package:14291/1" type="box" library_version="2">
+<description>MOUNTING PAD 5.5 mm, round</description>
+<packageinstances>
+<packageinstance name="5,5-PAD"/>
+</packageinstances>
+</package3d>
+</packages3d>
+<symbols>
+<symbol name="MOUNT-PAD" urn="urn:adsk.eagle:symbol:14249/1" library_version="2">
+<wire x1="0.254" y1="2.032" x2="2.032" y2="0.254" width="1.016" layer="94" curve="-75.749967" cap="flat"/>
+<wire x1="-2.032" y1="0.254" x2="-0.254" y2="2.032" width="1.016" layer="94" curve="-75.749967" cap="flat"/>
+<wire x1="-2.032" y1="-0.254" x2="-0.254" y2="-2.032" width="1.016" layer="94" curve="75.749967" cap="flat"/>
+<wire x1="0.254" y1="-2.032" x2="2.032" y2="-0.254" width="1.016" layer="94" curve="75.749967" cap="flat"/>
+<circle x="0" y="0" radius="1.524" width="0.0508" layer="94"/>
+<text x="2.794" y="0.5842" size="1.778" layer="95">&gt;NAME</text>
+<text x="2.794" y="-2.4638" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="MOUNT" x="-2.54" y="0" visible="off" length="short" direction="pas"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="MOUNT-PAD-ROUND" urn="urn:adsk.eagle:component:14303/2" prefix="H" library_version="2">
+<description>&lt;b&gt;MOUNTING PAD&lt;/b&gt;, round</description>
+<gates>
+<gate name="G$1" symbol="MOUNT-PAD" x="0" y="0"/>
+</gates>
+<devices>
+<device name="2.8" package="2,8-PAD">
+<connects>
+<connect gate="G$1" pin="MOUNT" pad="B2,8"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:14281/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="POPULARITY" value="6" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="3.0" package="3,0-PAD">
+<connects>
+<connect gate="G$1" pin="MOUNT" pad="B3,0"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:14280/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="POPULARITY" value="17" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="3.2" package="3,2-PAD">
+<connects>
+<connect gate="G$1" pin="MOUNT" pad="B3,2"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:14282/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="POPULARITY" value="4" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="3.3" package="3,3-PAD">
+<connects>
+<connect gate="G$1" pin="MOUNT" pad="B3,3"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:14283/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="POPULARITY" value="1" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="3.6" package="3,6-PAD">
+<connects>
+<connect gate="G$1" pin="MOUNT" pad="B3,6"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:14284/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="4.1" package="4,1-PAD">
+<connects>
+<connect gate="G$1" pin="MOUNT" pad="B4,1"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:14285/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="4.3" package="4,3-PAD">
+<connects>
+<connect gate="G$1" pin="MOUNT" pad="B4,3"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:14286/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="4.5" package="4,5-PAD">
+<connects>
+<connect gate="G$1" pin="MOUNT" pad="B4,5"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:14287/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="5.0" package="5,0-PAD">
+<connects>
+<connect gate="G$1" pin="MOUNT" pad="B5"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:14288/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="5.5" package="5,5-PAD">
+<connects>
+<connect gate="G$1" pin="MOUNT" pad="B5,5"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:14291/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -4155,6 +4522,18 @@ USE AT YOUR OWN RISK!&lt;p&gt;
 <part name="X11" library="con-JST PHD" deviceset="B26B-PHDSS" device=""/>
 <part name="GND11" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND12" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="PE1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="PE" device=""/>
+<part name="PE2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="PE" device=""/>
+<part name="PE3" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="PE" device=""/>
+<part name="PE4" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="PE" device=""/>
+<part name="PE5" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="PE" device=""/>
+<part name="PE6" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="PE" device=""/>
+<part name="PE7" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="PE" device=""/>
+<part name="PE8" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="PE" device=""/>
+<part name="PE9" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="PE" device=""/>
+<part name="PE10" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="PE" device=""/>
+<part name="PE11" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="PE" device=""/>
+<part name="H1" library="holes" library_urn="urn:adsk.eagle:library:237" deviceset="MOUNT-PAD-ROUND" device="3.2" package3d_urn="urn:adsk.eagle:package:14282/1"/>
 </parts>
 <sheets>
 <sheet>
@@ -4201,35 +4580,35 @@ USE AT YOUR OWN RISK!&lt;p&gt;
 <attribute name="NAME" x="83.82" y="20.32" size="1.778" layer="95"/>
 <attribute name="VALUE" x="83.82" y="7.62" size="1.778" layer="96"/>
 </instance>
-<instance part="GND1" gate="1" x="22.86" y="68.58" smashed="yes">
-<attribute name="VALUE" x="20.32" y="66.04" size="1.778" layer="96"/>
+<instance part="GND1" gate="1" x="17.78" y="68.58" smashed="yes">
+<attribute name="VALUE" x="15.24" y="66.04" size="1.778" layer="96"/>
 </instance>
-<instance part="GND2" gate="1" x="22.86" y="53.34" smashed="yes">
-<attribute name="VALUE" x="20.32" y="50.8" size="1.778" layer="96"/>
+<instance part="GND2" gate="1" x="17.78" y="53.34" smashed="yes">
+<attribute name="VALUE" x="15.24" y="50.8" size="1.778" layer="96"/>
 </instance>
-<instance part="GND3" gate="1" x="22.86" y="38.1" smashed="yes">
-<attribute name="VALUE" x="20.32" y="35.56" size="1.778" layer="96"/>
+<instance part="GND3" gate="1" x="17.78" y="38.1" smashed="yes">
+<attribute name="VALUE" x="15.24" y="35.56" size="1.778" layer="96"/>
 </instance>
-<instance part="GND4" gate="1" x="22.86" y="22.86" smashed="yes">
-<attribute name="VALUE" x="20.32" y="20.32" size="1.778" layer="96"/>
+<instance part="GND4" gate="1" x="17.78" y="22.86" smashed="yes">
+<attribute name="VALUE" x="15.24" y="20.32" size="1.778" layer="96"/>
 </instance>
-<instance part="GND5" gate="1" x="22.86" y="7.62" smashed="yes">
-<attribute name="VALUE" x="20.32" y="5.08" size="1.778" layer="96"/>
+<instance part="GND5" gate="1" x="17.78" y="7.62" smashed="yes">
+<attribute name="VALUE" x="15.24" y="5.08" size="1.778" layer="96"/>
 </instance>
-<instance part="GND6" gate="1" x="76.2" y="7.62" smashed="yes">
-<attribute name="VALUE" x="73.66" y="5.08" size="1.778" layer="96"/>
+<instance part="GND6" gate="1" x="71.12" y="7.62" smashed="yes">
+<attribute name="VALUE" x="68.58" y="5.08" size="1.778" layer="96"/>
 </instance>
-<instance part="GND7" gate="1" x="76.2" y="22.86" smashed="yes">
-<attribute name="VALUE" x="73.66" y="20.32" size="1.778" layer="96"/>
+<instance part="GND7" gate="1" x="71.12" y="22.86" smashed="yes">
+<attribute name="VALUE" x="68.58" y="20.32" size="1.778" layer="96"/>
 </instance>
-<instance part="GND8" gate="1" x="76.2" y="38.1" smashed="yes">
-<attribute name="VALUE" x="73.66" y="35.56" size="1.778" layer="96"/>
+<instance part="GND8" gate="1" x="71.12" y="38.1" smashed="yes">
+<attribute name="VALUE" x="68.58" y="35.56" size="1.778" layer="96"/>
 </instance>
-<instance part="GND9" gate="1" x="76.2" y="53.34" smashed="yes">
-<attribute name="VALUE" x="73.66" y="50.8" size="1.778" layer="96"/>
+<instance part="GND9" gate="1" x="71.12" y="53.34" smashed="yes">
+<attribute name="VALUE" x="68.58" y="50.8" size="1.778" layer="96"/>
 </instance>
-<instance part="GND10" gate="1" x="76.2" y="68.58" smashed="yes">
-<attribute name="VALUE" x="73.66" y="66.04" size="1.778" layer="96"/>
+<instance part="GND10" gate="1" x="71.12" y="68.58" smashed="yes">
+<attribute name="VALUE" x="68.58" y="66.04" size="1.778" layer="96"/>
 </instance>
 <instance part="X11" gate="G$1" x="55.88" y="111.76" smashed="yes" rot="R180">
 <attribute name="VALUE" x="59.69" y="132.08" size="1.778" layer="96" rot="R180"/>
@@ -4241,6 +4620,43 @@ USE AT YOUR OWN RISK!&lt;p&gt;
 <instance part="GND12" gate="1" x="78.74" y="93.98" smashed="yes">
 <attribute name="VALUE" x="76.2" y="91.44" size="1.778" layer="96"/>
 </instance>
+<instance part="PE1" gate="M" x="22.86" y="68.58" smashed="yes">
+<attribute name="VALUE" x="20.32" y="66.04" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="PE2" gate="M" x="25.4" y="53.34" smashed="yes">
+<attribute name="VALUE" x="22.86" y="50.8" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="PE3" gate="M" x="25.4" y="38.1" smashed="yes">
+<attribute name="VALUE" x="22.86" y="35.56" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="PE4" gate="M" x="25.4" y="22.86" smashed="yes">
+<attribute name="VALUE" x="22.86" y="20.32" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="PE5" gate="M" x="25.4" y="7.62" smashed="yes">
+<attribute name="VALUE" x="22.86" y="5.08" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="PE6" gate="M" x="78.74" y="7.62" smashed="yes">
+<attribute name="VALUE" x="76.2" y="5.08" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="PE7" gate="M" x="78.74" y="22.86" smashed="yes">
+<attribute name="VALUE" x="76.2" y="20.32" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="PE8" gate="M" x="78.74" y="38.1" smashed="yes">
+<attribute name="VALUE" x="76.2" y="35.56" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="PE9" gate="M" x="78.74" y="53.34" smashed="yes">
+<attribute name="VALUE" x="76.2" y="50.8" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="PE10" gate="M" x="78.74" y="68.58" smashed="yes">
+<attribute name="VALUE" x="76.2" y="66.04" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="PE11" gate="M" x="-30.48" y="50.8" smashed="yes">
+<attribute name="VALUE" x="-33.02" y="48.26" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="H1" gate="G$1" x="-25.4" y="53.34" smashed="yes">
+<attribute name="NAME" x="-22.606" y="53.9242" size="1.778" layer="95"/>
+<attribute name="VALUE" x="-22.606" y="50.8762" size="1.778" layer="96"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -4249,62 +4665,62 @@ USE AT YOUR OWN RISK!&lt;p&gt;
 <segment>
 <pinref part="X1" gate="G$1" pin="2"/>
 <pinref part="GND1" gate="1" pin="GND"/>
-<wire x1="27.94" y1="73.66" x2="22.86" y2="73.66" width="0.1524" layer="91"/>
-<wire x1="22.86" y1="73.66" x2="22.86" y2="71.12" width="0.1524" layer="91"/>
+<wire x1="27.94" y1="73.66" x2="17.78" y2="73.66" width="0.1524" layer="91"/>
+<wire x1="17.78" y1="73.66" x2="17.78" y2="71.12" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="X2" gate="G$1" pin="2"/>
 <pinref part="GND2" gate="1" pin="GND"/>
-<wire x1="27.94" y1="58.42" x2="22.86" y2="58.42" width="0.1524" layer="91"/>
-<wire x1="22.86" y1="58.42" x2="22.86" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="27.94" y1="58.42" x2="17.78" y2="58.42" width="0.1524" layer="91"/>
+<wire x1="17.78" y1="58.42" x2="17.78" y2="55.88" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="X3" gate="G$1" pin="2"/>
 <pinref part="GND3" gate="1" pin="GND"/>
-<wire x1="27.94" y1="43.18" x2="22.86" y2="43.18" width="0.1524" layer="91"/>
-<wire x1="22.86" y1="43.18" x2="22.86" y2="40.64" width="0.1524" layer="91"/>
+<wire x1="27.94" y1="43.18" x2="17.78" y2="43.18" width="0.1524" layer="91"/>
+<wire x1="17.78" y1="43.18" x2="17.78" y2="40.64" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="X4" gate="G$1" pin="2"/>
 <pinref part="GND4" gate="1" pin="GND"/>
-<wire x1="27.94" y1="27.94" x2="22.86" y2="27.94" width="0.1524" layer="91"/>
-<wire x1="22.86" y1="27.94" x2="22.86" y2="25.4" width="0.1524" layer="91"/>
+<wire x1="27.94" y1="27.94" x2="17.78" y2="27.94" width="0.1524" layer="91"/>
+<wire x1="17.78" y1="27.94" x2="17.78" y2="25.4" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="X5" gate="G$1" pin="2"/>
 <pinref part="GND5" gate="1" pin="GND"/>
-<wire x1="27.94" y1="12.7" x2="22.86" y2="12.7" width="0.1524" layer="91"/>
-<wire x1="22.86" y1="12.7" x2="22.86" y2="10.16" width="0.1524" layer="91"/>
+<wire x1="27.94" y1="12.7" x2="17.78" y2="12.7" width="0.1524" layer="91"/>
+<wire x1="17.78" y1="12.7" x2="17.78" y2="10.16" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="X10" gate="G$1" pin="2"/>
 <pinref part="GND6" gate="1" pin="GND"/>
-<wire x1="81.28" y1="12.7" x2="76.2" y2="12.7" width="0.1524" layer="91"/>
-<wire x1="76.2" y1="12.7" x2="76.2" y2="10.16" width="0.1524" layer="91"/>
+<wire x1="81.28" y1="12.7" x2="71.12" y2="12.7" width="0.1524" layer="91"/>
+<wire x1="71.12" y1="12.7" x2="71.12" y2="10.16" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="X9" gate="G$1" pin="2"/>
 <pinref part="GND7" gate="1" pin="GND"/>
-<wire x1="81.28" y1="27.94" x2="76.2" y2="27.94" width="0.1524" layer="91"/>
-<wire x1="76.2" y1="27.94" x2="76.2" y2="25.4" width="0.1524" layer="91"/>
+<wire x1="81.28" y1="27.94" x2="71.12" y2="27.94" width="0.1524" layer="91"/>
+<wire x1="71.12" y1="27.94" x2="71.12" y2="25.4" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="X8" gate="G$1" pin="2"/>
 <pinref part="GND8" gate="1" pin="GND"/>
-<wire x1="81.28" y1="43.18" x2="76.2" y2="43.18" width="0.1524" layer="91"/>
-<wire x1="76.2" y1="43.18" x2="76.2" y2="40.64" width="0.1524" layer="91"/>
+<wire x1="81.28" y1="43.18" x2="71.12" y2="43.18" width="0.1524" layer="91"/>
+<wire x1="71.12" y1="43.18" x2="71.12" y2="40.64" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="X7" gate="G$1" pin="2"/>
 <pinref part="GND9" gate="1" pin="GND"/>
-<wire x1="81.28" y1="58.42" x2="76.2" y2="58.42" width="0.1524" layer="91"/>
-<wire x1="76.2" y1="58.42" x2="76.2" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="81.28" y1="58.42" x2="71.12" y2="58.42" width="0.1524" layer="91"/>
+<wire x1="71.12" y1="58.42" x2="71.12" y2="55.88" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="X6" gate="G$1" pin="2"/>
 <pinref part="GND10" gate="1" pin="GND"/>
-<wire x1="81.28" y1="73.66" x2="76.2" y2="73.66" width="0.1524" layer="91"/>
-<wire x1="76.2" y1="73.66" x2="76.2" y2="71.12" width="0.1524" layer="91"/>
+<wire x1="81.28" y1="73.66" x2="71.12" y2="73.66" width="0.1524" layer="91"/>
+<wire x1="71.12" y1="73.66" x2="71.12" y2="71.12" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="GND11" gate="1" pin="GND"/>
@@ -4581,6 +4997,63 @@ USE AT YOUR OWN RISK!&lt;p&gt;
 <pinref part="X11" gate="G$1" pin="25"/>
 </segment>
 </net>
+<net name="PE" class="0">
+<segment>
+<pinref part="X1" gate="G$1" pin="G"/>
+<pinref part="PE1" gate="M" pin="PE"/>
+<wire x1="22.86" y1="71.12" x2="27.94" y2="71.12" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="X2" gate="G$1" pin="G"/>
+<pinref part="PE2" gate="M" pin="PE"/>
+<wire x1="27.94" y1="55.88" x2="25.4" y2="55.88" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="PE3" gate="M" pin="PE"/>
+<pinref part="X3" gate="G$1" pin="G"/>
+<wire x1="25.4" y1="40.64" x2="27.94" y2="40.64" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="PE4" gate="M" pin="PE"/>
+<pinref part="X4" gate="G$1" pin="G"/>
+<wire x1="25.4" y1="25.4" x2="27.94" y2="25.4" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="PE5" gate="M" pin="PE"/>
+<pinref part="X5" gate="G$1" pin="G"/>
+<wire x1="25.4" y1="10.16" x2="27.94" y2="10.16" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="PE6" gate="M" pin="PE"/>
+<pinref part="X10" gate="G$1" pin="G"/>
+<wire x1="78.74" y1="10.16" x2="81.28" y2="10.16" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="PE7" gate="M" pin="PE"/>
+<pinref part="X9" gate="G$1" pin="G"/>
+<wire x1="78.74" y1="25.4" x2="81.28" y2="25.4" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="PE8" gate="M" pin="PE"/>
+<pinref part="X8" gate="G$1" pin="G"/>
+<wire x1="78.74" y1="40.64" x2="81.28" y2="40.64" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="PE9" gate="M" pin="PE"/>
+<pinref part="X7" gate="G$1" pin="G"/>
+<wire x1="78.74" y1="55.88" x2="81.28" y2="55.88" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="PE10" gate="M" pin="PE"/>
+<pinref part="X6" gate="G$1" pin="G"/>
+<wire x1="78.74" y1="71.12" x2="81.28" y2="71.12" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="H1" gate="G$1" pin="MOUNT"/>
+<pinref part="PE11" gate="M" pin="PE"/>
+<wire x1="-27.94" y1="53.34" x2="-30.48" y2="53.34" width="0.1524" layer="91"/>
+</segment>
+</net>
 </nets>
 </sheet>
 </sheets>
@@ -4596,6 +5069,11 @@ with this version.
 Since Version 8.3, EAGLE supports URNs for individual library
 assets (packages, symbols, and devices). The URNs of those assets
 will not be understood (or retained) with this version.
+</note>
+<note version="8.3" severity="warning">
+Since Version 8.3, EAGLE supports the association of 3D packages
+with devices in libraries, schematics, and board files. Those 3D
+packages will not be understood (or retained) with this version.
 </note>
 </compatibility>
 </eagle>
