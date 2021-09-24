@@ -3405,7 +3405,7 @@ Source: www.neutrik.com/... 210_123161.pdf</description>
 <pad name="P$1" x="-4.05" y="-1.55" drill="3.4"/>
 <pad name="P$2" x="0" y="-5.5" drill="3.4"/>
 <pad name="P$3" x="4.05" y="-1.55" drill="3.4"/>
-<pad name="P$4" x="4.558" y="5.689" drill="2" shape="long" rot="R315"/>
+<pad name="P$4" x="5.828" y="4.419" drill="2" shape="long" rot="R315"/>
 <wire x1="-7.62" y1="-17.78" x2="-5.08" y2="-20.32" width="0.127" layer="21"/>
 <wire x1="-5.08" y1="-20.32" x2="5.08" y2="-20.32" width="0.127" layer="21"/>
 <wire x1="5.08" y1="-20.32" x2="7.62" y2="-17.78" width="0.127" layer="21"/>
@@ -3436,10 +3436,10 @@ Source: www.neutrik.com/... 210_123161.pdf</description>
 <circle x="9.525" y="12.065" radius="1.778" width="3.81" layer="30"/>
 <circle x="9.525" y="-12.065" radius="1.778" width="3.81" layer="30"/>
 <circle x="-9.525" y="-12.065" radius="1.778" width="3.81" layer="30"/>
-<wire x1="2.5146" y1="6.2992" x2="4.064" y2="7.5946" width="0" layer="46" curve="-180"/>
-<wire x1="5.0546" y1="3.7592" x2="6.604" y2="5.0546" width="0" layer="46" curve="180"/>
-<wire x1="2.5146" y1="6.2992" x2="5.0546" y2="3.7592" width="0" layer="46"/>
-<wire x1="4.064" y1="7.5946" x2="6.604" y2="5.0546" width="0" layer="46"/>
+<wire x1="3.7846" y1="5.0292" x2="5.334" y2="6.3246" width="0" layer="46" curve="-180"/>
+<wire x1="6.3246" y1="2.4892" x2="7.874" y2="3.7846" width="0" layer="46" curve="180"/>
+<wire x1="3.7846" y1="5.0292" x2="6.3246" y2="2.4892" width="0" layer="46"/>
+<wire x1="5.334" y1="6.3246" x2="7.874" y2="3.7846" width="0" layer="46"/>
 </package>
 </packages>
 <symbols>
@@ -3834,9 +3834,9 @@ Source: www.neutrik.com/</description>
 </device>
 <device name="" package="NC3FD-X">
 <connects>
-<connect gate="G$1" pin="1" pad="P$3"/>
-<connect gate="G$1" pin="2" pad="P$1"/>
-<connect gate="G$1" pin="3" pad="P$2"/>
+<connect gate="G$1" pin="1" pad="P$2"/>
+<connect gate="G$1" pin="2" pad="P$3"/>
+<connect gate="G$1" pin="3" pad="P$1"/>
 <connect gate="G$1" pin="G" pad="P$4"/>
 </connects>
 <technologies>
