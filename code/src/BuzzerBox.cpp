@@ -6,8 +6,8 @@
 #include "rpi_communication.hpp"
 
 #include <avr/wdt.h>
-uint8_t port_interrupt_flag = 255;
-uint8_t pin_data = 0xFF;
+volatile uint8_t port_interrupt_flag = 255;
+volatile uint8_t pin_data = 0xFF;
 
 RpiComm* rpiComm;
 SevenSeg* sevenSeg;
