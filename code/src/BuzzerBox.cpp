@@ -25,6 +25,9 @@ uint8_t release_was_high = 1;
 
 uint8_t currentBuzzer = NO_BUZZER;
 
+#define DEBOUNCE_MS 20
+uint32_t debounce_start = 0;
+
 // uint8_t lookup[] = {7, 0, 5, 1, 6, 4, 3, 2};
 uint8_t getBitPosition(uint8_t b) {
   int i=0;
@@ -178,16 +181,28 @@ void loop() {
     
   
   if(port_interrupt_flag != 255) {
-     if (!isLocked) {
-      if (port_interrupt_flag == 0) {
-        lock(buttonsB[getBitPosition(~pin_data)].number);
-      } else if (port_interrupt_flag == 1) {
-        lock(buttonsC[getBitPosition(~pin_data)].number);
-      } else if (port_interrupt_flag == 2) {
-        lock(buttonsD[getBitPosition(~pin_data)].number);
+    if (debounce_start == 0) {
+      debounce_start = millis();
+    } else if (millis() - debounce_start >= DEBOUNCE_MS) {
+      if (!isLocked) {
+        uint8_t confirmed_data;
+        if (port_interrupt_flag == 0) {
+          confirmed_data = PINB | ~b_select;
+          if (confirmed_data != 0xFF)
+            lock(buttonsB[getBitPosition(~confirmed_data)].number);
+        } else if (port_interrupt_flag == 1) {
+          confirmed_data = PINC | ~c_select;
+          if (confirmed_data != 0xFF)
+            lock(buttonsC[getBitPosition(~confirmed_data)].number);
+        } else if (port_interrupt_flag == 2) {
+          confirmed_data = PIND | ~d_select;
+          if (confirmed_data != 0xFF)
+            lock(buttonsD[getBitPosition(~confirmed_data)].number);
+        }
       }
+      port_interrupt_flag = 255;
+      debounce_start = 0;
     }
-    port_interrupt_flag = 255;
   }
   wdt_reset();
 }
