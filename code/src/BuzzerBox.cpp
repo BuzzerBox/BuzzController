@@ -7,7 +7,7 @@
 
 #include <avr/wdt.h>
 volatile uint8_t port_interrupt_flag = 255;
-volatile uint8_t pin_data = 0xFF;
+volatile uint8_t pin_data = 0xFF; // port snapshot taken at the first edge (0 = pressed)
 
 RpiComm* rpiComm;
 SevenSeg* sevenSeg;
@@ -19,9 +19,11 @@ uint8_t d_select = B11111000;
 
 boolean isLocked = false;
 boolean rPiIsConnected = false;
-uint8_t last_state[10] = {1};
-uint8_t release_down_count = 0;
-uint8_t release_was_high = 1;
+
+#define RELEASE_HOLD_MS 50
+uint8_t release_was_pressed = 0;
+uint32_t release_down_since = 0;
+boolean release_armed = false;
 
 uint8_t currentBuzzer = NO_BUZZER;
 
@@ -31,13 +33,19 @@ uint32_t debounce_start = 0;
 // uint8_t lookup[] = {7, 0, 5, 1, 6, 4, 3, 2};
 uint8_t getBitPosition(uint8_t b) {
   int i=0;
-  while( !((b >> i) & 1) ) { 
-    i++;  
+  while( !((b >> i) & 1) ) {
+    i++;
   }
   return i;
   //return lookup[((b * 0x1D) >> 4) & 0x7];
 }
 
+void enableButtonInterrupts() {
+  cli();
+  PCIFR = 0b00000111; // drop edges that happened while disabled
+  PCICR |= 0b00000111;
+  sei();
+}
 
 void setup() {
   DDRB = B00000000;
@@ -56,19 +64,17 @@ void setup() {
   sei();
 
   wdt_enable(WDTO_1S);
-  
+
   rpiComm = new RpiComm();
   i2cComm = new I2CComm();
   sevenSeg = new SevenSeg(true, i2cComm);
   i2cComm->turnOffAll();
-  i2cComm->turnOnSingle(buttons[4]);
-
 }
 
 ISR(PCINT0_vect)
 {
   if (port_interrupt_flag == 255) {
-    pin_data = PINB | ~b_select; 
+    pin_data = PINB | ~b_select;
     if (pin_data != 0xFF) {
       PCICR  &= ~0b00000111;
       port_interrupt_flag = 0;
@@ -79,7 +85,7 @@ ISR(PCINT0_vect)
 ISR(PCINT1_vect)
 {
   if (port_interrupt_flag == 255) {
-    pin_data = PINC | ~c_select; 
+    pin_data = PINC | ~c_select;
     if (pin_data != 0xFF) {
       PCICR  &= ~0b00000111;
       port_interrupt_flag = 1;
@@ -90,7 +96,7 @@ ISR(PCINT1_vect)
 ISR(PCINT2_vect)
 {
   if (port_interrupt_flag == 255) {
-    pin_data = PIND | ~d_select; 
+    pin_data = PIND | ~d_select;
     if (pin_data != 0xFF) {
       PCICR  &= ~0b00000111;
       port_interrupt_flag = 2;
@@ -104,9 +110,7 @@ void unlock() {
   currentBuzzer = NO_BUZZER;
   sevenSeg->clearDisplay(!rPiIsConnected);
   i2cComm->turnOffAll();
-  cli();
-  PCICR  |= 0b00000111;
-  sei();
+  enableButtonInterrupts();
   rpiComm->sendUnlock();
 }
 
@@ -131,7 +135,6 @@ void checkCommand(PiCmd command) {
       }
       break;
   }
-  command.command = EMPTY;
 }
 
 void displayCurrentState() {
@@ -161,47 +164,61 @@ void handleRpiConnectionState() {
   }
 }
 
+void handleReleaseButton() {
+  uint8_t release_pressed = ~PINC & 1;
+  if (release_pressed && !release_was_pressed) {
+    // Only a press that starts while locked may unlock, so holding the
+    // button cannot cancel the next lock.
+    release_down_since = millis();
+    release_armed = isLocked;
+  } else if (release_pressed && release_armed && isLocked
+             && millis() - release_down_since >= RELEASE_HOLD_MS) {
+    release_armed = false;
+    unlock();
+  }
+  release_was_pressed = release_pressed;
+}
+
+// Pick the pressed button on the port that triggered the interrupt.
+// Buttons already down at the first edge win over ones pressed during
+// the debounce window.
+void lockPressedButton() {
+  uint8_t pins, select;
+  const uint8_t* buttonNumbers;
+  if (port_interrupt_flag == 0) {
+    pins = PINB; select = b_select; buttonNumbers = buttonsB;
+  } else if (port_interrupt_flag == 1) {
+    pins = PINC; select = c_select; buttonNumbers = buttonsC;
+  } else {
+    pins = PIND; select = d_select; buttonNumbers = buttonsD;
+  }
+  uint8_t pressed = ~pins & select;
+  uint8_t pressedAtEdge = pressed & ~pin_data;
+  if (pressedAtEdge) pressed = pressedAtEdge;
+  if (pressed) lock(buttonNumbers[getBitPosition(pressed)]);
+}
+
 void loop() {
   if (rpiComm->checkData()) {
-    checkCommand(rpiComm->getLastCmd());  
+    checkCommand(rpiComm->getLastCmd());
   }
-  
+
   handleRpiConnectionState();
-  uint8_t release_pressed = ~PINC & 1;
-  if (release_pressed && release_was_high == 1) {
-      if (isLocked == true && release_down_count > 10) {
-        unlock();
-        release_was_high = 0;
-      }
-      release_down_count++;
-  } else {
-    if (!release_pressed) release_was_high = 1;
-    release_down_count = 0;
-  }
-    
-  
+  handleReleaseButton();
+
   if(port_interrupt_flag != 255) {
     if (debounce_start == 0) {
       debounce_start = millis();
     } else if (millis() - debounce_start >= DEBOUNCE_MS) {
       if (!isLocked) {
-        uint8_t confirmed_data;
-        if (port_interrupt_flag == 0) {
-          confirmed_data = PINB | ~b_select;
-          if (confirmed_data != 0xFF)
-            lock(buttonsB[getBitPosition(~confirmed_data)].number);
-        } else if (port_interrupt_flag == 1) {
-          confirmed_data = PINC | ~c_select;
-          if (confirmed_data != 0xFF)
-            lock(buttonsC[getBitPosition(~confirmed_data)].number);
-        } else if (port_interrupt_flag == 2) {
-          confirmed_data = PIND | ~d_select;
-          if (confirmed_data != 0xFF)
-            lock(buttonsD[getBitPosition(~confirmed_data)].number);
-        }
+        lockPressedButton();
       }
       port_interrupt_flag = 255;
       debounce_start = 0;
+      // Bounce or short tap: nothing locked, so listen again.
+      if (!isLocked) {
+        enableButtonInterrupts();
+      }
     }
   }
   wdt_reset();

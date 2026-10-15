@@ -21,15 +21,15 @@ boolean RpiComm::checkData() {
         hasCompleteMessage = true;
       }
       cmd_fill = 0;
+    } else if (cmd_fill == 0) {
+      current_command.command = readByte;
+      cmd_fill = 1;
+    } else if (cmd_fill == 1) {
+      current_command.data = readByte;
+      cmd_fill = 2;
     } else {
-      cmd_fill++;
-      if (cmd_fill == 1) {
-        current_command.command = readByte;
-      } else if (cmd_fill == 2) {
-        current_command.data = readByte;
-      } else {
-        cmd_fill = 0;
-      }
+      // Frame too long: discard everything until the next 0xFF
+      cmd_fill = 3;
     }
   }
   return hasCompleteMessage;
@@ -66,31 +66,13 @@ Pi_connection_state_t RpiComm::getConnectionState() {
   return connection_state;
 }
 
-Pi_connection_state_t RpiComm::advanceConnectionState() {
-  switch(connection_state) {
-    case NO_CONNECTION : 
-      connection_state = JUST_CONNECTED;
-      break;
-    case JUST_CONNECTED :
-      connection_state = CONNECTED;
-      break;
-    case CONNECTED :
-      connection_state = JUST_TIMED_OUT;
-      break;
-    case JUST_TIMED_OUT :
-      connection_state = NO_CONNECTION;
-      break;
-  }
-  return connection_state;
-}
-
 void RpiComm::setConnectionState(Pi_connection_state_t state) {
   connection_state = state;
 }
 
 bool RpiComm::isTimedOut() {
   if (connection_state == CONNECTED) {
-    if (lastConnection + heartbeatTimeout < millis()) {
+    if (millis() - lastConnection > (unsigned long)heartbeatTimeout) {
       connection_state = JUST_TIMED_OUT;
       return true;
     }

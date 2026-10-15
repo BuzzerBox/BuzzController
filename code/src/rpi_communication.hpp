@@ -23,7 +23,6 @@ class RpiComm {
   void sendButtonSelected(uint8_t buttonID);
   void sendRawData(byte data);
   Pi_connection_state_t getConnectionState();
-  Pi_connection_state_t advanceConnectionState();
   void setConnectionState(Pi_connection_state_t state);
   void heartbeatDetected();
   bool isTimedOut();

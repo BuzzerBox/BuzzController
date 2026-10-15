@@ -20,8 +20,8 @@ const byte numbers[10] = {ZERO, ONE, TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, 
 class SevenSeg {
  public:
     SevenSeg(bool setDot, I2CComm* i2cComm);
-    void displayNumber(uint8_t number, bool rPiIsConnected);
-    void clearDisplay(bool rPiIsConnected);
+    void displayNumber(uint8_t number, bool setDot);
+    void clearDisplay(bool setDot);
 };
 
 #endif
