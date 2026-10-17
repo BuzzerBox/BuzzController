@@ -49,7 +49,7 @@ BuzzController/
 | Display | 7-segment LED (common cathode, via expander) |
 | Buttons | 10 buzzers across MCU ports B, C, D + 1 release button |
 | CM4 ↔ MCU | Serial UART (115200 baud) |
-| Programming | STK500v2 via USB |
+| Programming | AVRISP mkII compatible (e.g. Olimex AVR-ISP-MK2) via the 6-pin ICSP header |
 
 PCB designs are in [EAGLE](https://www.autodesk.com/products/eagle/overview) format. The enclosure panel is a [Fusion 360](https://www.autodesk.com/products/fusion-360/overview) file.
 
@@ -96,7 +96,7 @@ pio run
 pio run --target upload
 ```
 
-Upload uses STK500v2 at 19200 baud over USB.
+Upload uses an AVRISP mkII compatible programmer (e.g. Olimex AVR-ISP-MK2) over USB, connected to the 6-pin ICSP header. Power the board from its own supply while flashing.
 
 ---
 
