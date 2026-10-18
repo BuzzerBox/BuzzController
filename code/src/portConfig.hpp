@@ -10,7 +10,10 @@ typedef enum {
   EMPTY = 0x00,
   SOFT_RELEASE = 0x01,
   SET_BUZZER = 0x02,
-
+  // the buzzer (data = buzzer ID 0-9) neither locks the box nor lights up until all are enabled again
+  DISABLE_BUZZER = 0x03,
+  // all buzzers count again (data = stuffing byte)
+  ENABLE_ALL_BUZZERS = 0x04,
 } Message_res_t;
 
 const byte NO_BUZZER = 0x7f;
