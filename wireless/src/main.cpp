@@ -62,6 +62,8 @@ static struct {
 
 static char line[256];
 static size_t lineLength = 0;
+// the rest of a line that was too long is skipped
+static bool skippingLine = false;
 
 // sent with the heartbeats, see messages::Diagnostics
 static const char *resetReason = "";
@@ -182,6 +184,11 @@ static void receivePackets() {
         if (length <= 0) {
             continue;
         }
+        // anything on the WiFi can send here; only the server says what the buzzer shows
+        if (!(udp.remoteIP() == serverIp)) {
+            Serial.printf("Ignoring a packet from %s, not the server\n", udp.remoteIP().toString().c_str());
+            continue;
+        }
         packet[length] = '\0';
         messages::State state;
         if (!messages::parseState(packet, length, state)) {
@@ -244,19 +251,20 @@ static void readSerial() {
     while (Serial.available() > 0) {
         char c = (char) Serial.read();
         if (c == '\n') {
-            line[lineLength] = '\0';
-            onLine(line);
+            if (!skippingLine) {
+                line[lineLength] = '\0';
+                onLine(line);
+            }
             lineLength = 0;
-        } else if (c != '\r') {
+            skippingLine = false;
+        } else if (c != '\r' && !skippingLine) {
             if (lineLength < sizeof(line) - 1) {
                 line[lineLength++] = c;
             } else {
                 // too long for anything it knows; skip to the next line
-                lineLength = sizeof(line);
+                lineLength = 0;
+                skippingLine = true;
             }
-        }
-        if (lineLength == sizeof(line)) {
-            lineLength = 0;
         }
     }
 }
@@ -278,9 +286,18 @@ static void goToSleep() {
     udp.stop();
     WiFi.disconnect(true);
     WiFi.mode(WIFI_OFF);
-    // a button that is still held would wake the buzzer right away
-    while (button.isDown() || (EXTERNAL_BUTTON_PIN != GPIO_NUM_NC && externalButton.isDown())) {
+    // a button that is still held would wake the buzzer right away. One held for longer is stuck (or its wires touch):
+    // then it wakes the buzzer when it is released, so it can't keep the buzzer awake and empty the battery.
+    bool hasExternalButton = EXTERNAL_BUTTON_PIN != GPIO_NUM_NC;
+    uint32_t waitStartMs = millis();
+    while ((button.isDown() || (hasExternalButton && externalButton.isDown()))
+           && millis() - waitStartMs < HELD_BUTTON_WAIT_MS) {
         delay(10);
+    }
+    bool buttonHeld = button.isDown();
+    bool externalButtonHeld = hasExternalButton && externalButton.isDown();
+    if (buttonHeld || externalButtonHeld) {
+        Serial.println("A button is stuck, it wakes the buzzer when it is released");
     }
     // the pull-ups of the RTC GPIOs need the RTC peripherals powered while asleep
     esp_sleep_pd_config(ESP_PD_DOMAIN_RTC_PERIPH, ESP_PD_OPTION_ON);
@@ -290,10 +307,11 @@ static void goToSleep() {
             rtc_gpio_pulldown_dis(pin);
         }
     }
-    // ext0 wakes up on one pin, ext1 on a set of pins that are all low: here the other one
-    esp_sleep_enable_ext0_wakeup(BUTTON_PIN, 0);
-    if (EXTERNAL_BUTTON_PIN != GPIO_NUM_NC) {
-        esp_sleep_enable_ext1_wakeup(1ULL << EXTERNAL_BUTTON_PIN, ESP_EXT1_WAKEUP_ALL_LOW);
+    // ext0 wakes up on one pin, ext1 on a set of pins that are all low (or any high): here the other one
+    esp_sleep_enable_ext0_wakeup(BUTTON_PIN, buttonHeld ? 1 : 0);
+    if (hasExternalButton) {
+        esp_sleep_enable_ext1_wakeup(1ULL << EXTERNAL_BUTTON_PIN,
+                                     externalButtonHeld ? ESP_EXT1_WAKEUP_ANY_HIGH : ESP_EXT1_WAKEUP_ALL_LOW);
     }
     usb.end();
     esp_deep_sleep_start();
@@ -393,14 +411,18 @@ void loop() {
 
     if (hasWifi) {
         bool isConnected = WiFi.status() == WL_CONNECTED;
+        uint32_t connectTimeoutMs = fastConnecting ? FAST_CONNECT_TIMEOUT_MS : RECONNECT_TIMEOUT_MS;
         if (isConnected && !connected) {
             onConnected();
         } else if (!isConnected && connected) {
             connected = false;
             wifiDrops++;
+            // the core may reconnect by itself; if it doesn't, see below
+            connectStartMs = nowMs;
             Serial.printf("WiFi lost (reason %u)\n", lastWifiReason);
-        } else if (!isConnected && fastConnecting && nowMs - connectStartMs > FAST_CONNECT_TIMEOUT_MS) {
-            // the access point changed, so scan
+        } else if (!isConnected && nowMs - connectStartMs > connectTimeoutMs) {
+            // the access point changed (so scan), or it went away and the core doesn't try again (so start over)
+            Serial.println("Not connected, looking for the WiFi again");
             connectWifi(false);
         }
     }

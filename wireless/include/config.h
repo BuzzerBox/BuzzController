@@ -32,6 +32,9 @@ constexpr uint32_t PRESS_RESEND_INTERVAL_MS = 30;
 constexpr int PRESS_SENDS = 10;
 // a WiFi connection with the channel and access point of the last one is quicker; after this, it scans
 constexpr uint32_t FAST_CONNECT_TIMEOUT_MS = 3000;
+// not connected for this long, it starts over with a scan: the Arduino core doesn't reconnect after every drop (not
+// when the box's access point shuts down), and its reconnect keeps the channel of the last connection
+constexpr uint32_t RECONNECT_TIMEOUT_MS = 10000;
 
 // ----- Power (see PowerPolicy)
 
@@ -41,3 +44,6 @@ constexpr uint32_t LOST_TIMEOUT_MS = 60000;
 constexpr uint32_t IDLE_TIMEOUT_MS = 10 * 60 * 1000;
 
 constexpr uint32_t DEBOUNCE_MS = 15;
+// before sleeping, the wait for a held button to be released; one held longer is stuck, and wakes the buzzer when it
+// is released
+constexpr uint32_t HELD_BUTTON_WAIT_MS = 2000;

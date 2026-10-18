@@ -9,9 +9,12 @@ talks to the BuzzerBox's game server over the box's WiFi, and the box shows it t
 - **Asleep** until its button is pressed. That press only wakes it up; it doesn't buzz.
 - **Awake**, it connects to the box's WiFi and game server. The first connection after a power-up scans for the box
   (a few seconds), later ones go straight to the box's channel.
-- It **stays awake while a game is running** on the box (also while the game master's device is away).
+- It **stays awake while a game with the wireless buzzers is running** on the box (also while the game master's device
+  is away). A game is played either with them or with the box's own buzzers.
+- **When the WiFi drops**, for example because the box restarted, it looks for the box's WiFi again every 10 s.
 - **Without a game** it goes back to sleep 10 minutes after the last press. It also goes to sleep when it can't reach
-  the box within 30 s of waking, or loses it for a minute.
+  the box within 30 s of waking, or loses it for a minute. A button that is stuck (held for more than 2 s when it
+  goes to sleep) wakes it when it is released, not right away.
 - **Plugged into the box over USB**, it shows up as a card on the game master's home page. "Übernehmen" there gives
   it the box's WiFi name and password and its address; the NeoPixel flashes green three times when it got them. A
   buzzer that has the box's WiFi already shows as adopted. The
