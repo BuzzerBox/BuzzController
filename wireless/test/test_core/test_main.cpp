@@ -222,6 +222,20 @@ void test_rejects_other_packets() {
     TEST_ASSERT_FALSE(messages::parseState(broken, strlen(broken), state));
 }
 
+void test_tells_its_wifi_without_the_passphrase() {
+    messages::WifiSettings wifi;
+    strcpy(wifi.ssid, "Box \"7\"");
+    strcpy(wifi.passphrase, "secret123");
+    strcpy(wifi.host, "10.0.0.5");
+    wifi.port = 5005;
+    char out[200];
+    messages::buildWifiInfo(out, sizeof(out), true, wifi);
+    TEST_ASSERT_EQUAL_STRING("{\"ssid\":\"Box \\\"7\\\"\",\"host\":\"10.0.0.5\",\"port\":5005}", out);
+    TEST_ASSERT_NULL(strstr(out, "secret"));
+    messages::buildWifiInfo(out, sizeof(out), false, wifi);
+    TEST_ASSERT_EQUAL_STRING("{}", out);
+}
+
 void test_parses_the_wifi() {
     messages::WifiSettings wifi;
     TEST_ASSERT_TRUE(messages::parseWifi(
@@ -266,6 +280,7 @@ int main() {
     RUN_TEST(test_parses_a_state);
     RUN_TEST(test_parses_a_state_of_an_older_server);
     RUN_TEST(test_rejects_other_packets);
+    RUN_TEST(test_tells_its_wifi_without_the_passphrase);
     RUN_TEST(test_parses_the_wifi);
     RUN_TEST(test_rejects_invalid_wifi);
     return UNITY_END();

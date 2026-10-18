@@ -44,6 +44,17 @@ size_t buildPress(char *out, size_t size, const char *mac, uint32_t number, bool
     return serialize(doc, out, size);
 }
 
+size_t buildWifiInfo(char *out, size_t size, bool hasWifi, const WifiSettings &settings) {
+    JsonDocument doc;
+    doc.to<JsonObject>();
+    if (hasWifi) {
+        doc["ssid"] = settings.ssid;
+        doc["host"] = settings.host;
+        doc["port"] = settings.port;
+    }
+    return serialize(doc, out, size);
+}
+
 bool parseState(const char *json, size_t length, State &state) {
     JsonDocument doc;
     if (deserializeJson(doc, json, length) != DeserializationError::Ok) {

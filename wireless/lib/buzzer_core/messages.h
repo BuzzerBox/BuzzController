@@ -11,7 +11,9 @@
  *   buzzer → server  {"t":"PRESS","id":<MAC>,"n":<press number>,"ts":<µs on the server's clock>}
  *   server → buzzer  {"t":"STATE","selected":…,"locked":…,"game":…,"st":<server µs>,"ack":<seq>,"pa":<n>}
  *
- * and the WiFi the box gives it over USB (BuzzUI server/services/buzzer-provisioning.service.ts).
+ * and the WiFi the box gives it over USB (BuzzUI server/services/buzzer-provisioning.service.ts), where the buzzer
+ * tells which WiFi it has: BUZZ READY <MAC> <firmware> {"ssid":…,"host":…,"port":…}, or {} without one. Never the
+ * passphrase.
  */
 namespace messages {
 
@@ -49,6 +51,8 @@ size_t buildHeartbeat(char *out, size_t size, const char *mac, uint16_t listenPo
 /** Without a synchronized clock the time is left out; the server then takes the press after the others */
 size_t buildPress(char *out, size_t size, const char *mac, uint32_t number, bool hasServerTime, int64_t serverUs);
 bool parseState(const char *json, size_t length, State &state);
+/** What the buzzer tells about its WiFi in the BUZZ READY line, without the passphrase; {} without one */
+size_t buildWifiInfo(char *out, size_t size, bool hasWifi, const WifiSettings &settings);
 /** The JSON of a "BUZZ WIFI" line; false if something is missing or too long */
 bool parseWifi(const char *json, WifiSettings &settings);
 

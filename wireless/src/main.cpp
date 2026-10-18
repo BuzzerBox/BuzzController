@@ -203,7 +203,12 @@ static void receivePackets() {
 // ----- USB: the box gives the WiFi, see BuzzUI server/services/buzzer-provisioning.service.ts
 
 static void printReady() {
-    Serial.printf("BUZZ READY %s %s\n", mac, FIRMWARE_VERSION);
+    // which WiFi it has, so that the box can tell whether it is adopted already
+    char wifiInfo[200];
+    if (messages::buildWifiInfo(wifiInfo, sizeof(wifiInfo), hasWifi, wifi) == 0) {
+        strcpy(wifiInfo, "{}");
+    }
+    Serial.printf("BUZZ READY %s %s %s\n", mac, FIRMWARE_VERSION, wifiInfo);
 }
 
 static void onLine(const char *text) {

@@ -12,9 +12,10 @@ talks to the BuzzerBox's game server over the box's WiFi, and the box shows it t
 - It **stays awake while a game is running** on the box (also while the game master's device is away).
 - **Without a game** it goes back to sleep 10 minutes after the last press. It also goes to sleep when it can't reach
   the box within 30 s of waking, or loses it for a minute.
-- **Plugged into the box over USB**, the box gives it its WiFi name and password and its address. The box wakes it up
-  for that (through the reset line), so a sleeping buzzer works too; the NeoPixel flashes green three times when it got
-  them. The USB cable also charges the battery.
+- **Plugged into the box over USB**, it shows up as a card on the game master's home page. "Übernehmen" there gives
+  it the box's WiFi name and password and its address; the NeoPixel flashes green three times when it got them. A
+  buzzer that has the box's WiFi already shows as adopted. The
+  box wakes a sleeping buzzer for that (through the reset line). The USB cable also charges the battery.
 
 ## Lights
 
@@ -86,10 +87,14 @@ USB, text lines at 115200 baud (BuzzUI `server/services/buzzer-provisioning.serv
 
 ```
 box → buzzer   BUZZ HELLO
-buzzer → box   BUZZ READY <MAC> <firmware version>        (also when it starts)
+buzzer → box   BUZZ READY <MAC> <firmware version> {"ssid":…,"host":…,"port":…}
+               (also when it starts; the WiFi it has, never the passphrase, or {} without one)
 box → buzzer   BUZZ WIFI {"ssid":…,"pass":…,"host":…,"port":…}
 buzzer → box   BUZZ OK | BUZZ ERROR <reason>
 ```
+
+With the WiFi it has, the box shows a buzzer that already has its WiFi as adopted, and one that is connected to it
+right now as connected.
 
 The buzzer only uses the serial connection while USB is plugged in. Without USB the Feather's USB serial chip
 (CH9102) has no power, and an ESP32 that kept its serial output (TX) high would power it halfway through that line: the
