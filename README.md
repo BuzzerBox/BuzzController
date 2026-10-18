@@ -2,6 +2,8 @@
 
 Firmware and hardware designs for the BuzzerBox — a 10-button quiz buzzer controller. A Raspberry Pi CM4 acts as the host, communicating with an ATmega328P co-processor over serial. The ATmega handles button detection, locks the active buzzer, and drives a 7-segment display.
 
+[`wireless/`](wireless/README.md) holds the firmware of the wireless buzzer: a battery-powered ESP32 Feather V2 that joins the box's WiFi.
+
 ---
 
 ## Features
@@ -27,6 +29,7 @@ BuzzController/
 │       ├── ttl_adapter.brd/.sch   # TTL adapter for devkit
 │       └── eagle.epf              # EAGLE CAD project file
 │   └── BuzzerBoxPanel.f3d         # Fusion 360 enclosure design
+├── wireless/                      # Wireless buzzer (ESP32 Feather V2), see wireless/README.md
 └── code/
     ├── platformio.ini             # Build configuration
     └── src/
