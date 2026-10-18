@@ -69,7 +69,15 @@ Communication between the ATmega328P and the Raspberry Pi uses 3-byte UART messa
 |---|---|---|
 | `EMPTY` | `0x00` | No operation |
 | `SOFT_RELEASE` | `0x01` | Unlock the active buzzer |
-| `SET_BUZZER` | `0x02` | Lock a specific buzzer (data = buzzer ID 0–9) |
+| `SET_BUZZER` | `0x02` | Lock a specific buzzer (data = buzzer ID 0–9), also a disabled one |
+| `DISABLE_BUZZER` | `0x03` | Turn a buzzer off (data = buzzer ID 0–9): pressing it neither locks the box nor lights it up |
+| `ENABLE_ALL_BUZZERS` | `0x04` | Turn all buzzers on again (data = stuffing byte `0x00`) |
+
+Disabled buzzers stay off across releases (`SOFT_RELEASE` and the release button); only `ENABLE_ALL_BUZZERS` turns
+them on again. When an enabled and a disabled buzzer are pressed at the same moment, the enabled one wins. A buzzer
+that is still held down when it is enabled counts again once it was released, so it doesn't lock the box right away.
+After a reset all buzzers are on: the Pi sends the disabled ones again with its heartbeats. IDs above 9 are ignored, and
+so are unknown commands, so a Pi that doesn't know these commands works as before.
 
 ### Events (Controller → RPi)
 
@@ -101,5 +109,12 @@ Upload uses an AVRISP mkII compatible programmer (e.g. Olimex AVR-ISP-MK2) over 
 ---
 
 ## Development
+
+`code/test/host` runs the buzzer logic of `BuzzerBox.cpp` on a PC, with the AVR registers mocked:
+
+```bash
+cd code/test/host
+g++ -std=gnu++11 -Imock -I../../src test_buzzers.cpp -o test_buzzers && ./test_buzzers
+```
 
 The `devkeys` PCB and `ttl_adapter` PCB are development accessories for testing the firmware without the full buzzer assembly.

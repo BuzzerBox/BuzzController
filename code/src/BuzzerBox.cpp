@@ -27,6 +27,13 @@ boolean release_armed = false;
 
 uint8_t currentBuzzer = NO_BUZZER;
 
+// Buzzers the Pi turned off, one bit per buzzer ID. Releasing doesn't clear it, only ENABLE_ALL_BUZZERS does; after a
+// reset all buzzers count, and the Pi sends the disabled ones again with its heartbeats.
+uint16_t disabledButtons = 0;
+// Buzzers that were held down while disabled: they count again once released, so a team that keeps its button
+// pressed doesn't lock the box the moment it is enabled again.
+uint16_t ignoredUntilReleased = 0;
+
 #define DEBOUNCE_MS 20
 uint32_t debounce_start = 0;
 
@@ -38,6 +45,36 @@ uint8_t getBitPosition(uint8_t b) {
   }
   return i;
   //return lookup[((b * 0x1D) >> 4) & 0x7];
+}
+
+boolean isDisabled(uint8_t buttonID) {
+  return ((disabledButtons | ignoredUntilReleased) >> buttonID) & 1;
+}
+
+// The pins of the port whose buzzers count, out of the selected ones
+uint8_t countingPins(uint8_t select, const uint8_t* buttonNumbers) {
+  uint8_t counting = select;
+  for (uint8_t bit = 0; bit < 8; bit++) {
+    if (((select >> bit) & 1) && isDisabled(buttonNumbers[bit])) {
+      counting &= ~(1 << bit);
+    }
+  }
+  return counting;
+}
+
+// Every buzzer that is held down right now, one bit per buzzer ID
+uint16_t readPressedButtons() {
+  uint16_t pressed = 0;
+  uint8_t pins[3] = {(uint8_t) (~PINB & b_select), (uint8_t) (~PINC & c_select), (uint8_t) (~PIND & d_select)};
+  const uint8_t* buttonNumbers[3] = {buttonsB, buttonsC, buttonsD};
+  for (uint8_t port = 0; port < 3; port++) {
+    for (uint8_t bit = 0; bit < 8; bit++) {
+      if ((pins[port] >> bit) & 1) {
+        pressed |= (uint16_t) 1 << buttonNumbers[port][bit];
+      }
+    }
+  }
+  return pressed;
 }
 
 void enableButtonInterrupts() {
@@ -130,9 +167,20 @@ void checkCommand(PiCmd command) {
       unlock();
       break;
     case SET_BUZZER:
+      // also a disabled one, e.g. when the master marks a team by hand
       if(command.data <= 9) {
          lock(command.data);
       }
+      break;
+    case DISABLE_BUZZER:
+      if(command.data <= 9) {
+        disabledButtons |= (uint16_t) 1 << command.data;
+      }
+      break;
+    case ENABLE_ALL_BUZZERS:
+      // the ones still held down by a team that was disabled wait until they are released
+      ignoredUntilReleased |= disabledButtons & readPressedButtons();
+      disabledButtons = 0;
       break;
   }
 }
@@ -181,7 +229,8 @@ void handleReleaseButton() {
 
 // Pick the pressed button on the port that triggered the interrupt.
 // Buttons already down at the first edge win over ones pressed during
-// the debounce window.
+// the debounce window. Disabled buttons don't count: when only those
+// were pressed, nothing locks.
 void lockPressedButton() {
   uint8_t pins, select;
   const uint8_t* buttonNumbers;
@@ -192,7 +241,7 @@ void lockPressedButton() {
   } else {
     pins = PIND; select = d_select; buttonNumbers = buttonsD;
   }
-  uint8_t pressed = ~pins & select;
+  uint8_t pressed = ~pins & countingPins(select, buttonNumbers);
   uint8_t pressedAtEdge = pressed & ~pin_data;
   if (pressedAtEdge) pressed = pressedAtEdge;
   if (pressed) lock(buttonNumbers[getBitPosition(pressed)]);
@@ -205,6 +254,9 @@ void loop() {
 
   handleRpiConnectionState();
   handleReleaseButton();
+  if (ignoredUntilReleased) {
+    ignoredUntilReleased &= readPressedButtons();
+  }
 
   if(port_interrupt_flag != 255) {
     if (debounce_start == 0) {
