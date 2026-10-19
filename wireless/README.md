@@ -2,7 +2,8 @@
 
 Firmware for a battery-powered buzzer on an [Adafruit ESP32 Feather V2](https://www.adafruit.com/product/5400). It
 talks to the BuzzerBox's game server over the box's WiFi, and the box shows it to the game master like its own buzzers
-(as "Funkbuzzer" with the end of its MAC address).
+(named after the color of its case, e.g. "Blauer Wireless Buzzer", or as "Funkbuzzer" with the end of its MAC
+address while it has no color).
 
 ## How it behaves
 
